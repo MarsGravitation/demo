@@ -1,0 +1,5 @@
+rootProject.name = 'springboot_2'
+include 'spring-batch'
+include 'spring-data-redis'
+include 'message-rabbimq'
+

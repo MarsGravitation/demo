@@ -1,0 +1,1083 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="eedc9914-50ea-4742-9878-ffaa516d4e15" name="Default Changelist" comment="" />
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path="$PROJECT_DIR$/hello-world/target/" />
+    <ignored path="$PROJECT_DIR$/login-db/target/" />
+    <ignored path="$PROJECT_DIR$/remember-me/target/" />
+    <ignored path="$PROJECT_DIR$/rememeber-me/target/" />
+    <ignored path="$PROJECT_DIR$/oauth-demo01/target/" />
+    <ignored path="$PROJECT_DIR$/ip-login/target/" />
+    <ignored path="$PROJECT_DIR$/login-qq/target/" />
+    <ignored path="$PROJECT_DIR$/login-sms/target/" />
+    <ignored path="$PROJECT_DIR$/faa-separation/target/" />
+    <ignored path="$PROJECT_DIR$/rewrite-login/target/" />
+    <ignored path="$PROJECT_DIR$/manage-project/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>doBuild</find>
+      <find>add</find>
+      <find>passwordEncoder</find>
+      <find>Ip</find>
+      <find>spring-social-autoconfigure</find>
+      <find>authenticate fail</find>
+      <find>-1</find>
+      <find>forb</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>Json</replace>
+    </replaceStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/login-sms/src/main/java/com/microwu/cxd/config/ValidateCodeSecurityConfig.java" />
+        <option value="$PROJECT_DIR$/login-sms/pom.xml" />
+        <option value="$PROJECT_DIR$/login-qq/src/main/java/com/microwu/cxd/social/qq/api/QQ.java" />
+        <option value="$PROJECT_DIR$/login-db/pom.xml" />
+        <option value="$PROJECT_DIR$/login-qq/src/main/java/com/microwu/cxd/social/qq/domain/QQUserInfo.java" />
+        <option value="$PROJECT_DIR$/login-qq/src/main/java/com/microwu/cxd/social/qq/api/impl/QQImpl.java" />
+        <option value="$PROJECT_DIR$/login-qq/src/main/java/com/microwu/cxd/social/qq/config/QQOAuth2Template.java" />
+        <option value="$PROJECT_DIR$/login-qq/src/main/java/com/microwu/cxd/social/qq/config/QQServiceProvider.java" />
+        <option value="$PROJECT_DIR$/login-qq/src/main/java/com/microwu/cxd/social/qq/config/QQConectionFactory.java" />
+        <option value="$PROJECT_DIR$/login-qq/src/main/java/com/microwu/cxd/social/qq/config/QQConnectionFactory.java" />
+        <option value="$PROJECT_DIR$/login-qq/src/main/java/com/microwu/cxd/social/qq/config/QQAdapter.java" />
+        <option value="$PROJECT_DIR$/login-qq/src/main/java/com/microwu/cxd/social/qq/config/SocialConfig.java" />
+        <option value="$PROJECT_DIR$/login-qq/src/main/java/com/microwu/cxd/social/qq/config/MerryyouSpringSocialConfigurer.java" />
+        <option value="$PROJECT_DIR$/login-qq/pom.xml" />
+        <option value="$PROJECT_DIR$/login-qq/src/main/java/com/microwu/cxd/social/qq/config/QQAuthConfig.java" />
+        <option value="$PROJECT_DIR$/hello-world/src/main/java/com/microwu/cxd/controller/HelloController.java" />
+        <option value="$PROJECT_DIR$/hello-world/src/main/java/com/microwu/cxd/config/WebSecurityConfig.java" />
+        <option value="$PROJECT_DIR$/hello-world/src/main/java/com/microwu/cxd/SpringSecurityApplication.java" />
+        <option value="$PROJECT_DIR$/rewrite-login/src/main/java/com/microwu/cxd/config/WebSecurityConfig.java" />
+        <option value="$PROJECT_DIR$/login-sms/src/main/java/com/microwu/cxd/config/WebSecurityConfig.java" />
+        <option value="$PROJECT_DIR$/login-db/src/main/resources/env/dev/application.yml" />
+        <option value="$PROJECT_DIR$/faa-separation/src/main/resources/env/dev/application.yml" />
+        <option value="$PROJECT_DIR$/faa-separation/src/main/java/com/microwu/cxd/domain/Permission.java" />
+        <option value="$PROJECT_DIR$/faa-separation/src/main/java/com/microwu/cxd/service/UserService.java" />
+        <option value="$PROJECT_DIR$/faa-separation/src/main/java/com/microwu/cxd/mapper/UserMapper.java" />
+        <option value="$PROJECT_DIR$/faa-separation/src/main/java/com/microwu/cxd/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/faa-separation/src/main/java/com/microwu/cxd/security/WebSecurityConfig.java" />
+        <option value="$PROJECT_DIR$/faa-separation/src/main/java/com/microwu/cxd/security/CustomAuthenticationProvider.java" />
+        <option value="$PROJECT_DIR$/manage-project/src/main/java/com/microwu/cxd/ManageProjectApplication.java" />
+        <option value="$PROJECT_DIR$/manage-project/src/main/java/com/microwu/cxd/domain/User.java" />
+        <option value="$PROJECT_DIR$/manage-project/src/main/java/com/microwu/cxd/service/UserService.java" />
+        <option value="$PROJECT_DIR$/manage-project/src/main/java/com/microwu/cxd/mapper/UserMapper.java" />
+        <option value="$PROJECT_DIR$/manage-project/src/main/java/com/microwu/cxd/controller/IndexController.java" />
+        <option value="$PROJECT_DIR$/manage-project/src/main/java/com/microwu/cxd/config.java" />
+        <option value="$PROJECT_DIR$/manage-project/src/main/java/com/microwu/cxd/config/MysqlConfig.java" />
+        <option value="$PROJECT_DIR$/manage-project/src/main/resources/dev/application.yml" />
+        <option value="$PROJECT_DIR$/manage-project/src/main/java/com/microwu/cxd/manage/config/MysqlConfig.java" />
+        <option value="$PROJECT_DIR$/manage-project/pom.xml" />
+        <option value="$PROJECT_DIR$/manage-project/src/main/resources/mapper/UserMapper.xml" />
+        <option value="$PROJECT_DIR$/faa-separation/src/main/java/com/microwu/cxd/manage/mapper/UserMapper.java" />
+        <option value="$PROJECT_DIR$/faa-separation/src/main/java/com/microwu/cxd/manage/security/CostomSecurityConfig.java" />
+        <option value="$PROJECT_DIR$/faa-separation/src/main/java/com/microwu/cxd/manage/security/WebSecurityConfig.java" />
+        <option value="$PROJECT_DIR$/faa-separation/src/main/java/com/microwu/cxd/manage/config/MysqlConfig.java" />
+        <option value="$PROJECT_DIR$/faa-separation/pom.xml" />
+        <option value="$PROJECT_DIR$/faa-separation/src/main/java/com/microwu/cxd/manage/domain/UserDO.java" />
+        <option value="$PROJECT_DIR$/faa-separation/src/main/resources/mapper/UserMapper.xml" />
+        <option value="$PROJECT_DIR$/faa-separation/src/main/java/com/microwu/cxd/manage/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/faa-separation/src/main/java/com/microwu/cxd/manage/controller/HomeController.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/faa-separation/src/main/java/com/microwu/cxd/manage/security/CustomSecurityConfig.java" />
+        <option value="$PROJECT_DIR$/faa-separation/src/main/java/com/microwu/cxd/manage/security/CustomAuthenticationSuccessHandler.java" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="G:/apache-maven-3.6.0" />
+        <option name="userSettingsFile" value="G:\apache-maven-3.6.0\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="login-db" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="login-db" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="login-qq" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="login-qq" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="spring-security" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="spring-security" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="864" />
+    <option name="width" value="1440" />
+    <option name="height" value="765" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="springsecurity" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springsecurity" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springsecurity" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springsecurity" type="462c0819:PsiDirectoryNode" />
+              <item name="rememeber-me" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springsecurity" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springsecurity" type="462c0819:PsiDirectoryNode" />
+              <item name="rememeber-me" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springsecurity" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springsecurity" type="462c0819:PsiDirectoryNode" />
+              <item name="rememeber-me" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springsecurity" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springsecurity" type="462c0819:PsiDirectoryNode" />
+              <item name="rememeber-me" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springsecurity" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springsecurity" type="462c0819:PsiDirectoryNode" />
+              <item name="rememeber-me" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="manage" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springsecurity" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springsecurity" type="462c0819:PsiDirectoryNode" />
+              <item name="rememeber-me" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="manage" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springsecurity" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springsecurity" type="462c0819:PsiDirectoryNode" />
+              <item name="rememeber-me" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="manage" type="462c0819:PsiDirectoryNode" />
+              <item name="security" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springsecurity" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springsecurity" type="462c0819:PsiDirectoryNode" />
+              <item name="rememeber-me" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springsecurity" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springsecurity" type="462c0819:PsiDirectoryNode" />
+              <item name="rememeber-me" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="env" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springsecurity" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springsecurity" type="462c0819:PsiDirectoryNode" />
+              <item name="rememeber-me" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="env" type="462c0819:PsiDirectoryNode" />
+              <item name="dev" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springsecurity" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springsecurity" type="462c0819:PsiDirectoryNode" />
+              <item name="rememeber-me" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="env" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springsecurity" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springsecurity" type="462c0819:PsiDirectoryNode" />
+              <item name="rememeber-me" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../github/logback" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="editing.templates" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\work-note\Products\springsecurity\manage-project\src\main\resources\env" />
+      <recent name="E:\work-note\Products\springsecurity\hello-world\src\main\resources\resources\css" />
+      <recent name="E:\work-note\Products\springsecurity\hello-world\src\main\resources\resources" />
+      <recent name="E:\work-note\Products\springsecurity\hello-world\src\main\resources\templates" />
+      <recent name="E:\work-note\Products\springsecurity\hello-world\src\main\resources\profile" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.microwu.cxd.domain" />
+      <recent name="com.microwu.cxd.config" />
+      <recent name="com.microwu.cxd.controller" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\work-note\Products\springsecurity\manage-project\src\main\resources\mapper" />
+      <recent name="E:\work-note\Products\springsecurity\login-qq\src\main\java\com\microwu\cxd" />
+      <recent name="E:\work-note\Products\springsecurity\rewrite-login\src\main\java\com\microwu\cxd" />
+      <recent name="E:\work-note\Products\springsecurity\faa-separation\src\main\resources" />
+      <recent name="E:\work-note\Products\springsecurity\login-qq\src\main" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.RememberMeApplication">
+    <configuration name="PasswordEncodeTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.microwu.cxd.encode.PasswordEncodeTest" />
+      <module name="faaseparation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.microwu.cxd.encode.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="security-remote" type="Remote">
+      <module name="helloworld" />
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" />
+      <option name="HOST" value="192.168.133.134" />
+      <option name="PORT" value="5005" />
+      <option name="AUTO_RESTART" value="false" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="5005" />
+        <option name="LOCAL" value="false" />
+      </RunnerSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="ForeAndAftSeparationApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="faaseparation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.microwu.cxd.manage.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.microwu.cxd.manage.ForeAndAftSeparationApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IpLoginApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="iplogin" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.microwu.cxd.manage.IpLoginApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ManageProjectApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="manage-project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.microwu.cxd.manage.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.microwu.cxd.manage.ManageProjectApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RememberMeApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="rememeberme" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.microwu.cxd.manage.RememberMeApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SmsLoginApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="loginsms" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.microwu.cxd.manage.SmsLoginApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringSecurityApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="helloworld" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.microwu.cxd.manage.SpringSecurityApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringWebSecurityOauthApplicationDemo01" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="oauthdemo01" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.microwu.cxd.manage.SpringWebSecurityOauthApplicationDemo01" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WebSecurityApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="logindb" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.microwu.cxd.manage.WebSecurityApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WebSecurityQQApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="loginqq" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.microwu.cxd.manage.WebSecurityQQApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.PasswordEncodeTest" />
+      <item itemvalue="Remote.security-remote" />
+      <item itemvalue="Spring Boot.WebSecurityApplication" />
+      <item itemvalue="Spring Boot.IpLoginApplication" />
+      <item itemvalue="Spring Boot.SpringWebSecurityOauthApplicationDemo01" />
+      <item itemvalue="Spring Boot.SpringSecurityApplication" />
+      <item itemvalue="Spring Boot.WebSecurityQQApplication" />
+      <item itemvalue="Spring Boot.RememberMeApplication" />
+      <item itemvalue="Spring Boot.SmsLoginApplication" />
+      <item itemvalue="Spring Boot.ManageProjectApplication" />
+      <item itemvalue="Spring Boot.ForeAndAftSeparationApplication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.ForeAndAftSeparationApplication" />
+        <item itemvalue="Spring Boot.ManageProjectApplication" />
+        <item itemvalue="Application.PasswordEncodeTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpringBootOptions">
+    <option name="showAdditionalConfigNotification" value="false" />
+  </component>
+  <component name="SshConsoleOptionsProvider">
+    <option name="myEncoding" value="UTF-8" />
+    <option name="myConnectionType" value="NONE" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="eedc9914-50ea-4742-9878-ffaa516d4e15" name="Default Changelist" comment="" />
+      <created>1564369233960</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1564369233960</updated>
+      <workItem from="1564369236335" duration="16036000" />
+      <workItem from="1564448559259" duration="1555000" />
+      <workItem from="1564543324084" duration="1118000" />
+      <workItem from="1564560191612" duration="2166000" />
+      <workItem from="1564840747918" duration="404000" />
+      <workItem from="1565061274189" duration="3842000" />
+      <workItem from="1565066679555" duration="5592000" />
+      <workItem from="1565935187911" duration="7756000" />
+      <workItem from="1565948765465" duration="1649000" />
+      <workItem from="1566010233654" duration="11278000" />
+      <workItem from="1566039751281" duration="5988000" />
+      <workItem from="1566092029203" duration="7223000" />
+      <workItem from="1566177777763" duration="330000" />
+      <workItem from="1566184091911" duration="10637000" />
+      <workItem from="1566264663711" duration="21384000" />
+      <workItem from="1566351289863" duration="658000" />
+      <workItem from="1566355811498" duration="1323000" />
+      <workItem from="1566378246821" duration="697000" />
+      <workItem from="1566435935496" duration="9747000" />
+      <workItem from="1566467635740" duration="2812000" />
+      <workItem from="1566521988300" duration="25532000" />
+      <workItem from="1566568052414" duration="136000" />
+      <workItem from="1566568205651" duration="1566000" />
+      <workItem from="1566610275031" duration="4306000" />
+      <workItem from="1566782231519" duration="22300000" />
+      <workItem from="1566867785374" duration="1146000" />
+      <workItem from="1568881436117" duration="374000" />
+      <workItem from="1569896666534" duration="9643000" />
+      <workItem from="1570351355830" duration="22000" />
+      <workItem from="1575526380585" duration="45000" />
+      <workItem from="1575968349234" duration="1134000" />
+      <workItem from="1578570735868" duration="4055000" />
+      <workItem from="1578621472939" duration="3646000" />
+      <workItem from="1578733804712" duration="17437000" />
+      <workItem from="1578876860533" duration="11641000" />
+      <workItem from="1578912320093" duration="3992000" />
+      <workItem from="1578964328222" duration="2773000" />
+      <workItem from="1578991612362" duration="1164000" />
+      <workItem from="1578993415297" duration="646000" />
+      <workItem from="1579051389711" duration="236000" />
+      <workItem from="1579069955286" duration="821000" />
+      <workItem from="1579071360024" duration="244000" />
+      <workItem from="1579155998613" duration="4000" />
+      <workItem from="1579159407886" duration="5000" />
+      <workItem from="1579488562539" duration="904000" />
+      <workItem from="1580736633643" duration="187000" />
+      <workItem from="1581763748369" duration="1454000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="UserMapperTest_test01 - 2019.08.17 at 12h 20m 03s.xml">
+      <configuration name="UserMapperTest.test01" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserMapperTest_test01 - 2019.08.17 at 12h 21m 18s.xml">
+      <configuration name="UserMapperTest.test01" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserMapperTest_test01 - 2019.08.17 at 12h 21m 47s.xml">
+      <configuration name="UserMapperTest.test01" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="227608000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <layout>
+      <window_info id="UI Designer" order="0" />
+      <window_info id="Favorites" order="1" side_tool="true" />
+      <window_info id="Web" order="2" side_tool="true" />
+      <window_info id="Designer" order="3" />
+      <window_info active="true" content_ui="combo" id="Project" order="4" visible="true" weight="0.33441296" />
+      <window_info id="Structure" order="5" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="0" weight="0.32894737" />
+      <window_info anchor="bottom" id="Docker" order="1" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="3" weight="0.3250444" />
+      <window_info anchor="bottom" id="Problems" order="4" />
+      <window_info anchor="bottom" id="Java Enterprise" order="5" />
+      <window_info anchor="bottom" id="Database Changes" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Spring" order="8" />
+      <window_info anchor="bottom" id="Message" order="9" />
+      <window_info anchor="bottom" id="Find" order="10" />
+      <window_info anchor="bottom" id="Run" order="11" weight="0.58259326" />
+      <window_info anchor="bottom" id="Debug" order="12" weight="0.44760212" />
+      <window_info anchor="bottom" id="Cvs" order="13" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="14" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="15" />
+      <window_info anchor="right" id="Palette" order="0" />
+      <window_info anchor="right" id="Mongo Explorer" order="1" />
+      <window_info anchor="right" id="Database" order="2" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info anchor="right" id="Bean Validation" order="4" />
+      <window_info anchor="right" id="Maven" order="5" weight="0.35303643" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="6" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="8" weight="0.25" />
+      <window_info anchor="right" id="Word Book" order="9" side_tool="true" />
+      <window_info anchor="right" id="BPMNPalette" order="10" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="UI Designer" order="0" />
+      <window_info id="Favorites" order="1" side_tool="true" />
+      <window_info id="Web" order="2" side_tool="true" />
+      <window_info id="Designer" order="3" />
+      <window_info active="true" content_ui="combo" id="Project" order="4" visible="true" weight="0.33441296" />
+      <window_info id="Structure" order="5" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="0" weight="0.32894737" />
+      <window_info anchor="bottom" id="Docker" order="1" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="3" weight="0.3250444" />
+      <window_info anchor="bottom" id="Problems" order="4" />
+      <window_info anchor="bottom" id="Java Enterprise" order="5" />
+      <window_info anchor="bottom" id="Database Changes" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Spring" order="8" />
+      <window_info anchor="bottom" id="Message" order="9" />
+      <window_info anchor="bottom" id="Find" order="10" />
+      <window_info anchor="bottom" id="Run" order="11" weight="0.58259326" />
+      <window_info anchor="bottom" id="Debug" order="12" weight="0.44760212" />
+      <window_info anchor="bottom" id="Cvs" order="13" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="14" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="15" />
+      <window_info anchor="right" id="Palette" order="0" />
+      <window_info anchor="right" id="Mongo Explorer" order="1" />
+      <window_info anchor="right" id="Database" order="2" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info anchor="right" id="Bean Validation" order="4" />
+      <window_info anchor="right" id="Maven" order="5" weight="0.35303643" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="6" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="8" weight="0.25" />
+      <window_info anchor="right" id="Word Book" order="9" side_tool="true" />
+      <window_info anchor="right" id="BPMNPalette" order="10" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/rememeber-me/src/main/java/com/microwu/cxd/manage/security/CustomAuthenticationProvider.java</url>
+          <line>27</line>
+          <properties />
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/5.1.5.RELEASE/spring-security-web-5.1.5.RELEASE.jar!/org/springframework/security/web/authentication/UsernamePasswordAuthenticationFilter.class</url>
+          <line>28</line>
+          <properties />
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>passwordEncoder.matches(result.getPassword(), userDO.getPassword())</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>this.getProviders()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/manage-project/src/main/resources/mapper/UserMapper.xml" />
+    <entry file="file://$PROJECT_DIR$/faa-separation/src/main/java/com/microwu/cxd/manage/domain/UserDO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="24" column="26" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/faa-separation/src/main/resources/mapper/UserMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="22" column="112" selection-start-line="22" selection-start-column="112" selection-end-line="22" selection-end-column="112" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/faa-separation/src/main/java/com/microwu/cxd/manage/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="94">
+          <caret line="19" column="29" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/faa-separation/src/main/java/com/microwu/cxd/manage/controller/HomeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="33" column="70" selection-start-line="33" selection-start-column="70" selection-end-line="33" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.1.5.RELEASE/spring-security-core-5.1.5.RELEASE.jar!/org/springframework/security/authentication/ProviderManager.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="94">
+          <caret line="72" selection-start-line="72" selection-end-line="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/faa-separation/src/main/java/com/microwu/cxd/manage/util/EncodeUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.1.7.RELEASE/spring-security-core-5.1.7.RELEASE.jar!/org/springframework/security/authentication/AbstractAuthenticationToken.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-660">
+          <caret line="19" column="22" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/faa-separation/src/main/java/com/microwu/cxd/manage/security/CustomJsonAuthenticationToken.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="16" column="58" lean-forward="true" selection-start-line="16" selection-start-column="58" selection-end-line="16" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/faa-separation/src/main/java/com/microwu/cxd/manage/security/CustomAuthenticationProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="74">
+          <caret line="39" column="64" selection-start-line="39" selection-start-column="58" selection-end-line="39" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login-db/src/main/java/com/microwu/cxd/manage/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login-db/src/main/java/com/microwu/cxd/manage/domain/UserDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rewrite-login/src/main/java/com/microwu/cxd/manage/config/WebSecurityConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-368">
+          <caret line="39" column="12" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login-db/src/main/java/com/microwu/cxd/manage/config/DbUserDetailsService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="24" column="24" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login-db/src/main/java/com/microwu/cxd/manage/config/WebSecurityConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="51" column="24" selection-start-line="51" selection-start-column="16" selection-end-line="51" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/5.1.7.RELEASE/spring-security-config-5.1.7.RELEASE.jar!/org/springframework/security/config/annotation/authentication/builders/AuthenticationManagerBuilder.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="990">
+          <caret line="65" selection-start-line="65" selection-end-line="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/5.1.7.RELEASE/spring-security-config-5.1.7.RELEASE.jar!/org/springframework/security/config/annotation/authentication/configurers/userdetails/DaoAuthenticationConfigurer.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="12" column="10" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/5.1.7.RELEASE/spring-security-config-5.1.7.RELEASE.jar!/org/springframework/security/config/annotation/authentication/configurers/userdetails/AbstractDaoAuthenticationConfigurer.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="23" column="9" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/faa-separation/src/main/java/com/microwu/cxd/manage/security/CustomJsonLoginFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="704">
+          <caret line="65" column="16" selection-start-line="65" selection-start-column="16" selection-end-line="65" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="26" selection-start-line="26" selection-end-line="31" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/faa-separation/src/main/resources/env/dev/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="38" lean-forward="true" selection-end-line="35" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/faa-separation/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="23" selection-start-line="23" selection-end-line="90" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/faa-separation/src/main/java/com/microwu/cxd/manage/config/MysqlConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="28" column="50" selection-start-line="28" selection-start-column="50" selection-end-line="28" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/faa-separation/src/main/java/com/microwu/cxd/manage/constant/HttpResponseStatusEnum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/faa-separation/src/main/java/com/microwu/cxd/manage/bean/WebResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="54" column="121" lean-forward="true" selection-start-line="54" selection-start-column="121" selection-end-line="54" selection-end-column="121" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/faa-separation/src/main/java/com/microwu/cxd/manage/security/CustomAuthenticationSuccessHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="23" column="135" selection-start-line="23" selection-start-column="135" selection-end-line="23" selection-end-column="135" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/faa-separation/src/main/java/com/microwu/cxd/manage/security/CustomAuthneticationEntryPoint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="22" column="43" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/faa-separation/src/main/java/com/microwu/cxd/manage/security/CustomAuthenticationFailureHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="22" column="31" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/faa-separation/src/main/java/com/microwu/cxd/manage/security/CustomAccessDeniedHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="22" column="38" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/faa-separation/src/main/java/com/microwu/cxd/manage/ForeAndAftSeparationApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/faa-separation/src/main/java/com/microwu/cxd/manage/security/WebSecurityConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/5.1.7.RELEASE/spring-security-config-5.1.7.RELEASE.jar!/org/springframework/security/config/annotation/web/configuration/EnableWebSecurity.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="19" column="17" lean-forward="true" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/5.1.7.RELEASE/spring-security-config-5.1.7.RELEASE.jar!/org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="70" column="43" lean-forward="true" selection-start-line="70" selection-start-column="43" selection-end-line="70" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/5.1.7.RELEASE/spring-security-config-5.1.7.RELEASE.jar!/org/springframework/security/config/annotation/AbstractSecurityBuilder.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="33" column="25" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/5.1.7.RELEASE/spring-security-config-5.1.7.RELEASE.jar!/org/springframework/security/config/annotation/AbstractConfiguredSecurityBuilder.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="192" column="28" selection-start-line="192" selection-start-column="23" selection-end-line="192" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login-sms/src/main/java/com/microwu/cxd/manage/config/ValidateCodeSecurityConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="21" column="103" selection-start-line="21" selection-start-column="63" selection-end-line="21" selection-end-column="103" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/faa-separation/src/main/java/com/microwu/cxd/manage/security/CustomSecurityConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="21" column="67" selection-start-line="21" selection-start-column="42" selection-end-line="21" selection-end-column="67" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/5.1.7.RELEASE/spring-security-config-5.1.7.RELEASE.jar!/org/springframework/security/config/annotation/SecurityConfigurer.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/5.1.7.RELEASE/spring-security-config-5.1.7.RELEASE.jar!/org/springframework/security/config/annotation/SecurityConfigurerAdapter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-442">
+          <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rememeber-me/src/main/resources/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1650" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rememeber-me/src/main/java/com/microwu/cxd/manage/RememberMeApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="12" column="25" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rememeber-me/src/main/resources/env/dev/application.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rememeber-me/src/main/resources/env/test/application.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rememeber-me/src/main/java/com/microwu/cxd/manage/security/WebSecurityConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rememeber-me/src/main/java/com/microwu/cxd/manage/security/CustomAuthenticationProcessingFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="23" column="69" lean-forward="true" selection-start-line="23" selection-start-column="69" selection-end-line="23" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/5.1.7.RELEASE/spring-security-web-5.1.7.RELEASE.jar!/org/springframework/security/web/authentication/AbstractAuthenticationProcessingFilter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="34" column="74" lean-forward="true" selection-start-line="34" selection-start-column="74" selection-end-line="34" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.11.RELEASE/spring-web-5.1.11.RELEASE.jar!/org/springframework/web/filter/GenericFilterBean.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="41" column="53" selection-start-line="41" selection-start-column="53" selection-end-line="41" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/javax/servlet/javax.servlet-api/4.0.1/javax.servlet-api-4.0.1.jar!/javax/servlet/Filter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rememeber-me/src/main/java/com/microwu/cxd/manage/controller/IndexControlller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="25" lean-forward="true" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.8.RELEASE/spring-web-5.1.8.RELEASE.jar!/org/springframework/web/filter/GenericFilterBean.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="54" column="5" selection-start-line="53" selection-start-column="31" selection-end-line="54" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/5.1.5.RELEASE/spring-security-web-5.1.5.RELEASE.jar!/org/springframework/security/web/authentication/rememberme/RememberMeAuthenticationFilter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="74" column="13" selection-start-line="49" selection-start-column="40" selection-end-line="74" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>springsecurity</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

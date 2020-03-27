@@ -1,0 +1,12 @@
+{
+  "groups": [
+    {
+      "name": "spring",
+      "type": "javax.sql.DataSource",
+      "sourceType": "com.microwu.cxd.manage.config.MysqlConfig",
+      "sourceMethod": "dataSource()"
+    }
+  ],
+  "properties": [],
+  "hints": []
+}

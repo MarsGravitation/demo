@@ -1,0 +1,8 @@
+server:
+  # 监听端口
+  port: 8080
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

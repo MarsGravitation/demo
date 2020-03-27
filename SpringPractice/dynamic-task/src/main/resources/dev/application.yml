@@ -1,0 +1,54 @@
+server:
+  # 监听端口
+  port: 8080
+  # web应用上下文路径
+  servlet:
+    context-path: /
+  use-forward-headers: true
+
+
+spring:
+  application:
+    name: dynamic-task
+
+  profiles:
+    active: dev
+
+  # mysql数据源
+  datasource-mysql:
+    name: mysql
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://192.168.133.134:3306/test?useUnicode=true&characterEncoding=utf-8&useSSL=false&useAffectedRows=true&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+    # 连接池配置信息
+    druid:
+      # 初始化大小/最小/最大
+      initial-size: 5
+      min-idle: 5
+      max-active: 20
+      # 获取连接等待超时时间
+      max-wait: 60000
+      # 间隔多久进行一次检测，检测需要关闭的空闲连接
+      time-between-eviction-runs-millis: 60000
+      # 一个连接在池中最小生存的时间
+      min-evictable-idle-time-millis: 300000
+      validation-query: SELECT 1 FROM DUAL
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+      # 打开PSCache，并指定每个连接上PSCache的大小。oracle设为true，mysql设为false。分库分表较多推荐设置为false
+      pool-prepared-statements: false
+      max-pool-prepared-statement-per-connection-size: 20
+      # 监控统计拦截的filters
+      filters: stat,wall,slf4j
+      connection-properties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+
+# 线程池配置
+thread-pool:
+  core-pool-size: 20
+  max-pool-size: 50
+  queue-capacity: 20
+  keep-alive: 20

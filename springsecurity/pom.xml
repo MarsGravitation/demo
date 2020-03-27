@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.microwu.cxd</groupId>
+  <artifactId>spring-security</artifactId>
+  <packaging>pom</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <modules>
+    <module>hello-world</module>
+    <module>login-db</module>
+      <module>rememeber-me</module>
+      <module>oauth-demo01</module>
+    <module>ip-login</module>
+      <module>login-qq</module>
+    <module>login-sms</module>
+      <module>faa-separation</module>
+      <module>rewrite-login</module>
+  </modules>
+
+  <name>spring-security</name>
+  <!-- FIXME change it to the project's website -->
+  <url>http://www.example.com</url>
+
+  <!-- 指定Spring Boot的版本 2.0.4.RELEASE -->
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>2.1.10.RELEASE</version>
+  </parent>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+  </properties>
+
+
+
+  <!--  打包命令 mvn clean package -Ptest -->
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+      </plugin>
+    </plugins>
+
+    <resources>
+      <resource>
+        <directory>src/main/resources</directory>
+        <!--    打包先排除三个文件夹    -->
+        <excludes>
+          <exclude>env/**</exclude>
+        </excludes>
+      </resource>
+
+      <resource>
+        <directory>src/main/resources</directory>
+        <includes>
+          <include>templates/**</include>
+          <include>mapper/**</include>
+        </includes>
+      </resource>
+
+      <resource>
+        <!--    关键, 把对应文件夹里的配置文件打包    -->
+        <directory>src/main/resources/env/${environment}</directory>
+      </resource>
+
+    </resources>
+  </build>
+
+  <!-- 定义多个profile, 每个profile都有一个唯一的id, 也包含properties属性.
+     这里为每个profile都定义了一个environment的properties, 每个环境都不一样.
+     当我们打包项目时, 激活不同的环境, environment就会被赋予不同的值  -->
+  <profiles>
+    <profile>
+      <id>dev</id>
+      <properties>
+        <!--    自定义字段, 可以有多个    -->
+        <environment>dev</environment>
+      </properties>
+      <!--   配置默认激活   -->
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+    </profile>
+
+    <profile>
+      <id>test</id>
+      <properties>
+        <environment>test</environment>
+      </properties>
+    </profile>
+  </profiles>
+
+</project>

@@ -1,0 +1,28 @@
+pay:
+  # 应用Id
+  appId: 2016101100657449
+  # 私钥
+  privateKey: MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCPNKuMdv8OW4xthtzSlLaj4GsNNyI7QPb38I/pkmmB1ZLkdosYHbWAWKTLqe1oD37BRpQLq4TmmJGVWAn7/+56bvRpSpC9gY4LGuRE+uBDCUAx34lYkOoyKxhF/fG2pSA/LFjRAu4KSP2lCsK1km4i9mFrSzdnYHVkTtXLJzuAgqPE2rWRsy43647k9SSakGn/BUVVw5FZzYwxEdiyks4domdUlVvhxAKnjY626T1yFJMcwSuVPwSoJURFf8wKRM7VVi16u3N00c6Y3so8KchtX0a4dbqyvurtKlwp1wnei8+QciL3E9SH4hB00X9nCDEvtSccH4ayDLiF1VSrFUD7AgMBAAECggEATZh1h+QGqgnzGnnj93q7SCrW9s80DjVSXOCNqjs6Ti6irIaLMeMPMN9XVD/cMvGKdkG/AF/M4II1CF4u8swntVGfv9m2eejURbIplDL4B3rgvOVp74J+U/bD7VD/gz8QLQrjiUV0JECOp7of7PDOGsWz3cZg2/QJR/Prpmu4sxXF5DQbcy+FDG0QAAPkCVZLr0ZhMacaiBr0PPV2X7QhhsiI6ZbGOed3dd0gvvUMuAMb2k8yMnBBxmjufM0DHzHmkE0TgQoPJqHhmIU0wJf5oPXB8aBYr1r9LCcyBmfEnfxacejz5qVkW8K+qSc8Y9mq4lHi84MX16z0ghOcgblx6QKBgQDVJak7Fg5jfyw2jNo5eGVf1Ey0eCrR+yaO94MZsIh6WJcghc+w6J8LBC3vrDDbytsleQZtTyuOfg6wWZoymxrahiA4FmgOHiuYPkOHzEuPHxYMmp0ZURxPSJtnWmGhDPuaKJddcE2u/d64a1pQie75CkqfudwZELD6txB1xU7vtQKBgQCr/z0+/8c/1wvUcnZQcpUe2HGcdvd66UdNGf+k974A5wjBcI89sZyDGg013IiPHsIxHAiRfmz/CZs9PBnZ2khiqfI+2eL6ECUKCX/DJgVLku9UwE6RZNaeCtoaGwhM8WuVaA+OuBTpmiOQs2IbbW/3sLXyoxCo4DVLWYGKlAn77wKBgDqEBFm8TGb0Wub+9Eoiy3HrjsNc2iSblpJZURyUYmN0Pskm80XWFxOnKhVKaH9uyYsYFrObsJGF+fJgJv0Np+mmOOItBJQbpEw/i7qUU4oPNrZvHAH/So5ZmJBfN75HGivQSP3V/v2zpJlsn3bM51ZnhOUk2U/oTS4HY/VxHaKhAoGBAJNHufNTZRQGmkuuRB/5LjY+k3Ku8JZgYbzlEWL6/cmaDIZQU2g5ydL9oOhJUupzJUiWP8QOpVjyqesSpvRElY1fB1/IhjMpVf41SiEaUph3VteU4PJhjeHBWyfVlBMG+9/xPrkwaj/qzJ+g69aerK1FtVfzSFXDv/8owuOehrojAoGABjV14tV2LJINVWipExYvIgaqvQ4m5tDG72hwBBZlAuw4vOzRb+guSTmLYMzcegfLZKWT30S2S+RMY3LaVgz68ZNoXI/gJ2LGDEb8aFwBY1o31dh3SiBtLqU2DumgPgrIMRfyQVfQ0ZyH2LcqtmR3TmTwWU3kKs7bRKC/vQAqoK0=
+  #支付宝公钥
+  publicKey: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAjzSrjHb/DluMbYbc0pS2o+BrDTciO0D29/CP6ZJpgdWS5HaLGB21gFiky6ntaA9+wUaUC6uE5piRlVgJ+//uem70aUqQvYGOCxrkRPrgQwlAMd+JWJDqMisYRf3xtqUgPyxY0QLuCkj9pQrCtZJuIvZha0s3Z2B1ZE7Vyyc7gIKjxNq1kbMuN+uO5PUkmpBp/wVFVcORWc2MMRHYspLOHaJnVJVb4cQCp42Otuk9chSTHMErlT8EqCVERX/MCkTO1VYtertzdNHOmN7KPCnIbV9GuHW6sr7q7SpcKdcJ3ovPkHIi9xPUh+IQdNF/ZwgxL7UnHB+Gsgy4hdVUqxVA+wIDAQAB
+  # 服务器异步通知
+  notifyUrl: http://
+  # 页面同步跳转同步通知路径
+  returnUrl: http://
+  # 签名方式
+  signType: RSA2
+  # 字符编码格式
+  charset: utf-8
+  # 支付宝网关
+  gatewayUrl: https://openapi.alipaydev.com/gateway.do
+
+server:
+  port: 8080
+  # web应用上下文路径
+  servlet:
+    context-path: /
+  use-forward-headers: true
+
+spring:
+  thymeleaf:
+    prefix: classpath:/templates/

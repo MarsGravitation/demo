@@ -1,0 +1,15 @@
+spring:
+  profiles:
+    active: dev
+
+  data:
+    mongodb:
+      uri: mongodb://cxd:123456@192.168.133.134:27017/cxd?authSource=cxd&authMechanism=SCRAM-SHA-1
+
+# 日志配置
+logging:
+  level:
+    com:
+      microwu:
+        dsp:
+          safe: debug

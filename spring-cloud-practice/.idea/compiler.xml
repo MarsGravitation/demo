@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="service-registry" />
+        <module name="consumer-ribbon" />
+        <module name="provider-user" />
+        <module name="consumer-feign" />
+        <module name="provider-user-2" />
+        <module name="gateway-zuul" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="consumer-feign" options="-parameters" />
+      <module name="consumer-ribbon" options="-parameters" />
+      <module name="gateway-zuul" options="-parameters" />
+      <module name="provider-user" options="-parameters" />
+      <module name="provider-user-2" options="-parameters" />
+      <module name="service-registry" options="-parameters" />
+      <module name="spring-cloud-practice" options="-parameters" />
+    </option>
+  </component>
+</project>

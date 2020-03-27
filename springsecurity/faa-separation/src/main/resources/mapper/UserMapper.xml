@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.microwu.cxd.manage.mapper.UserMapper">
+    <resultMap id="userResultMap" type="com.microwu.cxd.manage.domain.UserDO">
+        <id column="id" property="id"/>
+        <result column="username" property="username"/>
+        <result column="password" property="password"/>
+        <result property="nickname" column="nickname"/>
+        <result property="roles" column="roles"/>
+    </resultMap>
+
+    <resultMap id="permissionResultMap" type="com.microwu.cxd.manage.domain.Permission">
+        <id column="id" property="id"/>
+        <result column="name" property="name"/>
+        <result column="permission" property="permission"/>
+    </resultMap>
+
+    <select id="getUsername" resultMap="userResultMap">
+        select * from user where username = #{username}
+    </select>
+
+    <insert id="insert" parameterType="com.microwu.cxd.manage.domain.UserDO">
+        insert into user (username, password, mobile, nickname) values (#{username}, #{password}, #{mobile}, #{nickname})
+    </insert>
+
+    <select id="getPermissions" resultMap="permissionResultMap">
+        select * from permission where id = #{id}
+    </select>
+
+
+</mapper>
