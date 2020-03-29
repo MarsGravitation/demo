@@ -1,7 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="58e6f5af-07fd-44c6-b3ba-2149e51386ef" name="Default Changelist" comment="" />
+    <list default="true" id="58e6f5af-07fd-44c6-b3ba-2149e51386ef" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../Jdk1.8-test/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-cloud-practice/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Jdk1.8-test/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Jdk1.8-test/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-mvc/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-mvc/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-webflux/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-webflux/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-webflux/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-webflux/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-webflux/target/spring-webflux-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-webflux/target/spring-webflux-1.0-SNAPSHOT.jar.original" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/third-part-payment/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/third-part-payment/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/third-part-payment/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/third-part-payment/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/third-part-payment/target/third-part-payment-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/third-part-payment/target/third-part-payment-1.0-SNAPSHOT.jar.original" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-cloud-practice/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-cloud-practice/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-cloud-practice/consumer-feign/target/classes/META-INF/consumer-feign.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-cloud-practice/consumer-ribbon/target/classes/META-INF/consumer-ribbon.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-cloud-practice/gateway-zuul/target/classes/META-INF/gateway-zuul.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-cloud-practice/gateway-zuul/target/test-classes/META-INF/gateway-zuul.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-cloud-practice/provider-user-2/target/classes/META-INF/provider-user-2.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-cloud-practice/provider-user-2/target/test-classes/META-INF/provider-user-2.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-cloud-practice/provider-user/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-cloud-practice/provider-user/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-cloud-practice/provider-user/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-cloud-practice/provider-user/target/provider-user-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-cloud-practice/provider-user/target/provider-user-1.0-SNAPSHOT.jar.original" beforeDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/spring-redis/target/" />
@@ -47,6 +78,9 @@
       <find>MappingJackson2HttpMessageConverter</find>
       <find>getMessageConverters</find>
     </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -123,6 +157,15 @@
       <expand>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="Maven Quick Start Archetype" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="Maven Quick Start Archetype" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
           <item name="spring-mvc" type="9519ce18:MavenProjectsStructure$ProjectNode" />
         </path>
         <path>
@@ -139,12 +182,12 @@
     <option name="width" value="1440" />
     <option name="height" value="1017" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -155,63 +198,20 @@
             <path>
               <item name="SpringStudy" type="b2602c69:ProjectViewProjectNode" />
               <item name="SpringStudy" type="462c0819:PsiDirectoryNode" />
-              <item name="third-part-payment" type="462c0819:PsiDirectoryNode" />
+              <item name="spring-zookeeper" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SpringStudy" type="b2602c69:ProjectViewProjectNode" />
               <item name="SpringStudy" type="462c0819:PsiDirectoryNode" />
-              <item name="third-part-payment" type="462c0819:PsiDirectoryNode" />
+              <item name="spring-zookeeper" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SpringStudy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SpringStudy" type="462c0819:PsiDirectoryNode" />
-              <item name="third-part-payment" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SpringStudy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SpringStudy" type="462c0819:PsiDirectoryNode" />
-              <item name="third-part-payment" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SpringStudy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SpringStudy" type="462c0819:PsiDirectoryNode" />
-              <item name="third-part-payment" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="cxd" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SpringStudy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SpringStudy" type="462c0819:PsiDirectoryNode" />
-              <item name="third-part-payment" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="cxd" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SpringStudy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SpringStudy" type="462c0819:PsiDirectoryNode" />
-              <item name="third-part-payment" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="cxd" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -220,6 +220,7 @@
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -451,6 +452,7 @@
       <workItem from="1579586958293" duration="8580000" />
       <workItem from="1580714370850" duration="34000" />
       <workItem from="1585039165586" duration="72000" />
+      <workItem from="1585287909423" duration="25000" />
     </task>
     <servers />
   </component>
@@ -487,7 +489,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="179886000" />
+    <option name="totallyTimeSpent" value="179911000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
@@ -500,7 +502,7 @@
       <window_info id="Web" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.54884547" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.5480427" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991228" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />

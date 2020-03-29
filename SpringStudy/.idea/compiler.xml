@@ -6,15 +6,15 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="springmvc" />
-        <module name="springlogger" />
-        <module name="springrabbimq" />
+        <module name="spring-webflux" />
         <module name="spring-zookeeper" />
+        <module name="springlogger" />
+        <module name="netty" />
+        <module name="springrabbimq" />
         <module name="springsecurity" />
         <module name="springredis" />
-        <module name="netty" />
         <module name="thirdpartpayment" />
-        <module name="spring-webflux" />
+        <module name="springmvc" />
       </profile>
     </annotationProcessing>
   </component>

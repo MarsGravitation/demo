@@ -1,7 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a6d39f2b-9481-485f-bb90-551bfdff6d7e" name="Default Changelist" comment="" />
+    <list default="true" id="a6d39f2b-9481-485f-bb90-551bfdff6d7e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../Jdk1.8-test/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Jdk1.8-test/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Jdk1.8-test/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consumer-feign/target/classes/META-INF/consumer-feign.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/consumer-ribbon/target/classes/META-INF/consumer-ribbon.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-zuul/target/classes/META-INF/gateway-zuul.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-zuul/target/test-classes/META-INF/gateway-zuul.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provider-user-2/target/classes/META-INF/provider-user-2.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provider-user-2/target/test-classes/META-INF/provider-user-2.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provider-user/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provider-user/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provider-user/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provider-user/target/provider-user-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provider-user/target/provider-user-1.0-SNAPSHOT.jar.original" beforeDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/service-registry/target/" />
@@ -26,7 +42,7 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -35,6 +51,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -80,31 +99,12 @@
       <expand>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="provider-user" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="spring-cloud-practice" type="9519ce18:MavenProjectsStructure$ProjectNode" />
         </path>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="provider-user" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="spring-cloud-practice" type="9519ce18:MavenProjectsStructure$ProjectNode" />
           <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="provider-user" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="service-registry" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="service-registry" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="service-registry" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
         </path>
       </expand>
       <select />
@@ -116,11 +116,13 @@
     <option name="width" value="1440" />
     <option name="height" value="765" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -137,51 +139,13 @@
               <item name="spring-cloud-practice" type="b2602c69:ProjectViewProjectNode" />
               <item name="spring-cloud-practice" type="462c0819:PsiDirectoryNode" />
               <item name="provider-user" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spring-cloud-practice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spring-cloud-practice" type="462c0819:PsiDirectoryNode" />
-              <item name="provider-user" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spring-cloud-practice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spring-cloud-practice" type="462c0819:PsiDirectoryNode" />
-              <item name="provider-user" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spring-cloud-practice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spring-cloud-practice" type="462c0819:PsiDirectoryNode" />
-              <item name="provider-user" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="cxd" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spring-cloud-practice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spring-cloud-practice" type="462c0819:PsiDirectoryNode" />
-              <item name="provider-user" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spring-cloud-practice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spring-cloud-practice" type="462c0819:PsiDirectoryNode" />
-              <item name="service-registry" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -189,6 +153,7 @@
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -307,11 +272,12 @@
       <updated>1584752461486</updated>
       <workItem from="1584752464426" duration="21090000" />
       <workItem from="1585128901679" duration="2098000" />
+      <workItem from="1585287789586" duration="48000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23188000" />
+    <option name="totallyTimeSpent" value="23236000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
@@ -322,7 +288,7 @@
       <window_info id="UI Designer" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info id="Web" order="5" side_tool="true" />
-      <window_info anchor="bottom" id="Run" order="0" weight="0.61634105" />
+      <window_info anchor="bottom" id="Run" order="0" weight="0.61565834" />
       <window_info anchor="bottom" id="Spring" order="1" />
       <window_info anchor="bottom" id="Terminal" order="2" />
       <window_info anchor="bottom" id="Docker" order="3" show_stripe_button="false" />
