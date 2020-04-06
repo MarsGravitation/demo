@@ -2,261 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20045a90-d782-4cd5-ae77-3a2ff8f938f2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Jdk1.8-test/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SpringStudy/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring-cloud-practice/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/quartz/src/main/java/com/microwu/cxd/demo2/QuartzDemo01.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Jdk1.8-test/Jdk1.8-test-lambda/src/com/microwu/structure/BinaryTree.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Jdk1.8-test/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Jdk1.8-test/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SpringStudy/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringStudy/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SpringStudy/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringStudy/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SpringStudy/spring-mvc/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SpringStudy/spring-mvc/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SpringStudy/spring-webflux/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SpringStudy/spring-webflux/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SpringStudy/spring-webflux/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SpringStudy/spring-webflux/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SpringStudy/spring-webflux/target/spring-webflux-1.0-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SpringStudy/spring-webflux/target/spring-webflux-1.0-SNAPSHOT.jar.original" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SpringStudy/third-part-payment/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SpringStudy/third-part-payment/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SpringStudy/third-part-payment/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SpringStudy/third-part-payment/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SpringStudy/third-part-payment/target/third-part-payment-1.0-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SpringStudy/third-part-payment/target/third-part-payment-1.0-SNAPSHOT.jar.original" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-cloud-practice/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-cloud-practice/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-cloud-practice/consumer-feign/target/classes/META-INF/consumer-feign.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-cloud-practice/consumer-ribbon/target/classes/META-INF/consumer-ribbon.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-cloud-practice/gateway-zuul/target/classes/META-INF/gateway-zuul.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-cloud-practice/gateway-zuul/target/test-classes/META-INF/gateway-zuul.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-cloud-practice/provider-user-2/target/classes/META-INF/provider-user-2.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-cloud-practice/provider-user-2/target/test-classes/META-INF/provider-user-2.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-cloud-practice/provider-user/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-cloud-practice/provider-user/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-cloud-practice/provider-user/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-cloud-practice/provider-user/target/provider-user-1.0-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-cloud-practice/provider-user/target/provider-user-1.0-SNAPSHOT.jar.original" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consumer/target/classes/com/microwu/cxd/dubbo/App.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/consumer/target/classes/consumer.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/consumer/target/classes/log4j.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/consumer/target/test-classes/META-INF/consumer.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jmeter/target/classes/com/microwu/cxd/OutputService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jmeter/target/classes/com/microwu/cxd/SdkTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logtest/target/classes/com/microwu/cxd/App.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logtest/target/classes/com/microwu/cxd/log/JCLTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logtest/target/classes/com/microwu/cxd/log/JDKLogTest$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logtest/target/classes/com/microwu/cxd/log/JDKLogTest$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logtest/target/classes/com/microwu/cxd/log/JDKLogTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logtest/target/classes/com/microwu/cxd/log/SLF4JTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logtest/target/test-classes/com/microwu/cxd/AppTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/asynchronous/com/microwu/cxd/asynchronous/callback/CallBack2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/asynchronous/com/microwu/cxd/asynchronous/callback/Callback.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/asynchronous/com/microwu/cxd/asynchronous/callback/Callback3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/asynchronous/com/microwu/cxd/asynchronous/client/A.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/asynchronous/com/microwu/cxd/asynchronous/client/Browser$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/asynchronous/com/microwu/cxd/asynchronous/client/Browser$MyCallback.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/asynchronous/com/microwu/cxd/asynchronous/client/Browser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/asynchronous/com/microwu/cxd/asynchronous/client/Client$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/asynchronous/com/microwu/cxd/asynchronous/client/Client$MyCallback.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/asynchronous/com/microwu/cxd/asynchronous/client/Client.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/asynchronous/com/microwu/cxd/asynchronous/server/B.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/asynchronous/com/microwu/cxd/asynchronous/server/Server.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/asynchronous/com/microwu/cxd/asynchronous/server/Servicer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/asynchronous/com/microwu/cxd/asynchronous/test/CallbackTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/asynchronous/com/microwu/cxd/asynchronous/test/CallbackTest2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/asynchronous/com/microwu/cxd/asynchronous/test/CallbackTest3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/design-pattern/com/microwu/cxd/abstract_factory/AbstractFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/design-pattern/com/microwu/cxd/abstract_factory/AbstractFactoryPatternDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/design-pattern/com/microwu/cxd/abstract_factory/Blue.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/design-pattern/com/microwu/cxd/abstract_factory/Circle.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/design-pattern/com/microwu/cxd/abstract_factory/Color.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/design-pattern/com/microwu/cxd/abstract_factory/ColorFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/design-pattern/com/microwu/cxd/abstract_factory/FactoryProducer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/design-pattern/com/microwu/cxd/abstract_factory/Green.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/design-pattern/com/microwu/cxd/abstract_factory/Rectangle.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/design-pattern/com/microwu/cxd/abstract_factory/Red.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/design-pattern/com/microwu/cxd/abstract_factory/Shape.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/design-pattern/com/microwu/cxd/abstract_factory/ShapeFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/design-pattern/com/microwu/cxd/abstract_factory/Square.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/design-pattern/com/microwu/cxd/adapter/AdapterPatternDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/design-pattern/com/microwu/cxd/adapter/AdvanceMediaPlayer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/design-pattern/com/microwu/cxd/adapter/AudioPlayer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/design-pattern/com/microwu/cxd/adapter/MediaAdapter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/design-pattern/com/microwu/cxd/adapter/MediaPlayer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/design-pattern/com/microwu/cxd/adapter/Mp4Player.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/design-pattern/com/microwu/cxd/adapter/V1cPlayer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/design-pattern/com/microwu/cxd/builder/Bottle.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/design-pattern/com/microwu/cxd/builder/BuilderPatternDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/design-pattern/com/microwu/cxd/builder/Burger.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/design-pattern/com/microwu/cxd/builder/ChickenBurger.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/design-pattern/com/microwu/cxd/builder/Coke.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/design-pattern/com/microwu/cxd/builder/ColdDrink.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/design-pattern/com/microwu/cxd/builder/Item.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/design-pattern/com/microwu/cxd/builder/Meal.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/design-pattern/com/microwu/cxd/builder/MealBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/design-pattern/com/microwu/cxd/builder/Packing.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/design-pattern/com/microwu/cxd/builder/Pepsi.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/design-pattern/com/microwu/cxd/builder/VegBurger.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/design-pattern/com/microwu/cxd/builder/Wrapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/design-pattern/com/microwu/cxd/observer/CurrentConditionsDisplay.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/design-pattern/com/microwu/cxd/observer/DisplayElement.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/design-pattern/com/microwu/cxd/observer/Observer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/design-pattern/com/microwu/cxd/observer/Subject.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/design-pattern/com/microwu/cxd/observer/WeatherData.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/design-pattern/com/microwu/cxd/observer/WeatherStation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/design-pattern/com/microwu/cxd/prototype/PrototypePatternDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/design-pattern/com/microwu/cxd/prototype/Rectangle.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/design-pattern/com/microwu/cxd/prototype/Shape.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/design-pattern/com/microwu/cxd/prototype/ShapeCache.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/design-pattern/com/microwu/cxd/simple_factory/Circle.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/design-pattern/com/microwu/cxd/simple_factory/FactoryPatternDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/design-pattern/com/microwu/cxd/simple_factory/Rectangle.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/design-pattern/com/microwu/cxd/simple_factory/Shape.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/design-pattern/com/microwu/cxd/simple_factory/ShapeFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/design-pattern/com/microwu/cxd/simple_factory/Square.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/design-pattern/com/microwu/cxd/singleton/DoubleCheckedLockingSingleton.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/design-pattern/com/microwu/cxd/singleton/HungrySingleton.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/design-pattern/com/microwu/cxd/singleton/LazySingleton.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/design-pattern/com/microwu/cxd/singleton/SingletonEnum$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/design-pattern/com/microwu/cxd/singleton/SingletonEnum.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/design-pattern/com/microwu/cxd/singleton/StaticInnerSingleton$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/design-pattern/com/microwu/cxd/singleton/StaticInnerSingleton$SingletonHolder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/design-pattern/com/microwu/cxd/singleton/StaticInnerSingleton.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/design-pattern/com/microwu/cxd/strategy/Context.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/design-pattern/com/microwu/cxd/strategy/OperationAdd.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/design-pattern/com/microwu/cxd/strategy/OperationSubstract.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/design-pattern/com/microwu/cxd/strategy/Strategy.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/design-pattern/com/microwu/cxd/strategy/StrategyPatternDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/factory-model/com/mocrowu/cxd/abstract_factory/AbstractFactoryTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/factory-model/com/mocrowu/cxd/abstract_factory/NYPizzaIngredientFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/factory-model/com/mocrowu/cxd/abstract_factory/PizzaIngredientFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/factory-model/com/mocrowu/cxd/abstract_factory/pojo/Cheese.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/factory-model/com/mocrowu/cxd/abstract_factory/pojo/CheesePizza.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/factory-model/com/mocrowu/cxd/abstract_factory/pojo/Clams.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/factory-model/com/mocrowu/cxd/abstract_factory/pojo/ClamsPizza.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/factory-model/com/mocrowu/cxd/abstract_factory/pojo/Dough.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/factory-model/com/mocrowu/cxd/abstract_factory/pojo/FreshClams.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/factory-model/com/mocrowu/cxd/abstract_factory/pojo/Garlic.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/factory-model/com/mocrowu/cxd/abstract_factory/pojo/MarinaraSauce.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/factory-model/com/mocrowu/cxd/abstract_factory/pojo/Mushroom.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/factory-model/com/mocrowu/cxd/abstract_factory/pojo/NYPizzaStore.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/factory-model/com/mocrowu/cxd/abstract_factory/pojo/Onion.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/factory-model/com/mocrowu/cxd/abstract_factory/pojo/Pepperoni.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/factory-model/com/mocrowu/cxd/abstract_factory/pojo/Pizza.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/factory-model/com/mocrowu/cxd/abstract_factory/pojo/PizzaStore.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/factory-model/com/mocrowu/cxd/abstract_factory/pojo/RefPepper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/factory-model/com/mocrowu/cxd/abstract_factory/pojo/ReggianoCheese.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/factory-model/com/mocrowu/cxd/abstract_factory/pojo/Sauce.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/factory-model/com/mocrowu/cxd/abstract_factory/pojo/SlicedPepperoni.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/factory-model/com/mocrowu/cxd/abstract_factory/pojo/ThinCrustDough.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/factory-model/com/mocrowu/cxd/abstract_factory/pojo/Veggies.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/factory-model/com/mocrowu/cxd/abstracts/ChicagoPizzaStore.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/factory-model/com/mocrowu/cxd/abstracts/ChicagoStyleCheesePizza.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/factory-model/com/mocrowu/cxd/abstracts/NYPizzaStore.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/factory-model/com/mocrowu/cxd/abstracts/NYStyleChinesePizza.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/factory-model/com/mocrowu/cxd/abstracts/Pizza.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/factory-model/com/mocrowu/cxd/abstracts/PizzaStore.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/factory-model/com/mocrowu/cxd/abstracts/PizzaTestDrive.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/factory-model/com/mocrowu/cxd/adapter/BioRobot.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/factory-model/com/mocrowu/cxd/adapter/Client.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/factory-model/com/mocrowu/cxd/adapter/Dog.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/factory-model/com/mocrowu/cxd/adapter/DogAdapter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/factory-model/com/mocrowu/cxd/adapter/Robot.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/factory-model/com/mocrowu/cxd/builder/Client.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/factory-model/com/mocrowu/cxd/builder/KFCWaiter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/factory-model/com/mocrowu/cxd/builder/Meal.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/factory-model/com/mocrowu/cxd/builder/MealA.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/factory-model/com/mocrowu/cxd/builder/MealB.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/factory-model/com/mocrowu/cxd/builder/MealBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/factory-model/com/mocrowu/cxd/chain/AbstractLogger.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/factory-model/com/mocrowu/cxd/chain/ChainPatternDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/factory-model/com/mocrowu/cxd/chain/ConsoleLogger.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/factory-model/com/mocrowu/cxd/chain/ErrorLogger.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/factory-model/com/mocrowu/cxd/chain/FileLogger.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/factory-model/com/mocrowu/cxd/listener/Even.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/factory-model/com/mocrowu/cxd/listener/Person.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/factory-model/com/mocrowu/cxd/listener/PersonListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/factory-model/com/mocrowu/cxd/listener/TestListener$MyPersonLister.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/factory-model/com/mocrowu/cxd/listener/TestListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/factory-model/com/mocrowu/cxd/observer/CurrentConditionDisplay.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/factory-model/com/mocrowu/cxd/observer/DisplayElement.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/factory-model/com/mocrowu/cxd/observer/Observer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/factory-model/com/mocrowu/cxd/observer/Subject.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/factory-model/com/mocrowu/cxd/observer/WeatherData.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/factory-model/com/mocrowu/cxd/observer/WeatherStation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/factory-model/com/mocrowu/cxd/prototype/Client.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/factory-model/com/mocrowu/cxd/prototype/Resume.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/factory-model/com/mocrowu/cxd/simple/ChinesePizza.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/factory-model/com/mocrowu/cxd/simple/EnglishPizza.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/factory-model/com/mocrowu/cxd/simple/Pizza.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/factory-model/com/mocrowu/cxd/simple/PizzaStore.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/factory-model/com/mocrowu/cxd/simple/SimplyPizzaFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/factory-model/com/mocrowu/cxd/singleton/Singleton_1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/factory-model/com/mocrowu/cxd/singleton/Singleton_2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/factory-model/com/mocrowu/cxd/singleton/Singleton_3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/factory-model/com/mocrowu/cxd/singleton/Singleton_4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/factory-model/com/mocrowu/cxd/singleton/Singleton_5$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/factory-model/com/mocrowu/cxd/singleton/Singleton_5$SingletonHolder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/factory-model/com/mocrowu/cxd/singleton/Singleton_5.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/factory-model/com/mocrowu/cxd/singleton/Singleton_6.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/factory-model/com/mocrowu/cxd/strategy/ArrayHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/factory-model/com/mocrowu/cxd/strategy/BubbleSort.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/factory-model/com/mocrowu/cxd/strategy/Client.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/factory-model/com/mocrowu/cxd/strategy/InsertSort.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/factory-model/com/mocrowu/cxd/strategy/SelectSort.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/factory-model/com/mocrowu/cxd/strategy/Sort.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/factory-model/com/mocrowu/cxd/template_method/CaffeineBeverage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/factory-model/com/mocrowu/cxd/template_method/Coffee.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/factory-model/com/mocrowu/cxd/template_method/Tea.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/factory-model/com/mocrowu/cxd/template_method/Test.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/file/com/microwu/cxd/file/split/FileMerge.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/file/com/microwu/cxd/file/split/FileSplitDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/java8/com/microwu/cxd/java8/stream/StreamTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/multithreading/com/microwu/cxd/multithreading/Problem$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/multithreading/com/microwu/cxd/multithreading/Problem.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/multithreading/com/microwu/cxd/multithreading/creation/CreateTheadDemo$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/multithreading/com/microwu/cxd/multithreading/creation/CreateTheadDemo$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/multithreading/com/microwu/cxd/multithreading/creation/CreateTheadDemo$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/multithreading/com/microwu/cxd/multithreading/creation/CreateTheadDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/multithreading/com/microwu/cxd/multithreading/status/InterruptDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/multithreading/com/microwu/cxd/multithreading/sync/SynchronizedDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/multithreading/com/microwu/cxd/multithreading/threadpool/ThreadPoolDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/nio/com/microwu/cxd/nio/BigFileReader$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/nio/com/microwu/cxd/nio/BigFileReader$Builder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/nio/com/microwu/cxd/nio/BigFileReader$SliceReaderTask.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/nio/com/microwu/cxd/nio/BigFileReader$StartEndPair.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/nio/com/microwu/cxd/nio/BigFileReader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/nio/com/microwu/cxd/nio/IHandle.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/nio/com/microwu/cxd/nio/Main$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/nio/com/microwu/cxd/nio/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/nio/com/microwu/cxd/nio/line/NIODemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/nio/com/microwu/cxd/nio/line/NIOReadLine01.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/nio/com/microwu/cxd/nio/line/NIOReadLine02.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/nio/com/microwu/cxd/nio/line/NIOTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/reflex/com/microwu/cxd/reflex/ReflexDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/reflex/com/microwu/cxd/reflex/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/target/classes/META-INF.spring/provider.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/target/classes/com/microwu/cxd/App.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/target/classes/com/microwu/cxd/service/ProviderService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/target/classes/com/microwu/cxd/service/impl/ProviderServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/target/classes/log4j.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/quartz/src/main/java/com/microwu/cxd/App.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/quartz/src/main/java/com/microwu/cxd/job/EmailJob.java" beforeDir="false" afterPath="$PROJECT_DIR$/quartz/src/main/java/com/microwu/cxd/demo/job/EmailJob.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quartz/src/main/java/com/microwu/cxd/job/HelloJob.java" beforeDir="false" afterPath="$PROJECT_DIR$/quartz/src/main/java/com/microwu/cxd/demo/job/HelloJob.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quartz/src/main/java/com/microwu/cxd/job/TaskJob.java" beforeDir="false" afterPath="$PROJECT_DIR$/quartz/src/main/java/com/microwu/cxd/demo/job/TaskJob.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quartz/src/main/java/com/microwu/cxd/scheduler/CronScheduler.java" beforeDir="false" afterPath="$PROJECT_DIR$/quartz/src/main/java/com/microwu/cxd/demo/scheduler/CronScheduler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quartz/src/main/java/com/microwu/cxd/scheduler/HelloScheduler.java" beforeDir="false" afterPath="$PROJECT_DIR$/quartz/src/main/java/com/microwu/cxd/demo/scheduler/HelloScheduler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quartz/src/main/java/com/microwu/cxd/scheduler/SecondeScheduler.java" beforeDir="false" afterPath="$PROJECT_DIR$/quartz/src/main/java/com/microwu/cxd/demo/scheduler/SecondeScheduler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quartz/src/main/java/com/microwu/cxd/scheduler/TaskScheduler.java" beforeDir="false" afterPath="$PROJECT_DIR$/quartz/src/main/java/com/microwu/cxd/demo/scheduler/TaskScheduler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quartz/target/classes/com/microwu/cxd/App.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/quartz/target/classes/com/microwu/cxd/job/EmailJob.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/quartz/target/classes/com/microwu/cxd/job/HelloJob.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/quartz/target/classes/com/microwu/cxd/job/TaskJob.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/quartz/target/classes/com/microwu/cxd/scheduler/CronScheduler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/quartz/target/classes/com/microwu/cxd/scheduler/HelloScheduler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/quartz/target/classes/com/microwu/cxd/scheduler/SecondeScheduler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/quartz/target/classes/com/microwu/cxd/scheduler/TaskScheduler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Jdk1.8-test/Jdk1.8-test-lambda/src/com/microwu/collection/ListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Jdk1.8-test/Jdk1.8-test-lambda/src/com/microwu/collection/ListTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Jdk1.8-test/Jdk1.8-test-lambda/src/com/microwu/time/TimeDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Jdk1.8-test/Jdk1.8-test-lambda/src/com/microwu/time/TimeDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Jdk1.8-test/out/production/Jdk1.8-test-lambda/com/microwu/collection/ListTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Jdk1.8-test/out/production/Jdk1.8-test-lambda/com/microwu/collection/ListTest.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/clone/target/" />
@@ -410,7 +160,7 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="990" />
-    <option name="y" value="10" />
+    <option name="y" value="9" />
     <option name="width" value="1104" />
     <option name="height" value="765" />
   </component>
@@ -420,7 +170,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -428,67 +177,12 @@
               <item name="study-day01" type="b2602c69:ProjectViewProjectNode" />
               <item name="study-day01" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="study-day01" type="b2602c69:ProjectViewProjectNode" />
-              <item name="study-day01" type="462c0819:PsiDirectoryNode" />
-              <item name="quartz" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="study-day01" type="b2602c69:ProjectViewProjectNode" />
-              <item name="study-day01" type="462c0819:PsiDirectoryNode" />
-              <item name="quartz" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="study-day01" type="b2602c69:ProjectViewProjectNode" />
-              <item name="study-day01" type="462c0819:PsiDirectoryNode" />
-              <item name="quartz" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="study-day01" type="b2602c69:ProjectViewProjectNode" />
-              <item name="study-day01" type="462c0819:PsiDirectoryNode" />
-              <item name="quartz" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="study-day01" type="b2602c69:ProjectViewProjectNode" />
-              <item name="study-day01" type="462c0819:PsiDirectoryNode" />
-              <item name="quartz" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="cxd" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="study-day01" type="b2602c69:ProjectViewProjectNode" />
-              <item name="study-day01" type="462c0819:PsiDirectoryNode" />
-              <item name="quartz" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="cxd" type="462c0819:PsiDirectoryNode" />
-              <item name="demo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="study-day01" type="b2602c69:ProjectViewProjectNode" />
-              <item name="study-day01" type="462c0819:PsiDirectoryNode" />
-              <item name="quartz" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="cxd" type="462c0819:PsiDirectoryNode" />
-              <item name="demo" type="462c0819:PsiDirectoryNode" />
-              <item name="scheduler" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -691,6 +385,7 @@
       <workItem from="1585318786166" duration="787000" />
       <workItem from="1585378337640" duration="52000" />
       <workItem from="1585386634392" duration="3266000" />
+      <workItem from="1585821917409" duration="611000" />
     </task>
     <servers />
   </component>
@@ -703,7 +398,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="181229000" />
+    <option name="totallyTimeSpent" value="181840000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
@@ -1072,13 +767,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/quartz/src/main/java/com/microwu/cxd/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/quartz/src/main/java/com/microwu/cxd/App.java" />
     <entry file="jar://$MAVEN_REPOSITORY$/org/quartz-scheduler/quartz/2.3.0/quartz-2.3.0.jar!/org/quartz/Job.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">

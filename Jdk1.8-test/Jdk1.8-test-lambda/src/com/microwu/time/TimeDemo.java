@@ -123,9 +123,11 @@ public class TimeDemo {
 
     public static void test10() {
         // 计算两个日期之间的天数和月数
-        LocalDate date = LocalDate.of(2019, Month.AUGUST, 23);
-        LocalDate now = LocalDate.now();
-        Period between = Period.between(date, now);
+        LocalDate date = LocalDate.of(2020, Month.JANUARY, 22);
+//        LocalDate now = LocalDate.now();
+        LocalDate now = LocalDate.of(2020, Month.MARCH, 14);
+//        Period between = Period.between(date, now);
+//        System.out.println(between.getDays());
         long between1 = ChronoUnit.DAYS.between(date, now);
         System.out.println(between1 - 1);
         // 获取时间戳
