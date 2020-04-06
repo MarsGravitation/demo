@@ -1,7 +1,0 @@
-security:
-  basic:
-    enable: true
-
-spring:
-  profiles:
-    active: dev
