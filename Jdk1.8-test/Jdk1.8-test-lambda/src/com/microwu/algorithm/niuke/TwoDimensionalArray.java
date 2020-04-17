@@ -9,7 +9,7 @@ package com.microwu.algorithm.niuke;
  * Update History:
  * Author        Time            Content
  */
-public class NiuKeDemo02 {
+public class TwoDimensionalArray {
 
     public static void test() {
         int[][] nums = {

@@ -16,7 +16,7 @@ package com.microwu.algorithm.niuke;
  * Update History:
  * Author        Time            Content
  */
-public class NiuKeDemo03 {
+public class ReplaceSpaces {
 
     private static void test() {
         String str = "A B A";

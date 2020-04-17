@@ -1,5 +1,8 @@
 package com.microwu.cxd.controller.retry;
 
+import com.github.rholder.retry.RetryException;
+import com.microwu.cxd.service.GuavaRetryService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.retry.RecoveryCallback;
 import org.springframework.retry.RetryCallback;
 import org.springframework.retry.annotation.Backoff;
@@ -12,9 +15,17 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Collections;
+import java.util.concurrent.ExecutionException;
 
 /**
  * Description:
+ *      重试：
+ *          1. 递归重试的博客找不到了
+ *          2. spring 的重试
+ *              https://www.cnblogs.com/mfrank/p/11336770.html
+ *          3. guava 的重试
+ *              https://blog.csdn.net/sinat_26342009/article/details/88045701
+ *
  *
  * @Author: chengxudong             chengxudong@microwu.com
  * Date:       2020/1/21   14:15
@@ -24,6 +35,9 @@ import java.util.Collections;
  */
 @RestController
 public class RetryController {
+
+    @Autowired
+    private GuavaRetryService guavaRetryService;
 
     @GetMapping("/retry")
     public String retry() {
@@ -87,6 +101,24 @@ public class RetryController {
     @Retryable(value = Exception.class, maxAttempts = 3, backoff = @Backoff(delay = 1000, multiplier = 2))
     public String annotationRetry() {
         springHttp();
+        return "success";
+    }
+
+    /**
+     * 使用guava 进行重试
+     * https://blog.csdn.net/sinat_26342009/article/details/88045701
+     *
+     * 异步方法最好不要有返回值
+     *
+     * @author   chengxudong               chengxudong@microwu.com
+     * @date    2020/4/16  9:41
+     *
+     * @param
+     * @return  java.lang.String
+     */
+    @GetMapping("/guava/retry")
+    public String guavaRetry() throws ExecutionException, RetryException {
+        guavaRetryService.retry();
         return "success";
     }
 

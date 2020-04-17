@@ -14,13 +14,18 @@ package com.microwu.algorithm.niuke;
  *
  *  要求: 时间复杂度O(n), 空间复杂度O(1)
  *
+ *  不考虑时间复杂度，空间复杂度的想法：
+ *      1. 双循环判断
+ *      2. 排序
+ *      3. HashSet
+ *
  * @Author: chengxudong             chengxudong@microwu.com
  * Date:       2020/2/17   9:33
  * Copyright:      北京小悟科技有限公司       http://www.microwu.com
  * Update History:
  * Author        Time            Content
  */
-public class NiuKeDemo01 {
+public class RepeatNumber {
 
     /**
      * 时间复杂度O(n^)

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="GBK"?>
+<advice>
+    <common>
+        <sysId>T20110729-080629</sysId>
+        <sysAccount>yanaiguo</sysAccount>
+        <pwd>123456</pwd>
+        <interfaces>140000</interfaces>
+        <bizCode>11001</bizCode>
+        <bizName>asdas</bizName>
+        <taskName>测试</taskName>
+        <remoteIp>010192021028</remoteIp>
+        <sendingtime>20110826153853</sendingtime>
+        <tasksequence>201108261538531876485</tasksequence>
+    </common>
+    <data>
+        <mailss>
+            <mail>
+                <to>yanaiguo@sinovatech.com,yanaiguo@sinovatech.com</to>
+                <displayname> 闫爱国</displayname>//显示发件人别名
+                <cc/>
+                <pp/>
+                <sp>10010.com</sp>
+                <subject>你好你好</subject>
+                <content/>
+                <filesize>22187</filesize>
+                <attements>
+                    <fileName>fm.log</fileName>
+                </attements>
+                <attements>
+                    <fileName>info.log</fileName>
+                </attements>
+            </mail>
+        </mailss>
+    </data>
+</advice>
