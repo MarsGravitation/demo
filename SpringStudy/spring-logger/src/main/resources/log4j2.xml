@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- monitorInterval 没搞懂。能够自动检测对配置文件的更改并自行重新配置
+    至少30秒后检查配置文件中的更改，最小间隔为5秒
+
+    status：应该记录到控制台的内部Log4j事件的级别。如果需要对log4j进行故障排除
+    建议设置为 trace
+ -->
+<!--<Configuration status="WARN" monitorInterval="30">-->
+<!--    <Appenders>-->
+<!--        <Console name="Console" target="SYSTEM_OUT">-->
+<!--            &lt;!&ndash;      经过测试，过滤器元素只能使用一个-->
+<!--                  但是可是使用<Filters> 配置多个，但是这里我没有成功-->
+<!--                  &ndash;&gt;-->
+<!--            <Filters>-->
+<!--                <MarkerFilter marker="SQL_QUERY" onMatch="ACCEPT" onMismatch="DENY"/>-->
+<!--                <MarkerFilter marker="SQL_UPDATE" onMatch="ACCEPT" onMismatch="DENY"/>-->
+<!--            </Filters>-->
+<!--            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>-->
+<!--        </Console>-->
+<!--    </Appenders>-->
+<!--    <Loggers>-->
+<!--        <Root level="TRACE">-->
+<!--            <AppenderRef ref="Console"/>-->
+<!--        </Root>-->
+<!--    </Loggers>-->
+<!--    &lt;!&ndash;      bar 输出trace 日志，其他输出error 日志&ndash;&gt;-->
+<!--    &lt;!&ndash;      存在的问题：bar 的跟踪消息出现了两次，因为首先使用 与bar 关联的附加程序，&ndash;&gt;-->
+<!--    &lt;!&ndash;      该附加程序将第一个实例写入了控制台。接下来，引用 bar的父级(root)，root 关联的附加程序&ndash;&gt;-->
+<!--    &lt;!&ndash;      也将写入控制台。这称为可加性。设置 additivity = false 解决&ndash;&gt;-->
+
+<!--    &lt;!&ndash;      每个配置必须具有root logger， 如果未配置，将使用默认root LoggerConfig，level = error&ndash;&gt;-->
+<!--    &lt;!&ndash;            并附加了控制台程序。根记录器与其他记录器的主要区别是：根记录器没有名称属性，&ndash;&gt;-->
+<!--    &lt;!&ndash;            根记录器没有父项，不支持加属性&ndash;&gt;-->
+
+<!--    <Loggers>-->
+<!--        <Logger name="com.microwu.cxd.demo" level="trace" additivity="false">-->
+<!--            <AppenderRef ref="Console"/>-->
+<!--        </Logger>-->
+<!--        <Root level="error">-->
+<!--            <AppenderRef ref="Console"/>-->
+<!--        </Root>-->
+<!--    </Loggers>-->
+
+<!--</Configuration>-->
+
+<!--
+    1. File + Async 异步写日志
+    2. RandomAccessFile 性能比 File高20-200%
+ -->
+<!--<Configuration status="warn" name="HelloWord" packages="com.microwu.cxd.demo">-->
+<!--    <Appenders>-->
+<!--        <File name="MyFile" fileName="G:\exe\txt\data\a.txt">-->
+<!--            <PatternLayout>-->
+<!--                <Pattern>%d %p %c{1.} [%t] %m%n</Pattern>-->
+<!--            </PatternLayout>-->
+<!--        </File>-->
+<!--        <RandomAccessFile name="MyFile" fileName="G:\exe\txt\data\a.txt">-->
+<!--            <PatternLayout>-->
+<!--                <Pattern>%d %p %c{1.} [%t] %m%n</Pattern>-->
+<!--            </PatternLayout>-->
+<!--        </RandomAccessFile>-->
+<!--        <Async name="Async">-->
+<!--            <AppenderRef ref="MyFile"/>-->
+<!--        </Async>-->
+<!--    </Appenders>-->
+<!--    <Loggers>-->
+<!--        <Root level="info">-->
+<!--            <AppenderRef ref="MyFile"/>-->
+<!--        </Root>-->
+<!--    </Loggers>-->
+<!--</Configuration>-->
+
+<!--
+    RollingFile参数：
+        1. File：文件名，如果不存在，将创建它们
+        2. filePattern：归档日志文件的模式，模式的格式取决于所使用的RolloverPolicy
+    触发政策：可以组合多个触发策略
+        1. Cron 触发策略
+        2. OnStartup 触发策略
+        3. SizeBasedTriggeringPolicy：基于大小的触发策略，与基于时间的策略结合使用时，
+        文件模式必须包含%i，否则目标文件将在每次翻转时被覆盖。因为基于大小的触发策略不会导致
+        文件名中的时间戳值更改。
+        4. TimeBasedTriggeringPolicy：基于时间的触发策略。一旦日期/时间不再适用于
+        文件，会导致翻转。该策略接受一个interval属性，该属性根据时间模式和一个boolean只是发生翻转的频率
+    展期策略：默认的翻转策略支持三种递增计数器的方法
+        1. min=,max=3,文件名是foo.log,文件名模式是foo-%i.log
+    DirectWriteRolloverStrategy: 没有文件属性，直接将日志写入 filePattern 日志中
+
+    通过自己的测试，了解到翻转的过程：
+        1. 先将日志写入 fileName中，如果达到触发策略，按照 filePattern进行翻转
+        2. 默认的过渡策略，fileIndex="max",刚开始日志记录到foo.log 文件，第一次翻转，foo.log -> foo-1.log,
+            新的日志被写入foo.log;第二次翻转期间，foo.log -> foo-2.log，新的日志被写入foo.log
+        3. 如果超过max的限制，删除foo-1.log,将foo-2.log -> foo-1.log, foo-3.log -> foo-2.log, foo.log -> foo-1.log
+            新的日志写入foo.log,默认max=7
+
+-->
+<!--<Configuration status="warn" name="HelloWorld" packages="">-->
+<!--    <Appenders>-->
+<!--        <RollingFile name="RollingFile"-->
+<!--                     filePattern="G:\exe\txt\data\$${date:yyy-MM}\app-%d{MM-dd-yyyy}-%i.log">-->
+<!--            <PatternLayout>-->
+<!--                <Pattern>%d %p %c{1.} [%t] %m%n</Pattern>-->
+<!--            </PatternLayout>-->
+<!--            <Policies>-->
+<!--                <TimeBasedTriggeringPolicy />-->
+<!--                <SizeBasedTriggeringPolicy size="1MB"/>-->
+<!--            </Policies>-->
+<!--            <DefaultRolloverStrategy max="20"/>-->
+<!--            <DirectWriteRolloverStrategy maxFiles="20"/>-->
+<!--        </RollingFile>-->
+<!--    </Appenders>-->
+<!--    <Loggers>-->
+<!--        <Root level="trace">-->
+<!--            <AppenderRef ref="RollingFile"/>-->
+<!--        </Root>-->
+<!--    </Loggers>-->
+<!--</Configuration>-->
+
+<!--
+    过滤器使用：
+        1. 标记过滤器
+            MarkerFilter 将配置的marker值与LogEvent中的marker进行比较。当标记名称与日志事件的标记或者父项匹配时，就会写入日志
+        2. 阈值过滤器
+            如果LogEvent 中的级别与配置的级别相同或者更特定是，匹配，否则放弃
+-->
+<Configuration status="warn" name="MyApp" packages="">
+    <Appenders>
+        <RollingFile name="RollingFile" fileName="G:\exe\txt\data\a.txt"
+                     filePattern="logs/app-%d{MM-dd-yyyy}.log.gz">
+            <ThresholdFilter level="info" onMatch="ACCEPT" onMismatch="DENY"/>
+            <PatternLayout>
+                <pattern>%d %p %c{1.} [%t] %m%n</pattern>
+            </PatternLayout>
+            <TimeBasedTriggeringPolicy />
+        </RollingFile>
+    </Appenders>
+    <Loggers>
+        <Root level="trace">
+            <AppenderRef ref="RollingFile"/>
+        </Root>
+    </Loggers>
+</Configuration>

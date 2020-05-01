@@ -15,6 +15,7 @@
       <module>spring-webflux</module>
     <module>netty</module>
       <module>spring-zookeeper</module>
+      <module>spring-mybatis</module>
   </modules>
   <name>Maven Quick Start Archetype</name>
   <url>http://maven.apache.org</url>

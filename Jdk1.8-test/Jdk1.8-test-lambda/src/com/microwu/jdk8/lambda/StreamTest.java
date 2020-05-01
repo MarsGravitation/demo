@@ -18,8 +18,8 @@ import java.util.stream.Collectors;
  *      3. Stream 操作是延迟执行的. 它会等到需要结果的时候才执行. 也就是执行中断操作的时候
  *
  * 创建Stream
- *      由集合创建: Java8 中的Collectin 接口被扩展, 提供了两个获取流的方法, 这两个方法时default,
- *                  也就是说所有实现Collectin接口的接口都不需要实现就可以直接使用
+ *      由集合创建: Java8 中的Collection 接口被扩展, 提供了两个获取流的方法, 这两个方法是default,
+ *                  也就是说所有实现Collection接口的接口都不需要实现就可以直接使用
  *       1. default Stream stream - 返回一个顺序流
  *       2. default Stream parallelStream - 返回一个并行流
  *

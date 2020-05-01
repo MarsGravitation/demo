@@ -18,6 +18,7 @@
     <module>login-sms</module>
       <module>faa-separation</module>
       <module>rewrite-login</module>
+    <module>oauth</module>
   </modules>
 
   <name>spring-security</name>

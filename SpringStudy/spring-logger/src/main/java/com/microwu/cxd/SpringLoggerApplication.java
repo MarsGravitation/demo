@@ -40,8 +40,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  *
  *      简单地说Logger就是一个路由器, 指定类, 包中的日志信息流向那个管道, 以及控制它们的流量
  *
- *
- * @Author: chengxudong             chengxudong@microwu.com
+ * @Author:     chengxudong             chengxudong@microwu.com
  * Date:       2019/9/26   10:43
  * Copyright:      北京小悟科技有限公司       http://www.microwu.com
  * Update History:

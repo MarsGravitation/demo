@@ -1,0 +1,26 @@
+server:
+  port: 8081
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        # 每个route 都需要一个唯一的id， uri 是将请求路由到哪里
+        # predicates 如果时间在 after 之后，进入该路由
+        # 如果没有匹配的路由，404
+        #        - id: after_route
+        #          uri: http://httpbin.org:80/get
+        #          predicates:
+        #            - After=2027-01-20T17:42:47.789-07:00[America/Denver]
+#        - id: header_route
+#          uri: http://httpbin.org:80/get
+#          filters:
+#            - AddRequestHeader=X-Request-Foo, Bar
+#          predicates:
+#            - Header=X-Request-Id, \d+
+        - id: elapsed_route
+          uri: http://httpbin.org:80/get
+          filters:
+            - RequestTime=true
+          predicates:
+            - After=2017-01-20T17:42:47.789-07:00[America/Denver]

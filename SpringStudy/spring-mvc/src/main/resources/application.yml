@@ -10,3 +10,8 @@ management:
 logging:
   level:
     com: debug
+#
+#spring:
+#  jackson:
+#    serialization:
+#      write-dates-as-timestamps: true
