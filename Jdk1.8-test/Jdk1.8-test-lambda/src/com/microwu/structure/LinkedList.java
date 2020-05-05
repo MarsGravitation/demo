@@ -2,6 +2,7 @@ package com.microwu.structure;
 
 /**
  * Description: 使用链表实现 增删改
+ * jdk 源码分析： https://github.com/wupeixuan/JDKSourceCode1.8/blob/master/src/java/util/ArrayList.java
  *
  * @Author: chengxudong             chengxudong@microwu.com
  * Date:       2020/3/26   10:04

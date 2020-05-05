@@ -5,6 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
  * Hello world!
+ * 原理解析：https://www.jianshu.com/p/4fcdcf677371
  *
  */
 @SpringBootApplication
