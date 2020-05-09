@@ -1,0 +1,36 @@
+server:
+  port: 9003
+
+spring:
+  application:
+    name: gateway-server
+
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          # 关闭服务注册和发现的功能
+          # 否则会自动根据服务发现为每个服务创建了一个router
+          enabled: false
+          # 开启小写
+          lower-case-service-id: true
+      routes:
+      - id: provider-user
+        uri: lb://PROVIDER-USER
+        predicates:
+          - Path=/user/**
+
+      - id: provider-movie
+        uri: lb://PROVIDER-MOVIE
+        predicates:
+          - Path=/movie/**
+
+      - id: auth-server
+        uri: lb://AUTH-SERVER
+        predicates:
+          - Path=/oauth/**
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9000/eureka/
