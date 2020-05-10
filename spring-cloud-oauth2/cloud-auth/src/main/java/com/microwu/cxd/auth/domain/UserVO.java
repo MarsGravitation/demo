@@ -22,4 +22,6 @@ public class UserVO {
 
     private String mobile;
 
+    private String role;
+
 }

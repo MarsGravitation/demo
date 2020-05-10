@@ -2,6 +2,7 @@ package com.microwu.cxd.auth.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.oauth2.config.annotation.configurers.ClientDetailsServiceConfigurer;
@@ -9,10 +10,14 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.A
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableAuthorizationServer;
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerEndpointsConfigurer;
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerSecurityConfigurer;
-import org.springframework.security.oauth2.provider.token.store.InMemoryTokenStore;
+import org.springframework.security.oauth2.provider.client.JdbcClientDetailsService;
+import org.springframework.security.oauth2.provider.token.store.redis.RedisTokenStore;
+
+import javax.sql.DataSource;
 
 /**
  * Description:
+ *  由内存转为数据库：https://www.cnblogs.com/fengzheng/p/11724625.html
  *
  * @Author: chengxudong             chengxudong@microwu.com
  * Date:       2020/5/7   17:54
@@ -25,6 +30,8 @@ import org.springframework.security.oauth2.provider.token.store.InMemoryTokenSto
 public class AuthServerConfiguration extends AuthorizationServerConfigurerAdapter {
 
 //    private static final String DEMO_RESOURCE_ID = "user";
+    @Autowired
+    private DataSource dataSource;
 
     @Autowired
     private PasswordEncoder passwordEncoder;
@@ -32,29 +39,42 @@ public class AuthServerConfiguration extends AuthorizationServerConfigurerAdapte
     @Autowired
     private AuthenticationManager authenticationManager;
 
+    @Autowired
+    private RedisConnectionFactory redisConnectionFactory;
+
+//    @Override
+//    public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
+//        // 配置两个客户端，一个用于password认证，一个用于client 认证
+//        clients.inMemory().withClient("client_1")
+////                .resourceIds(DEMO_RESOURCE_ID)
+//                .authorizedGrantTypes("client_credentials", "refresh_token")
+//                .scopes("select")
+//                .authorities("client")
+//                .secret(passwordEncoder.encode("123456"))
+//                .and()
+//                .withClient("client_2")
+////                .resourceIds(DEMO_RESOURCE_ID)
+//                .authorizedGrantTypes("password", "refresh_token")
+//                .scopes("select")
+//                .authorities("client")
+//                .secret(passwordEncoder.encode("123456"));
+//
+//    }
+
+
     @Override
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
-        // 配置两个客户端，一个用于password认证，一个用于client 认证
-        clients.inMemory().withClient("client_1")
-//                .resourceIds(DEMO_RESOURCE_ID)
-                .authorizedGrantTypes("client_credentials", "refresh_token")
-                .scopes("select")
-                .authorities("client")
-                .secret(passwordEncoder.encode("123456"))
-                .and()
-                .withClient("client_2")
-//                .resourceIds(DEMO_RESOURCE_ID)
-                .authorizedGrantTypes("password", "refresh_token")
-                .scopes("select")
-                .authorities("client")
-                .secret(passwordEncoder.encode("123456"));
-
+        JdbcClientDetailsService jdbcClientDetailsService = new JdbcClientDetailsService(dataSource);
+        jdbcClientDetailsService.setPasswordEncoder(passwordEncoder);
+        clients
+                .withClientDetails(jdbcClientDetailsService);
     }
 
     @Override
     public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
         endpoints
-                .tokenStore(new InMemoryTokenStore())
+//                .tokenStore(new InMemoryTokenStore())
+                .tokenStore(new RedisTokenStore(redisConnectionFactory))
                 .authenticationManager(authenticationManager);
     }
 

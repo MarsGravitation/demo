@@ -28,6 +28,20 @@
     <maven.compiler.target>1.8</maven.compiler.target>
   </properties>
 
+  <repositories>
+    <repository>
+      <id>alimaven</id>
+      <name>aliyun maven</name>
+      <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>
+  </repositories>
+
   <profiles>
     <profile>
       <id>dev</id><!--执行打包命令时将使用此处的id进行定位-->

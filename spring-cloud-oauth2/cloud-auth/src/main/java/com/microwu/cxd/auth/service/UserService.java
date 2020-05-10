@@ -1,6 +1,8 @@
 package com.microwu.cxd.auth.service;
 
 import com.microwu.cxd.auth.domain.UserVO;
+import com.microwu.cxd.auth.mapper.UserMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
@@ -15,6 +17,9 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserService {
 
+    @Autowired
+    private UserMapper userMapper;
+
     public UserVO findUserByMobile(String mobile) {
         UserVO userVO = new UserVO();
         userVO.setId(1L);
@@ -22,5 +27,9 @@ public class UserService {
         userVO.setPassword("123456");
         userVO.setMobile(mobile);
         return userVO;
+    }
+
+    public UserVO getById(Long id) {
+        return userMapper.getById(id);
     }
 }
