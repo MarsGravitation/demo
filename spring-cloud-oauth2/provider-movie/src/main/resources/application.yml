@@ -28,5 +28,42 @@ security:
     #      userInfoUri: http://localhost:9004/oauth/check_token
     resource:
       userInfoUri: http://localhost:9004/user/info
-    authorization:
-      check-token-access: http://localhost:9004/oauth/check_token
+#    authorization:
+#      check-token-access: http://localhost:9004/oauth/check_token
+
+# 配置失败
+logging:
+  level:
+    com:
+      microwu:
+        cxd: debug
+#    com.microwu.cxd.movie.service.UserFeignConfig: debug
+
+# Feign 通用配置, 配置属性的优先级更高
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 5000
+        readTimeout: 5000
+        loggerLevel: basic
+
+  # 启用熔断器
+  hystrix:
+    enabled: true
+
+  # 启用压缩功能
+  compression:
+    request: true
+    response: true
+
+# 解决Feign/Ribbon 第一次请求失败
+# 由于Ribbon 是懒加载的，在首次请求时，才会开始初始化相关类
+# 如果初始化时间长，可能默认为响应超时
+# 可以设置Hystrix 超时时间，指标不治本
+# 配置饥饿加载
+ribbon:
+  eager-load:
+    enabled: true
+    # 多个使用，分割
+    clients: provider-user

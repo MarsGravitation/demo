@@ -22,6 +22,10 @@ public class UserController {
     @GetMapping("/{id}")
     @PreAuthorize("hasAuthority('USER')")
     public String id(@PathVariable Long id) {
+        if (1L == id) {
+            throw new RuntimeException("不允许它查询用户信息");
+        }
+        System.out.println("权限验证通过。。。");
         return "i am " + id + " user";
     }
 }

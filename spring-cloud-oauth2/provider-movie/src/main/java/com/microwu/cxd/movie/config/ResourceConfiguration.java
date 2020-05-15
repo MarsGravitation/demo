@@ -27,6 +27,7 @@ public class ResourceConfiguration extends ResourceServerConfigurerAdapter {
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.IF_REQUIRED)
                 .and()
                 .authorizeRequests()
+                .antMatchers("/test/**").permitAll()
                 .anyRequest().authenticated();
 
     }

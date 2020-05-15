@@ -1,12 +1,12 @@
 package com.microwu.cxd.movie.controller;
 
+import com.microwu.cxd.movie.domain.User;
 import com.microwu.cxd.movie.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.Map;
 
 /**
  * Description:
@@ -18,7 +18,6 @@ import org.springframework.web.bind.annotation.RestController;
  * Author        Time            Content
  */
 @RestController
-@RequestMapping("/movie")
 public class MovieController {
 
 //    @Autowired
@@ -26,7 +25,16 @@ public class MovieController {
     @Autowired
     private UserService userService;
 
-    @GetMapping("/{id}")
+    /**
+     * 测试权限控制
+     *
+     * @author   chengxudong               chengxudong@microwu.com
+     * @date    2020/5/13  10:09
+     *
+     * @param   	id
+     * @return  java.lang.String
+     */
+    @GetMapping("/movie/{id}")
     @PreAuthorize("hasAuthority('USER')")
     public String movie(@PathVariable Long id) {
 //        ResponseEntity<String> entity = restTemplate.getForEntity("http://127.0.0.1:9001/user/1", String.class, 1L);
@@ -34,6 +42,25 @@ public class MovieController {
         String body = userService.hello(id);
         return body + ", " + "i see " + id + " movie";
 //        return "i am " + id + " movie";
+    }
+
+    /**
+     * 测试无权限，且get 发送多参数案例
+     *
+     * @author   chengxudong               chengxudong@microwu.com
+     * @date    2020/5/13  10:09
+     *
+     * @param   	map
+     * @return  com.microwu.cxd.movie.domain.User
+     */
+    @GetMapping("/test/get")
+    public User user(@RequestParam Map<String, Object> map) {
+        return userService.get(map);
+    }
+
+    @PostMapping("/test/post")
+    public User user(@RequestBody User user) {
+        return userService.postUser(user);
     }
 
 }

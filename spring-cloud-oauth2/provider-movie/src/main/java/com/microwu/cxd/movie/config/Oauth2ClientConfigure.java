@@ -4,12 +4,11 @@ import feign.RequestInterceptor;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.cloud.security.oauth2.client.feign.OAuth2FeignRequestInterceptor;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.security.oauth2.client.OAuth2ClientContext;
 import org.springframework.security.oauth2.client.resource.OAuth2ProtectedResourceDetails;
 
 /**
- * Description:
+ * Description: 解决服务间调用传递token 问题
  *
  * @Author: chengxudong             chengxudong@microwu.com
  * Date:       2020/5/8   16:50
@@ -17,7 +16,7 @@ import org.springframework.security.oauth2.client.resource.OAuth2ProtectedResour
  * Update History:
  * Author        Time            Content
  */
-@Configuration
+//@Configuration
 public class Oauth2ClientConfigure {
 
     @Bean

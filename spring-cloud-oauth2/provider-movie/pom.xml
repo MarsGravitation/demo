@@ -32,6 +32,17 @@
             <artifactId>spring-cloud-starter-oauth2</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>io.github.openfeign.form</groupId>
+            <artifactId>feign-form</artifactId>
+            <version>3.8.0</version>
+        </dependency>
+        <dependency>
+            <groupId>io.github.openfeign.form</groupId>
+            <artifactId>feign-form-spring</artifactId>
+            <version>3.8.0</version>
+        </dependency>
+
         <!-- 引入Lombok -->
         <dependency>
             <groupId>org.projectlombok</groupId>
