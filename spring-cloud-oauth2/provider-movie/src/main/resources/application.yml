@@ -67,3 +67,16 @@ ribbon:
     enabled: true
     # 多个使用，分割
     clients: provider-user
+
+# hystrix 线程隔离，导致安全问题，线程上下文传递不到子线程中
+# hystrix 具体源码不清楚，网上抄的配置
+# https://blog.csdn.net/yudar1024/article/details/76070214/
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000
+          #这里将线程策略设置为SEMAPHORE
+          strategy: SEMAPHORE
