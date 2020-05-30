@@ -1,0 +1,25 @@
+dubbo:
+  scan:
+    # dubbo 服务扫描基准包
+    base-packages: com.microwu.cxd.dubbo.provider
+  protocol:
+    # dubbo 协议
+    name: dubbo
+    # dubbo 协议端口（ -1 表示自增端口，从 20880 开始）
+    port: -1
+  registry:
+    # 挂载到 Spring Cloud 注册中心
+    address: spring-cloud://localhost
+
+spring:
+  application:
+    # dubbo 应用名称
+    name: dubbo-server
+  main:
+    # Spring Boot 2.1 需要设定
+    allow-bean-definition-overriding: true
+  cloud:
+    nacos:
+      # Nacos 服务发现与注册配置
+      discovery:
+        server-addr: 192.168.133.134:8848

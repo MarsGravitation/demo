@@ -1,0 +1,5 @@
+dubbo:
+  registry:
+    address: spring-cloud://localhost
+  cloud:
+    subscribed-services: dubbo-provider

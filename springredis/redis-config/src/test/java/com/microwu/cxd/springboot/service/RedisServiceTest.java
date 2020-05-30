@@ -105,4 +105,9 @@ public class RedisServiceTest {
         String age = redisTemplate.opsForValue().get("age");
         System.out.println(age);
     }
+
+    @Test
+    public void test08() throws InterruptedException {
+        redisService.structure();
+    }
 }

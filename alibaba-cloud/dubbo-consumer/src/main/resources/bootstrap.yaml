@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: dubbo-consumer
+  main:
+    allow-bean-definition-overriding: true
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.133.134:8848
+        enabled: true
+        register-enabled: true
+      username: nacos
+      password: nacos
+server:
+  port: 8081

@@ -4,14 +4,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.dao.DataAccessException;
 import org.springframework.data.redis.connection.RedisConnection;
-import org.springframework.data.redis.core.RedisCallback;
-import org.springframework.data.redis.core.RedisOperations;
-import org.springframework.data.redis.core.RedisTemplate;
-import org.springframework.data.redis.core.SessionCallback;
+import org.springframework.data.redis.core.*;
 import org.springframework.data.redis.core.script.DefaultRedisScript;
 import org.springframework.scripting.support.ResourceScriptSource;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
+import java.time.Duration;
 import java.time.Instant;
 import java.util.Collections;
 import java.util.List;
@@ -189,5 +188,37 @@ public class RedisService {
         redisScript.setResultType(Boolean.class);
         Boolean execute = redisTemplate.execute(redisScript, Collections.singletonList(key), timeStampMills, period, maxCount);
         return execute;
+    }
+
+    @Resource(name = "redisTemplate")
+    private HashOperations<String, Object, Object> hashOperations;
+
+    /**
+     * 测试redis 常用的数据结构以及过期时间
+     *
+     * @author   chengxudong               chengxudong@microwu.com
+     * @date    2020/5/28  16:31
+     *
+     * @param
+     * @return  void
+     */
+    public void structure() throws InterruptedException {
+        // String
+        System.out.println("String 类型 1min 后过期。。。");
+        redisTemplate.opsForValue().set("name", "cxd", Duration.ofMinutes(1L));
+
+        // map
+        // 测试结果：put 之后并不会重置它的过期时间
+//        System.out.println("Map 类型 1min 后过期。。。");
+//        hashOperations.put("map", "name", "cxd");
+//        redisTemplate.expire("map", 1L, TimeUnit.MINUTES);
+//
+//        Thread.sleep(1000 * 30);
+//        hashOperations.put("map", "age", "25");
+//        // 这里的过期是指对 key 进行过期，这里会重置过期时间
+//        redisTemplate.expire("map", 1, TimeUnit.MINUTES);
+//        Thread.sleep(1000 * 31);
+//        System.out.println("Map 中 key 为 name 的属性存在吗？" +  hashOperations.hasKey("map", "name"));
+
     }
 }
