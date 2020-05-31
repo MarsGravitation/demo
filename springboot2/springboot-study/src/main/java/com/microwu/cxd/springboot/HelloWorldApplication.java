@@ -2,6 +2,7 @@ package com.microwu.cxd.springboot;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 
 /**
  * Description:
@@ -27,7 +28,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * Update History:
  * Author        Time            Content
  */
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = {"com.microwu.cxd"})
 public class HelloWorldApplication {
     public static void main(String[] args) {
         SpringApplication.run(HelloWorldApplication.class, args);
