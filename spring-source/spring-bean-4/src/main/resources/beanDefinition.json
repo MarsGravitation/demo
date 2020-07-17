@@ -1,0 +1,88 @@
+[
+  {
+    "abstract": false,
+    "autowireCandidate": true,
+    "autowireMode": 0,
+    "beanClass": "com.microwu.cxd.spring.service.impl.TestServiceImpl",
+    "beanClassName": "com.microwu.cxd.spring.service.impl.TestServiceImpl",
+    "constructorArgumentValues": {
+      "argumentCount": 0,
+      "empty": true,
+      "genericArgumentValues": [],
+      "indexedArgumentValues": {}
+    },
+    "dependencyCheck": 0,
+    "enforceDestroyMethod": true,
+    "enforceInitMethod": true,
+    "lazyInit": false,
+    "lenientConstructorResolution": true,
+    "methodOverrides": {
+      "empty": true,
+      "overrides": []
+    },
+    "nonPublicAccessAllowed": true,
+    "primary": false,
+    "propertyValues": {
+      "converted": false,
+      "empty": true,
+      "propertyValueList": [],
+      "propertyValues": []
+    },
+    "prototype": false,
+    "qualifiers": [],
+    "resolvedAutowireMode": 0,
+    "role": 0,
+    "scope": "",
+    "singleton": true,
+    "synthetic": false
+  },
+  {
+    "abstract": false,
+    "autowireCandidate": true,
+    "autowireMode": 0,
+    "beanClass": "com.microwu.cxd.spring.controller.TestController",
+    "beanClassName": "com.microwu.cxd.spring.controller.TestController",
+    "constructorArgumentValues": {
+      "argumentCount": 2,
+      "empty": false,
+      "genericArgumentValues": [],
+      "indexedArgumentValues": {
+        0: {
+          "converted": false,
+          "value": {
+            "beanName": "testServiceImpl",
+            "toParent": false
+          }
+        },
+        1: {
+          "converted": false,
+          "value": "wire by constructor"
+        }
+      }
+    },
+    "dependencyCheck": 0,
+    "enforceDestroyMethod": true,
+    "enforceInitMethod": true,
+    "lazyInit": false,
+    "lenientConstructorResolution": true,
+    "methodOverrides": {
+      "empty": true,
+      "overrides": []
+    },
+    "nonPublicAccessAllowed": true,
+    "primary": false,
+    "propertyValues": {
+      "converted": false,
+      "empty": true,
+      "propertyValueList": [],
+      "propertyValues": []
+    },
+    "prototype": false,
+    "qualifiers": [],
+    "resolvedAutowireMode": 0,
+    "role": 0,
+    "scope": "",
+    "singleton": true,
+    "synthetic": false
+  }
+]

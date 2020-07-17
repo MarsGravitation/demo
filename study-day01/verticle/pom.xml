@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.microwu.cxd</groupId>
+    <artifactId>verticle</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <name>verticle</name>
+    <!-- FIXME change it to the project's website -->
+    <url>http://www.example.com</url>
+
+    <!--  <properties>-->
+    <!--    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>-->
+    <!--    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>-->
+    <!--    <java.version>1.8</java.version>-->
+    <!--    <vertx.version>3.4.2</vertx.version>-->
+    <!--    <main.class>io.vertx.core.Launcher</main.class>-->
+    <!--    <main.verticle>com.example.demo.StartVerticle</main.verticle>-->
+    <!--  </properties>-->
+
+    <!--  <dependencies>-->
+
+    <!--    <dependency>-->
+    <!--      <groupId>io.vertx</groupId>-->
+    <!--      <artifactId>vertx-core</artifactId>-->
+    <!--      <version>${vertx.version}</version>-->
+    <!--    </dependency>-->
+
+    <!--    <dependency>-->
+    <!--      <groupId>io.vertx</groupId>-->
+    <!--      <artifactId>vertx-web</artifactId>-->
+    <!--      <version>${vertx.version}</version>-->
+    <!--    </dependency>-->
+    <!--    <dependency>-->
+    <!--      <groupId>io.vertx</groupId>-->
+    <!--      <artifactId>vertx-platform</artifactId>-->
+    <!--      <version>2.1M1</version>-->
+    <!--      <scope>compile</scope>-->
+    <!--    </dependency>-->
+
+    <!--    <dependency>-->
+    <!--      <groupId>io.vertx</groupId>-->
+    <!--      <artifactId>vertx-web-client</artifactId>-->
+    <!--    </dependency>-->
+    <!--  </dependencies>-->
+    <properties>
+        <vertx.version>3.8.3</vertx.version>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>io.vertx</groupId>
+                <artifactId>vertx-stack-depchain</artifactId>
+                <version>${vertx.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>io.vertx</groupId>
+            <artifactId>vertx-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.vertx</groupId>
+            <artifactId>vertx-web-client</artifactId>
+        </dependency>
+    </dependencies>
+
+</project>

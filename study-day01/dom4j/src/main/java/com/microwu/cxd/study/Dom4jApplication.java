@@ -4,6 +4,7 @@ import org.dom4j.*;
 import org.dom4j.io.SAXReader;
 
 import java.io.InputStream;
+import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -55,25 +56,32 @@ public class Dom4jApplication {
      * @return  void
      */
     public static void traverse() throws DocumentException {
-//        Element root = getRoot();
-//        Iterator iterator = root.elementIterator();
-//        while (iterator.hasNext()) {
-//            Element element = (Element) iterator.next();
-//            System.out.println(element.getName());
-//        }
-//        treeWalk(getRoot());
         Element root = getRoot();
-        root.accept(new VisitorSupport() {
-            @Override
-            public void visit(Element node) {
-                System.out.println(node.getText());
+        Iterator iterator = root.elementIterator();
+        while (iterator.hasNext()) {
+            Element element = (Element) iterator.next();
+            System.out.println(element.getName());
+            Attribute type = element.attribute("type");
+            System.out.println(type.getValue());
+            Iterator elementIterator = element.elementIterator();
+            while (elementIterator.hasNext()) {
+                Element innerElement = (Element) elementIterator.next();
+                System.out.println(innerElement.getName());
             }
-
-            @Override
-            public void visit(Attribute node) {
-                System.out.println(node.getName());
-            }
-        });
+        }
+//        treeWalk(getRoot());
+//        Element root = getRoot();
+//        root.accept(new VisitorSupport() {
+//            @Override
+//            public void visit(Element node) {
+//                System.out.println(node.getText());
+//            }
+//
+//            @Override
+//            public void visit(Attribute node) {
+//                System.out.println(node.getName());
+//            }
+//        });
     }
 
     public static void treeWalk(Element element) {
@@ -143,7 +151,7 @@ public class Dom4jApplication {
     }
 
     public static void main(String[] args) throws DocumentException {
-//        traverse();
+        traverse();
 //        Node node = bar(load());
 //        System.out.println(node.getText());
 
@@ -164,9 +172,9 @@ public class Dom4jApplication {
 //        String string = string(document);
 //        System.out.println(string);
 
-        String text = "<state>        <msg>账户名称,关键字过滤状态,黑名单状态,sp号状态,接口编码,接口状态</msg>         <stateEncode>10010,000000,000000,000000,140000,000000</stateEncode>     </state>";
-        Document document = stringToDocument(text);
-        Node node = document.selectSingleNode("//msg");
-        System.out.println(node.getText());
+//        String text = "<state>        <msg>账户名称,关键字过滤状态,黑名单状态,sp号状态,接口编码,接口状态</msg>         <stateEncode>10010,000000,000000,000000,140000,000000</stateEncode>     </state>";
+//        Document document = stringToDocument(text);
+//        Node node = document.selectSingleNode("//msg");
+//        System.out.println(node.getText());
     }
 }

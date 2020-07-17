@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+             xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+             xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC"
+             xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI"
+             xmlns:flowable="http://flowable.org/bpmn"
+             typeLanguage="http://www.w3.org/2001/XMLSchema"
+             expressionLanguage="http://www.w3.org/1999/XPath"
+             targetNamespace="http://www.flowable.org/processdef">
+
+    <process id="holidayRequest" name="Holiday Request" isExecutable="true">
+
+        <!--    每一个步骤 activity 都有一个 id 属性    -->
+        <startEvent id="startEvent"/>
+        <!--    活动之间通过顺序流 sequence flow 连接    -->
+        <sequenceFlow sourceRef="startEvent" targetRef="approveTask"/>
+
+        <!--    用户任务，这是流程中人类用户操作的步骤    -->
+        <userTask id="approveTask" name="Approve or reject request" flowable:candidateGroups="managers"/>
+        <sequenceFlow sourceRef="approveTask" targetRef="decision"/>
+
+        <!--    排他网关    -->
+        <exclusiveGateway id="decision"/>
+        <!--
+            变量 approved 称为流程变量。流程变量是持久化数据，与流程实例存储在一起，并可以在流程实例的生命周期中使用。
+            在这个例子里，我们需要在特定的地方 complete 设置这个流程变量，而不是在流程实例启动时就能获取数据
+
+         -->
+        <sequenceFlow sourceRef="decision" targetRef="externalSystemCall">
+            <conditionExpression xsi:type="tFormalExpression">
+                <![CDATA[
+          ${approved}
+        ]]>
+            </conditionExpression>
+        </sequenceFlow>
+        <sequenceFlow  sourceRef="decision" targetRef="sendRejectionMail">
+            <conditionExpression xsi:type="tFormalExpression">
+                <![CDATA[
+          ${!approved}
+        ]]>
+            </conditionExpression>
+        </sequenceFlow>
+
+        <serviceTask id="externalSystemCall" name="Enter holidays in external system"
+                     flowable:class="com.microwu.cxd.flowable.CallExternalSystemDelegate"/>
+        <sequenceFlow sourceRef="externalSystemCall" targetRef="holidayApprovedTask"/>
+
+        <userTask id="holidayApprovedTask" name="Holiday approved" flowable:assignee="${employee}"/>
+        <sequenceFlow sourceRef="holidayApprovedTask" targetRef="approveEnd"/>
+
+        <serviceTask id="sendRejectionMail" name="Send out rejection email"
+                     flowable:class="org.flowable.SendRejectionMail"/>
+        <sequenceFlow sourceRef="sendRejectionMail" targetRef="rejectEnd"/>
+
+        <endEvent id="approveEnd"/>
+
+        <endEvent id="rejectEnd"/>
+
+    </process>
+
+</definitions>

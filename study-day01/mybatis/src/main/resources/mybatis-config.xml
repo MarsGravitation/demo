@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<!-- XML 配置文件中包含了 MyBatis 系统的核心设置，包括获取数据库连接实例的数据源(DataSource) 以及决定事务作用域和控制方式的事务管理器 -->
+<configuration>
+    <environments default="development">
+        <environment id="development">
+            <!--      type = "JDBC" 直接使用 JDBC 的提交和回滚设施，它依赖从数据源获得的连接来管理事务作用域      -->
+            <transactionManager type="JDBC"/>
+            <!--      type = "POOLED" 这种数据源的时间利用 池 的概念将 JDBC 连接对象组织起来，避免了创建新的连接实例时所必须的初始化和认证时间     -->
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://192.168.133.134:3306/test?useUnicode=true"/>
+                <property name="username" value="root"/>
+                <property name="password" value="123456"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <!--  配置 mappers，告诉 MyBatis 去哪里找这些语句  -->
+    <mappers>
+        <mapper resource="UserMapper.xml"/>
+    </mappers>
+</configuration>

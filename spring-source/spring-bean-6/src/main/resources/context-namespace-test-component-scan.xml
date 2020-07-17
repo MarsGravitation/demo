@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+                http://www.springframework.org/schema/context
+                 http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--
+        扫描类路径下的注解组件，它们将会被自动注册为 spring bean。默认情况下，可以识别以下注解：
+        @Component、@Repository、@Service、@Controller
+
+        注意：这个元素隐含了context:annotation-config 的作用，会默认激活bean class 的@Autowired 等注解
+        注意：你可以在包路径里，使用placeholder，但是只能引用 system property
+
+        属性：
+            1. include-filter：控制那些组件能被扫描为 bean
+            2. exclude-filter：那些组件不被扫描
+            3. base-package：逗号分隔包名列表
+            4. resource-pattern：扫描那些class，推荐使用include-filter
+            5. user-default-filters：是否使用默认filter，默认filter 扫描 @Component、@Repository、@Service、@Controller
+            6. annotation-config：注解驱动，默认启用；这样 @Autowired 才可以使用
+            7. name-generator：指定怎么生成 beanName
+            8. scope-resolver：不太懂
+            9. scope-proxy：不太懂
+      -->
+    <context:component-scan base-package="com.microwu.cxd.spring"/>
+</beans>

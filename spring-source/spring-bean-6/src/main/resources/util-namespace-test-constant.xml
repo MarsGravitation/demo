@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  定义两个 namespace,
+    语法: xmlns:namespace-prefix="URI"
+
+    命名空间,可以随便取 - xmlns:util="http://www.springframework.org/schema/util"
+    对应的约束 - http://www.springframework.org/schema/util  http://www.springframework.org/schema/util/spring-util.xsd
+    这个可以理解为 KV, xsd 文件用于格式校验
+
+    EntityResolver#resolveEntity(String publicId, String systemId)
+        - systemId 一般就是 http://www.springframework.org/schema/util/spring-util.xsd，默认是通过网络获取的
+        spring 自定义了 entityResolver，实现类为 org.springframework.beans.factory.xml.ResourceEntityResolver，
+        主要逻辑就是去查找 classpath 下的 META-INF/spring.spring.schemas
+-->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+                http://www.springframework.org/schema/util  http://www.springframework.org/schema/util/spring-util.xsd">
+
+    <util:constant id="chin.age" static-field="java.sql.Connection.TRANSACTION_SERIALIZABLE"/>
+
+
+</beans>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 命名空间的补充：
+    1. 利用更长的全限定名来将不同的语句隔离开来
+    2. 同时也实现了接口绑定
+
+    命名解析：为了减少输入量，全限定名将被直接用于查找和使用；短名称如果全局唯一也可以作为一个单独的引用
+    -->
+<mapper namespace="com.microwu.cxd.mybatis.UserMapper">
+    <select id="selectUser" resultType="com.microwu.cxd.mybatis.User">
+        select * from user where id = #{id}
+    </select>
+</mapper>

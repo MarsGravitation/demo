@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+                http://www.springframework.org/schema/context
+                 http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--
+        为什么需要配置这个？
+        使 bean class 中的多种注解可以被识别：
+        Spring 提供的 @Required、@Autowired
+        JSR 250 @PostConstruct、@PreDestroy、@Resource
+        另外，你也可以选择激活单独的对应这些注解的BeanPostProcessors
+        注意：这个注解不能激活 @Transactional 的注解识别，如果要识别这个，请使用 tx:annotation-driven
+      -->
+    <context:annotation-config/>
+    <!--
+        <bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/>
+        与上一个配置等价 - 这里我没有测试
+    -->
+
+    <bean class="com.microwu.cxd.spring.service.TestService"></bean>
+
+    <bean class="com.microwu.cxd.spring.controller.TestController"></bean>
+</beans>

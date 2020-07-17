@@ -36,6 +36,7 @@ public class ClientWithResponseHandler {
             // 创建一个自定义的响应处理者
             ResponseHandler<String> responseHandler = new ResponseHandler<String>() {
 
+                @Override
                 public String handleResponse(HttpResponse httpResponse) throws ClientProtocolException, IOException {
                     int status = httpResponse.getStatusLine().getStatusCode();
                     if (status >= 200 && status < 300) {

@@ -24,6 +24,8 @@
         <module>dubbo-client</module>
         <module>dubbo-provider</module>
         <module>dubbo-consumer</module>
+        <module>nacos-spring</module>
+        <module>nacos-springboot</module>
     </modules>
 
     <dependencyManagement>

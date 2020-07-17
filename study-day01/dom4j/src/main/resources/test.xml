@@ -1,35 +1,17 @@
-<?xml version="1.0" encoding="GBK"?>
-<advice>
-    <common>
-        <sysId>T20110729-080629</sysId>
-        <sysAccount>yanaiguo</sysAccount>
-        <pwd>123456</pwd>
-        <interfaces>140000</interfaces>
-        <bizCode>11001</bizCode>
-        <bizName>asdas</bizName>
-        <taskName>测试</taskName>
-        <remoteIp>010192021028</remoteIp>
-        <sendingtime>20110826153853</sendingtime>
-        <tasksequence>201108261538531876485</tasksequence>
-    </common>
-    <data>
-        <mailss>
-            <mail>
-                <to>yanaiguo@sinovatech.com,yanaiguo@sinovatech.com</to>
-                <displayname> 闫爱国</displayname>//显示发件人别名
-                <cc/>
-                <pp/>
-                <sp>10010.com</sp>
-                <subject>你好你好</subject>
-                <content/>
-                <filesize>22187</filesize>
-                <attements>
-                    <fileName>fm.log</fileName>
-                </attements>
-                <attements>
-                    <fileName>info.log</fileName>
-                </attements>
-            </mail>
-        </mailss>
-    </data>
-</advice>
+<?xml version="1.0" encoding="UTF-8"?>
+<file xmlns="urn:gsma:params:xml:ns:rcs:rcs:fthttp"
+      xmlns:x="urn:gsma:params:xml:ns:rcs:rcs:up:fthttpext">
+    <file-info type="thumbnail">
+        <file-size>[thumbnail size in bytes]</file-size>
+        <content-type>[MIME-type for thumbnail]</content-type>
+        <data url = "[HTTP URL for the thumbnail]" until = "[validity of the
+thumbnail]"/>
+    </file-info>
+    <file-info type="file" file-disposition="[file-disposition]">
+        <file-size>[file size in bytes]</file-size>
+        <file-name>[original file name]</file-name>
+        <content-type>[MIME-type for file]</content-type>
+        <data url = "[HTTP URL for the file]" until = "[validity of the file]"/>
+        <x:branded-url>[alternative branded HTTP URL of the file]</x:branded-url>
+    </file-info>
+</file>

@@ -3,6 +3,7 @@ package com.microwu.cxd.springboot.config;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.microwu.cxd.springboot.listener.DefaultMessageDelegate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.data.redis.RedisProperties;
 import org.springframework.context.annotation.Bean;
@@ -11,6 +12,9 @@ import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.data.redis.connection.RedisStandaloneConfiguration;
 import org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.listener.PatternTopic;
+import org.springframework.data.redis.listener.RedisMessageListenerContainer;
+import org.springframework.data.redis.listener.adapter.MessageListenerAdapter;
 import org.springframework.data.redis.serializer.Jackson2JsonRedisSerializer;
 import org.springframework.data.redis.serializer.RedisSerializer;
 import org.springframework.data.redis.serializer.StringRedisSerializer;
@@ -43,7 +47,7 @@ public class RedisConfig {
      * @author   chengxudong               chengxudong@microwu.com
      * @date    2020/5/28  16:58
      *
-     * @param   	
+     * @param
      * @return  LettuceConnectionFactory
      */
     @Bean
@@ -145,5 +149,23 @@ public class RedisConfig {
         serializer.setObjectMapper(objectMapper);
         return serializer;
 
+    }
+
+    @Bean
+    public MessageListenerAdapter messageListenerAdapter() {
+        return new MessageListenerAdapter(new DefaultMessageDelegate());
+    }
+
+    @Bean
+    public RedisMessageListenerContainer redisMessageListenerContainer() {
+        RedisMessageListenerContainer redisMessageListenerContainer = new RedisMessageListenerContainer();
+        redisMessageListenerContainer.setConnectionFactory(getConnectionFactory(14));
+//        Map<? extends MessageListener, Collection<? extends Topic>> listeners = new HashMap<>(1);
+//        ArrayList<Topic> topics = new ArrayList<>(1);
+//        topics.add(new ChannelTopic(""));
+//        listeners.put(messageListenerAdapter(), topics);
+//        redisMessageListenerContainer.setMessageListeners(listeners);
+        redisMessageListenerContainer.addMessageListener(messageListenerAdapter(), new PatternTopic("__keyevent@14__:expired"));
+        return redisMessageListenerContainer;
     }
 }

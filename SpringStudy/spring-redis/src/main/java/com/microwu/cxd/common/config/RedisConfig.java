@@ -3,18 +3,24 @@ package com.microwu.cxd.common.config;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.microwu.cxd.common.listener.DefaultMessageDelegate;
 import com.microwu.cxd.listener.TopicMessageListener;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Primary;
+import org.springframework.data.redis.connection.MessageListener;
 import org.springframework.data.redis.connection.RedisStandaloneConfiguration;
 import org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.listener.PatternTopic;
 import org.springframework.data.redis.listener.RedisMessageListenerContainer;
+import org.springframework.data.redis.listener.Topic;
+import org.springframework.data.redis.listener.adapter.MessageListenerAdapter;
 import org.springframework.data.redis.serializer.Jackson2JsonRedisSerializer;
 import org.springframework.data.redis.serializer.StringRedisSerializer;
 import org.springframework.session.data.redis.config.annotation.web.http.EnableRedisHttpSession;
+
+import java.util.*;
 
 /**
  * Description:     @EnableRedisHttpSession注释创建一个SpringBean, 名称为SpringSessionRepositoryFilter
@@ -46,11 +52,29 @@ public class RedisConfig {
         return redisTemplate;
     }
 
+//    @Bean
+//    public RedisMessageListenerContainer messageListenerContainer() {
+//        RedisMessageListenerContainer redisMessageListenerContainer = new RedisMessageListenerContainer();
+//        redisMessageListenerContainer.setConnectionFactory(lettuceConnectionFactory());
+//        redisMessageListenerContainer.addMessageListener(topicMessageListener, new PatternTopic("__keyevent@0__:expired"));
+//        return  redisMessageListenerContainer;
+//    }
+
+    @Bean
+    public MessageListenerAdapter messageListenerAdapter() {
+        return new MessageListenerAdapter(new DefaultMessageDelegate());
+    }
+
     @Bean
     public RedisMessageListenerContainer messageListenerContainer() {
         RedisMessageListenerContainer redisMessageListenerContainer = new RedisMessageListenerContainer();
         redisMessageListenerContainer.setConnectionFactory(lettuceConnectionFactory());
-        redisMessageListenerContainer.addMessageListener(topicMessageListener, new PatternTopic("__keyevent@0__:expired"));
+        Map<MessageListener, Collection<? extends Topic>> listeners = new HashMap<>(1);
+        List<Topic> topics = new ArrayList<>(1);
+        topics.add(new PatternTopic("__keyevent@14__:expired"));
+        listeners.put(messageListenerAdapter(), topics);
+        redisMessageListenerContainer.setMessageListeners(listeners);
+//        redisMessageListenerContainer.addMessageListener(messageListenerAdapter(), new PatternTopic("__keyevent@14__:expired"));
         return  redisMessageListenerContainer;
     }
 
