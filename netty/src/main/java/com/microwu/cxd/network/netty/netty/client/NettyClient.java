@@ -43,7 +43,7 @@ public class NettyClient {
                         @Override
                         protected void initChannel(SocketChannel socketChannel) throws Exception {
                             socketChannel.pipeline().addLast(
-                                    new NettyMessageDecoder(1024 * 1024, 4, 4));
+                                    new NettyMessageDecoder(1024 * 1024, 4, 4, 0, 0));
                             socketChannel.pipeline().addLast("MessageEncoder",
                                     new NettyMessageEncoder());
                             socketChannel.pipeline().addLast("readTimeoutHandler",
@@ -56,6 +56,7 @@ public class NettyClient {
                     });
 
             ChannelFuture future = bootstrap.connect(new InetSocketAddress(host, port), new InetSocketAddress(NettyConstant.LOCAL_IP, NettyConstant.LOCAL_PORT)).sync();
+            System.out.println("客户端连接成功。。。");
 
             future.channel().closeFuture().sync();
         } finally {

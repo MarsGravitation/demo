@@ -44,7 +44,6 @@ public class HttpFileServerHandler extends SimpleChannelInboundHandler<FullHttpR
         final String path = sanitizeUri(uri);
         if (path == null) {
             sendError(channelHandlerContext, HttpResponseStatus.FORBIDDEN);
-            ;
             return;
         }
 
@@ -111,7 +110,7 @@ public class HttpFileServerHandler extends SimpleChannelInboundHandler<FullHttpR
 
     private void sendListing(ChannelHandlerContext channelHandlerContext, File dir) {
         DefaultFullHttpResponse response = new DefaultFullHttpResponse(HttpVersion.HTTP_1_1, HttpResponseStatus.OK);
-        response.headers().set(HttpHeaderNames.CONTENT_TYPE, "text/html;chaarset=UTF-8");
+        response.headers().set(HttpHeaderNames.CONTENT_TYPE, "text/html;charset=UTF-8");
 
         String dirPath = dir.getPath();
         StringBuilder buf = new StringBuilder();

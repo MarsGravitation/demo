@@ -4,6 +4,7 @@ import com.microwu.cxd.network.netty.netty.NettyConstant;
 import com.microwu.cxd.network.netty.netty.codec.NettyMessageDecoder;
 import com.microwu.cxd.network.netty.netty.codec.NettyMessageEncoder;
 import io.netty.bootstrap.ServerBootstrap;
+import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelOption;
 import io.netty.channel.nio.NioEventLoopGroup;
@@ -31,7 +32,7 @@ public class NettyServer {
                 .childHandler(new ChannelInitializer<SocketChannel>() {
                     @Override
                     protected void initChannel(SocketChannel socketChannel) throws Exception {
-                        socketChannel.pipeline().addLast(new NettyMessageDecoder(1024 * 1024, 4, 4));
+                        socketChannel.pipeline().addLast(new NettyMessageDecoder(1024 * 1024, 4, 4, 0, 0));
                         socketChannel.pipeline().addLast(new NettyMessageEncoder());
                         socketChannel.pipeline().addLast(new LoginAuthRespHandler());
                         socketChannel.pipeline().addLast("HeartBeatHandler",
@@ -39,7 +40,9 @@ public class NettyServer {
                     }
                 });
 
-        bootstrap.bind(NettyConstant.REMOTE_IP, NettyConstant.PORT).sync();
+        ChannelFuture future = bootstrap.bind(NettyConstant.REMOTE_IP, NettyConstant.PORT).sync();
+        System.out.println("服务器启动成功。。。");
+        future.channel().closeFuture().sync();
 
     }
 

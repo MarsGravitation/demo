@@ -15,7 +15,7 @@ public class CurrentConditionsDisplay implements  Observer, DisplayElement {
 
     public CurrentConditionsDisplay(Subject weatherData) {
         this.weatherData = weatherData;
-        weatherData.registerObserver(this);
+        this.weatherData.registerObserver(this);
     }
 
     @Override

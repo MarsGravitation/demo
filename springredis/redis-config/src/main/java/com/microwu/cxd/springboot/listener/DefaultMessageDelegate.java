@@ -32,8 +32,31 @@ public class DefaultMessageDelegate implements  MessageDelegate {
 
     }
 
+    /**
+     * 				Class<?>[] types = m.getParameterTypes();
+     * 				Object[] args = //
+     * 						types.length == 2 //
+     * 								&& types[0].isInstance(arguments[0]) //
+     * 								&& types[1].isInstance(arguments[1]) ? arguments : message;
+     *
+     * 				if (!types[0].isInstance(args[0])) {
+     * 					continue;
+     *                                }
+     *
+     * isInstance 这个对象能不能转换为这个类
+     *
+     * 1. 会最先匹配两个参数的方法且参数类型匹配
+     * 2. 且第一个参数类型匹配
+     *
+     * @author   chengxudong               chengxudong@microwu.com
+     * @date    2020/9/1  17:20
+     *
+     * @param   	message
+     * @param 		channel
+     * @return  void
+     */
     @Override
     public void handleMessage(Serializable message, String channel) {
-
+        System.out.println(message + " " + channel);
     }
 }

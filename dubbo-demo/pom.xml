@@ -10,6 +10,7 @@
     <modules>
         <module>dubbo-provider</module>
         <module>dubbo-consumer</module>
+        <module>dubbo-second-demo</module>
     </modules>
     <packaging>pom</packaging>
 

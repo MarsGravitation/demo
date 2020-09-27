@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Licensed to the Apache Software Foundation (ASF) under one or more
+  contributor license agreements.  See the NOTICE file distributed with
+  this work for additional information regarding copyright ownership.
+  The ASF licenses this file to You under the Apache License, Version 2.0
+  (the "License"); you may not use this file except in compliance with
+  the License.  You may obtain a copy of the License at
+      http://www.apache.org/licenses/LICENSE-2.0
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://dubbo.apache.org/schema/dubbo"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+       http://dubbo.apache.org/schema/dubbo http://dubbo.apache.org/schema/dubbo/dubbo.xsd">
+
+    <!--
+        service: 服务配置，用于暴露一个服务，定义服务的元信息，一个服务可以使用多个协议暴露，一个服务也可以注册到多个注册中心
+        reference：引用配置，用于创建一个远程服务代理，一个引用可以指向多个注册中心
+        protocol：协议配置，用于配置提供服务的协议信息，协议由提供方指定，消费方被动接受
+        application：应用配置，用于配置当前应用信息，不管该应用是提供者还是消费者
+        module：模块配置
+        registry：注册中心配置，用于配置连接注册中心相关信息
+        monitor：监控中心配置，用于配置连接监控中心相关信息
+        provider：提供方配置
+        consumer：消费方配置
+        method：方法配置
+        argument：参数配置
+
+        不同粒度配置的覆盖关系：
+            1. 方法级优先，接口次之，全局配置再次之
+            2. 如果级别一样，消费方优先，提供方次之
+
+        建议由服务提供方设置超时 provider timeout
+
+      -->
+
+    <!--  提供方应用信息，用于计算依赖关系  -->
+    <dubbo:application name="demo-provider"/>
+
+    <!--  使用 zookeeper，向注册中心暴露服务地址 -->
+    <dubbo:registry address="zookeeper://192.168.133.134:2181"/>
+
+    <!--  使用 dubbo 协议暴露端口  -->
+    <dubbo:protocol name="dubbo"/>
+
+    <!--  和本地 bean 一样实现服务 -->
+    <bean id="demoService" class="com.microwu.cxd.dubbo.DemoServiceImpl"/>
+
+    <!--  声明需要暴露的服务接口  -->
+    <dubbo:service interface="com.microwu.cxd.dubbo.DemoService" ref="demoService"/>
+
+</beans>

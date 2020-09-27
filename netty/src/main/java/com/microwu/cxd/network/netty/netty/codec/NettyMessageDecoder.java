@@ -21,13 +21,14 @@ import java.util.HashMap;
 public class NettyMessageDecoder extends LengthFieldBasedFrameDecoder {
     MarshallingDecoder marshallingDecoder;
 
-    public NettyMessageDecoder(int maxFrameLength, int lengthFieldOffset, int lengthFieldLength) throws IOException {
-        super(maxFrameLength, lengthFieldOffset, lengthFieldLength);
+    public NettyMessageDecoder(int maxFrameLength, int lengthFieldOffset, int lengthFieldLength, int lengthAdjustment, int initialBytesToStrip) throws IOException {
+        super(maxFrameLength, lengthFieldOffset, lengthFieldLength, lengthAdjustment, initialBytesToStrip);
         marshallingDecoder = new MarshallingDecoder();
     }
 
     @Override
     protected Object decode(ChannelHandlerContext ctx, ByteBuf in) throws Exception {
+        // 1. 调用父类获取包
         ByteBuf frame = (ByteBuf) super.decode(ctx, in);
         if(frame == null) {
             return null;
@@ -42,6 +43,7 @@ public class NettyMessageDecoder extends LengthFieldBasedFrameDecoder {
         header.setPriority(frame.readByte());
 
         int size = frame.readInt();
+        // 附件格式大于 0，需要解码操作
         if(size > 0) {
             HashMap<String, Object> attch = new HashMap<>(size);
             int keySize = 0;
@@ -52,12 +54,16 @@ public class NettyMessageDecoder extends LengthFieldBasedFrameDecoder {
                 keyArray = new byte[keySize];
                 frame.readBytes(keyArray);
                 key = new String(keyArray, "UTF-8");
+                // 解码
                 attch.put(key, marshallingDecoder.decode(frame));
             }
             keyArray = null;
             key = null;
             header.setAttachment(attch);
         }
+
+        // 对于 ByteBuf 来说，读一个数据，就会少一个数据，所以读完 header，剩下就是 body 了
+        // 如果大于四个字节，说明有数据，4 个字节是内容长度的占位
         if(frame.readableBytes() > 4) {
             message.setBody(marshallingDecoder.decode(frame));
         }

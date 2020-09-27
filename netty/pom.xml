@@ -28,6 +28,7 @@
       <groupId>io.netty</groupId>
       <artifactId>netty-all</artifactId>
       <version>5.0.0.Alpha2</version>
+<!--      <version>4.1.51.Final</version>-->
     </dependency>
 
     <dependency>
@@ -76,6 +77,11 @@
       <version>3.11.1</version>
     </dependency>
 
+    <dependency>
+      <groupId>com.caucho</groupId>
+      <artifactId>hessian</artifactId>
+      <version>4.0.38</version>
+    </dependency>
 
   </dependencies>
 

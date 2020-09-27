@@ -1,9 +1,6 @@
 package com.microwu.cxd.http.client4;
 
-import org.apache.http.Header;
-import org.apache.http.HttpHost;
-import org.apache.http.HttpResponse;
-import org.apache.http.ParseException;
+import org.apache.http.*;
 import org.apache.http.client.config.AuthSchemes;
 import org.apache.http.client.config.CookieSpecs;
 import org.apache.http.client.config.RequestConfig;
@@ -28,7 +25,9 @@ import org.apache.http.impl.io.DefaultHttpResponseParserFactory;
 import org.apache.http.io.HttpMessageParser;
 import org.apache.http.io.SessionInputBuffer;
 import org.apache.http.message.BasicHeader;
+import org.apache.http.message.BasicHeaderElementIterator;
 import org.apache.http.message.BasicLineParser;
+import org.apache.http.protocol.HTTP;
 import org.apache.http.protocol.HttpCoreContext;
 import org.apache.http.ssl.SSLContexts;
 import org.apache.http.util.CharArrayBuffer;
@@ -51,7 +50,7 @@ import java.util.Arrays;
  */
 public class ClientConfiguration {
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, InterruptedException {
         // 使用自定义消息解析和写入器
         DefaultHttpResponseParserFactory responseParserFactory = new DefaultHttpResponseParserFactory() {
             @Override
@@ -137,18 +136,40 @@ public class ClientConfiguration {
                 .setDefaultCredentialsProvider(credentialsProvider)
 //                .setProxy(new HttpHost("myProxy", 8080))
                 .setDefaultRequestConfig(requestConfig)
+                .setKeepAliveStrategy(((response, context) -> {
+                    // Honor 'keep-alive' header
+                    HeaderElementIterator it = new BasicHeaderElementIterator(
+                            response.headerIterator(HTTP.CONN_KEEP_ALIVE));
+                    while (it.hasNext()) {
+                        HeaderElement he = it.nextElement();
+                        String param = he.getName();
+                        String value = he.getValue();
+                        if (value != null && param.equalsIgnoreCase("timeout")) {
+                            try {
+                                return Long.parseLong(value) * 1000;
+                            } catch(NumberFormatException ignore) {
+                            }
+                        }
+                    }
+                    System.out.println("客户端自定义保活策略 5s 。。。");
+                    return 5 * 1000;
+                }))
                 .build();
 
         try {
-            HttpGet httpGet = new HttpGet("http://httpbin.org/get");
-            CloseableHttpResponse response = httpClient.execute(httpGet, HttpCoreContext.create());
-            try {
-                System.out.println(response.getStatusLine());
-                System.out.println(EntityUtils.toString(response.getEntity()));
-            } finally {
-                response.close();
+            for (int i = 0; i < 2; i++) {
+                HttpGet httpGet = new HttpGet("http://123.125.99.253:9001/");
+                CloseableHttpResponse response = httpClient.execute(httpGet, HttpCoreContext.create());
+                try {
+                    System.out.println(response.getStatusLine());
+                    System.out.println(EntityUtils.toString(response.getEntity()));
+                } finally {
+                    response.close();
+                }
+                Thread.sleep(10000);
             }
 
+            Thread.sleep(10000);
         } finally {
             httpClient.close();
         }

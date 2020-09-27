@@ -60,7 +60,7 @@ public class ChangeFileEncoding {
     }
 
     public static void main(String[] args) throws IOException {
-        convert("C:\\Users\\Administration\\Desktop\\新建文件夹\\运营任务\\王钻\\日报\\200716_detailedlist.csv", "UTF-8", "GBK");
+        convert("C:\\Users\\Administration\\Desktop\\新建文件夹\\运营任务\\王钻\\日报\\200926_detailedlist.csv", "UTF-8", "GBK");
     }
 
 }
