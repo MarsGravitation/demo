@@ -3,6 +3,7 @@ package com.microwu.reflex;
 import java.lang.reflect.Field;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Stream;
 
@@ -73,6 +74,18 @@ public class ReflectionDemo03 {
      * Class：不解释了
      * ParameterizedType：参数化类型，只要带参数化（泛型）标签 <ClassName> 的参数或者属性，例如：Set<String>
      *
+     * JDK 中关于泛型的 API
+     *  Class 中的方法：
+     *      Type[] getGenericInterfaces() - 返回类实例的接口的泛型类型
+     *      Type[] getGenericSuperclass() - 返回类实例的父类的泛型类型
+     *  Constructor：
+     *      Type[] getGenericParameterTypes - 返回构造器的方法参数的泛型类型
+     *  Method：
+     *      Type[] getGenericParameterTypes - 返回方法参数的泛型类型
+     *      Type[] getGenericReturnType - 返回方法值的泛型类型
+     *  Field:
+     *      Type getGenericType - 返回属性的泛型类型
+     *
      * @param
      * @return void
      * @author chengxudong               chengxudong@microwu.com
@@ -95,7 +108,44 @@ public class ReflectionDemo03 {
         System.out.println(genericType + " is ParameterizedType -> " + (genericType instanceof ParameterizedType));
     }
 
+    /**
+     * Type 体系
+     *  JDK 1.5 扩充了四种泛型类型：参数化类型（ParameterizedType）、类型变量类型（TypeVariable）、限定符类型（WildcardType）、泛型数组类型（GenericArrayType）
+     *
+     *  ParameterizedType 参数化类型，实际上只要带参数化泛型标签 <ClassName> 的参数或者属性，都属于 ParameterizedType，如 List<String> list;
+     *      |- getActualTypeArguments - 返回这个 ParameterizedType 的实际类型 Type 数组，Type 数组里面可能是 Class，ParameterizedType 或者其他，这个方法仅仅脱去最外层的 <>
+     *      |- getRawType - 返回当前这个 ParameterizedType 的原始类型，List<String> -> List.class
+     *      |- getOwnerType - 获取原始类型所属的类型，
+     *
+     * @author   chengxudong               chengxudong@microwu.com
+     * @date    2020/10/27  10:17
+     *
+     * @param
+     * @return  void
+     */
+    public static void test02() {
+        List<String> list = new ArrayList<>();
+        list.getClass().getGenericInterfaces();
+        Type type = list.getClass().getGenericSuperclass();
+        if (type instanceof ParameterizedType) {
+            ParameterizedType parameterizedType = (ParameterizedType) type;
+            Type[] actualTypeArguments = parameterizedType.getActualTypeArguments();
+            Stream.of(actualTypeArguments).forEach(actualTypeArgument -> {
+                System.out.println(actualTypeArgument);
+                if (actualTypeArgument instanceof Class) {
+                    Class c = (Class) actualTypeArgument;
+                    System.out.println("Class：" + c.getName());
+                }
+            });
+
+            System.out.println("TypeName：" + parameterizedType.getTypeName());
+            System.out.println("RawType：" + parameterizedType.getRawType());
+            System.out.println("OwnerType：" + parameterizedType.getOwnerType());
+        }
+    }
+
     public static void main(String[] args) throws NoSuchFieldException {
-        test();
+//        test();
+        test02();
     }
 }

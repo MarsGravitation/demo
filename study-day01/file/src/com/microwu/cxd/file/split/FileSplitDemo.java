@@ -14,7 +14,7 @@ import java.nio.channels.FileChannel;
  */
 public class FileSplitDemo {
     public static void main(String[] args) throws IOException {
-        splitFile("G:\\workspace\\task\\王钻\\数据库\\WeChat Files\\wxid_rs6uf3wu28lm22\\FileStorage\\File\\2019-12\\用户状态统计\\all_mobile.txt", 7);
+        splitFile("G:\\workspace\\task\\王钻\\数据库\\WeChat Files\\wxid_rs6uf3wu28lm22\\FileStorage\\File\\2020-10\\王砖商城数据0928(1)\\online_and_mid.csv", 2);
         // qieGe(20, "G:\\workspace\\task\\王钻\\数据库\\4月离网用户已登录王钻商城.csv");
     }
 
@@ -50,8 +50,8 @@ public class FileSplitDemo {
                 endPosition = fileSize; //最后一个文件直接指向文件末尾
             }
             String lastName = filePath.substring(filePath.lastIndexOf("."));//截取后面的文件后缀
-            // String subName = filePath.substring(0, filePath.lastIndexOf("."));//截取文件的前缀
-            FileOutputStream fos = new FileOutputStream("G:\\workspace\\task\\王钻\\数据库\\WeChat Files\\wxid_rs6uf3wu28lm22\\FileStorage\\File\\2019-12\\用户状态统计\\part_" + (i + 1) + lastName);
+            String subName = filePath.substring(0, filePath.lastIndexOf("."));//截取文件的前缀
+            FileOutputStream fos = new FileOutputStream(subName + "_part_" + (i + 1) + lastName);
             FileChannel outputChannel = fos.getChannel();
             inputChannel.transferTo(startPosition, endPosition - startPosition, outputChannel);//通道传输文件数据
             outputChannel.close();

@@ -25,6 +25,11 @@ import java.lang.reflect.Method;
  *      setWriteMethod
  *
  *  4. 不正当使用会导致内存溢出
+ *      如果框架或者程序用到了 JavaBeans Introspector，那么就相当于启用了一个系统级别的缓存，这个缓存会存放一些曾加载并分析过的 Javabean 的引用，当 web 服务器关闭的时候，由于这个缓存中存放这
+ *      这些 JavaBean 的引用，所以垃圾回收器不能对 Web 容器中的 JavaBean 对象进行回收，导致内存越来越大。还有一点值得注意，清除 Introspector 缓存的唯一方式是刷新整个缓冲区，这是因为 JDK 没办法
+ *      判断那些是数据当前的应用的引用，所以刷新整个 Introspector 缓存缓冲区会导致把服务器的所有应用的 Introspector 缓存都删掉。Spring 中提供了 IntrospectorCleanupListener 就是为了解决这个问题，
+ *      它会在 Web 服务器停止的时候，清理一下这个 Introspector 缓存，使 JavaBean 能被垃圾回收器正确回收。
+ *
  *      spring 中通过 CachedIntrospectionResults 自行管理
  *
  * https://mp.weixin.qq.com/s?__biz=MzU4MDYxNjQ1OQ==&mid=2247486194&idx=1&sn=d50d4424e90dd4ee14ba33ad586eb3e4&chksm=fd556296ca22eb80a957172770e32659946d7eab92534e031d097e4e5bec3b767bc86b1a3595&scene=126&sessionid=1597107225&key=2008e9df245ac54d2577f125d90e7877e56314a79afa5b34cb54966576561819a718988ff054e8ba38ddb3b1ea2fe4e48609379f6e795bdeebf4ca8fb2bcc2dabd21bf9ce42262c378e7b5b47f45366f&ascene=1&uin=MTAwMTU2MDQyOA%3D%3D&devicetype=Windows+10+x64&version=62090538&lang=zh_CN&exportkey=A75KqjjAHrRV45vyDjtYVr8%3D&pass_ticket=BeqjOMuhXy%2FVuOWjhsdlSG3h2NnueJrVzyTmPOUxg%2BqVyUEUc%2FQ4HZZb7QTXYim4

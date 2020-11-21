@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.4"
+         xmlns="http://java.sun.com/xml/ns/j2ee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+
+  <!-- Servlet Filters ================================================ -->
+  <!--  配置前端控制器  -->
+  <!-- 玩springmvc 离不开servlet , spring'mvc实际上是把servlet给藏起来了 -->
+  <servlet>
+    <servlet-name>dispatcherServlet</servlet-name>
+    <!-- 这个类名是孤独写死的 -->
+    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+    <!-- 全局的初始化参数，目的是加载spring的配置问价-->
+    <init-param>
+      <!-- 加载配置文件 -->
+      <param-name>contextConfigLocation</param-name>
+      <param-value>classpath:springmvc.xml</param-value>
+    </init-param>
+    <!-- 配置服务器一启动就加载-->
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>dispatcherServlet</servlet-name>
+    <!--  / 表示任何路径都会被他拦截下来 -->
+    <url-pattern>/</url-pattern>
+  </servlet-mapping>
+
+
+</web-app>

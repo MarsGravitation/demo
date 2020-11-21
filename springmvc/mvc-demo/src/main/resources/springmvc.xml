@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/mvc
+       http://www.springframework.org/schema/mvc/spring-mvc.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- 上面的名称空间以后使用的时候,直接拷贝就好 -->
+
+    <!-- 开启注解扫描-->
+    <context:component-scan base-package="com.microwu.cxd.mvc"/>
+
+    <!-- 配置视图解析器 我们的页面跳转就是通过它来完成的-->
+    <bean id="internalResourceViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+<!--        配置前缀路径-->
+        <property name="prefix" value="/WEB-INF/pages/"/>
+<!--        配置文件的后缀名-->
+        <property name="suffix" value=".html"/>
+    </bean>
+
+    <!-- 开启注解版SpringMvc的支持 -->
+    <mvc:annotation-driven/>
+
+</beans>
+        <!-- springmvc的配置文件 要想生效，就得在前端控制器上注册-->

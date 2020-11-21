@@ -6,7 +6,12 @@
 
   <groupId>com.microwu.cxd</groupId>
   <artifactId>springmvc</artifactId>
+  <packaging>pom</packaging>
   <version>1.0-SNAPSHOT</version>
+  <modules>
+    <module>mvc-demo</module>
+      <module>tomcat</module>
+  </modules>
 
   <name>springmvc</name>
   <!-- FIXME change it to the project's website -->

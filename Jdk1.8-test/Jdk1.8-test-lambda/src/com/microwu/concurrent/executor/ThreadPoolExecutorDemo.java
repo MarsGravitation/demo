@@ -69,7 +69,7 @@ public class ThreadPoolExecutorDemo {
         ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(1, 1, 1, null, null);
         /*
             1. 如果当前线程少于核心线程数，直接添加一个 worker 来执行任务
-            2. 如果当前线程数大于核心线程数或者添加 worker 失败，把任务添加到 workQueue中
+            2. 如果当前线程数大于核心线程数或者添加 worker 失败，把任务添加到 workQueue 中
             3. 如果 workQueue 队列满了，以 max 为界创建新的 worker，如果失败，执行拒绝策略
          */
         threadPoolExecutor.execute(null);

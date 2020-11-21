@@ -48,14 +48,17 @@ public class ClassResourceTest {
         System.out.println(resource1);
 
         // 3. 得到的是当前 classpath 的绝对 URI 路径
+        // file:/E:/work-note/Products/spring-source/spring-bean-1/target/classes/
         URL resource2 = aClass.getClassLoader().getResource("");
         System.out.println(resource2);
 
         // 4. 当前 classpath 的绝对路径
+        // file:/E:/work-note/Products/spring-source/spring-bean-1/target/classes/
         URL resource3 = ClassLoader.getSystemResource("");
         System.out.println(resource3);
 
         // 5. 当前 classpath 的绝对路径
+        // file:/E:/work-note/Products/spring-source/spring-bean-1/target/classes/
         URL resource4 = Thread.currentThread().getContextClassLoader().getResource("");
         System.out.println(resource4);
 
