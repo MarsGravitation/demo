@@ -6,11 +6,10 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.format.FormatterRegistry;
-import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 /**
- * Description:     SpringMVC自定义配置:
+ * Description:     SpringMVC 自定义配置:
  *      1. @EnableWebMvc + extends WebMvcConfigurationAdapter, 在扩展类中重写父类的方法, 会屏蔽@EnableAotuConfigration中的设置
  *      2. extends WebMvcConfigurationSupport, 重写父类方法, 会屏蔽默认的设置
  *      3. extends WebMvcConfigurationAdapter, 重写父类方法, 不会屏蔽默认的设置(过时) - implements WebMvcConfigurer
@@ -25,6 +24,33 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
  *     // Implement configuration methods...
  * }
  *
+ * 一般来说不要使用 @EnableWebMVC，会使默认配置失效
+ *
+ * 官网提供了高级模式
+ * @Configuration
+ * public class WebConfig extends DelegatingWebMvcConfiguration {
+ *
+ *     // ...
+ * }
+ *
+ * 高级模式说的是 @EnableWebMvc 导入 DelegatingWebMvcConfiguration，其中：
+ *  为 Spring MVC 应用程序提供默认的 Spring 配置
+ *  检测并委托给 WebMvcConfigurer 实现以自定义该配置
+ *
+ *  删除 @EnableWebMvc 直接继承 DelegatingWebMvcConfiguration 效果类似
+ *
+ * SpringBoot 中的 Spring MVC
+ * SpringBoot 提供了自动配置：
+ *  1. 包含 ContentNegotiatingViewResolver 和 BeanNameViewResolver
+ *  2. 支持提供静态资源
+ *  3. 自动注册 Converter, GenericConverter 和 Formatter
+ *  4. 支持 HttpMessageConverters
+ *  5. 自动注册 MessageCodesResolver
+ *  6. 静态 index.html支持
+ *  7. 自动使用 ConfigurableWebBindingInitializer
+ *
+ *  如果要保留这些 SpringBoot MVC 定制并进行更多的定制，可以添加自己的 @Configuration WebMvcConfigurer 类，但不添加 @EnableWebMvc
+ *
  * @Author:          chengxudong             chengxudong@microwu.com
  * Date:           2019/7/31   14:15
  * Copyright       北京小悟科技有限公司       http://www.microwu.com
@@ -32,7 +58,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
  * Author        Time            Content
  */
 @Configuration
-@EnableWebMvc
+//@EnableWebMvc
 public class SpringMvcConfig implements WebMvcConfigurer, ApplicationContextAware {
     private ApplicationContext applicationContext;
 

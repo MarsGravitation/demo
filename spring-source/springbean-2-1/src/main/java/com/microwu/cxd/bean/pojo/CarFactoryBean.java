@@ -1,0 +1,45 @@
+package com.microwu.cxd.bean.pojo;
+
+import org.springframework.beans.factory.FactoryBean;
+
+/**
+ * Description:
+ *
+ * @Author: chengxudong             chengxudong@microwu.com
+ * Date:       2021/1/13   9:59
+ * Copyright:      北京小悟科技有限公司       http://www.microwu.com
+ * Update History:
+ * Author        Time            Content
+ */
+public class CarFactoryBean implements FactoryBean<Car> {
+
+    private String carInfo;
+
+    @Override
+    public Car getObject() throws Exception {
+        Car car = new Car();
+        String[] infos = carInfo.split(",");
+        car.setBrand(infos[0]);
+        car.setMaxSpeed(Integer.valueOf(infos[1]));
+        car.setPrice(Double.valueOf(infos[2]));
+        return car;
+    }
+
+    @Override
+    public Class<?> getObjectType() {
+        return Car.class;
+    }
+
+    @Override
+    public boolean isSingleton() {
+        return false;
+    }
+
+    public String getCarInfo() {
+        return carInfo;
+    }
+
+    public void setCarInfo(String carInfo) {
+        this.carInfo = carInfo;
+    }
+}

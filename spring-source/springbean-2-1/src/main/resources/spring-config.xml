@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="myTestBean" class="com.microwu.cxd.bean.pojo.MyTestBean" scope="prototype"/>
+
+    <bean id="myTestBean2" class="com.microwu.cxd.bean.pojo.MyTestBean2"/>
+
+    <bean id="car" class="com.microwu.cxd.bean.pojo.CarFactoryBean">
+        <property name="carInfo" value="大奔,600,1000000"></property>
+    </bean>
+
+<!--    <bean id="myBeanFactoryPostProcessor" class="com.microwu.cxd.bean.component.MyBeanFactoryPostProcessor"></bean>-->
+
+<!--    <bean id="myInstantiationAwareBeanPostProcessor" class="com.microwu.cxd.bean.component.MyInstantiationAwareBeanPostProcessor"></bean>-->
+
+</beans>

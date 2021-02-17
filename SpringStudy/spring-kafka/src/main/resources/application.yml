@@ -1,0 +1,11 @@
+spring:
+  kafka:
+    bootstrap-servers:
+      - 192.168.133.134:9092
+    producer:
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+      properties:
+        spring.json.type.mapping: foo:com.microwu.cxd.kafka.common.Foo1,bar:com.microwu.cxd.kafka.common.Bar1
+    consumer:
+      bootstrap-servers:
+        - 192.168.133.134:9092

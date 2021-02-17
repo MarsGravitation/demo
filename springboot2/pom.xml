@@ -22,6 +22,7 @@
     <module>spring-netty</module>
       <module>spring-security</module>
     <module>springboot-study</module>
+      <module>springboot-study-2</module>
   </modules>
 
   <name>springboot-2</name>

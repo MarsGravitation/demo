@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.microwu.cxd.tool.config.CustomToolConfiguration

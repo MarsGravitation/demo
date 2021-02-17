@@ -42,6 +42,12 @@ package com.microwu.cxd.mvc;
 public class SpringMvcApplication {
 
     public static void main(String[] args) {
+//        ContextLoaderListener
+//        DispatcherServlet
+//        AnnotationDrivenBeanDefinitionParser
+//        MethodIntrospector
+//        RequestMappingHandlerMapping
+//        RequestMappingHandlerAdapter
 //        HandlerMethod
 //        AbstractHandlerMethodMapping
     }

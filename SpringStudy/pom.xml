@@ -18,6 +18,8 @@
       <module>spring-mybatis</module>
     <module>jpa</module>
       <module>spring-flowable</module>
+    <module>spring-kafka</module>
+      <module>custom-starter-tool</module>
   </modules>
   <name>Maven Quick Start Archetype</name>
   <url>http://maven.apache.org</url>

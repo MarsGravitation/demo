@@ -22,9 +22,10 @@ import org.springframework.scheduling.annotation.EnableAsync;
 @EnableAsync
 public class SpringMvcApplication
 {
-    public static void main( String[] args )
-    {
+    public static void main( String[] args ) {
+//        ContextLoaderListener
+//        DispatcherServlet
+//        ExceptionHandlerExceptionResolver
         SpringApplication.run(SpringMvcApplication.class, args);
-
     }
 }

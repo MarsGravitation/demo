@@ -3,7 +3,7 @@ package com.microwu.concurrent.limit;
 /**
  * Description:
  *
- *
+ *  https://www.jianshu.com/p/36bca4ed6d17
  *
  * @Author: chengxudong             chengxudong@microwu.com
  * Date:       2020/10/16   16:25

@@ -17,6 +17,7 @@
         <module>spring-bean-6</module>
         <module>spring-aop-1</module>
         <module>spring-aop-2</module>
+        <module>springbean-2-1</module>
     </modules>
 
     <dependencyManagement>

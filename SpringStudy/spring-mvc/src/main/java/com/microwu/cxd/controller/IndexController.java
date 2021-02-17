@@ -13,15 +13,15 @@ import java.util.concurrent.TimeUnit;
 /**
  * Description:
  * @RequestBody 和 @ResponseBody 分别完成请求到对象, 对象到请求的转换
- * 底层是依靠HttpMessageConverter 消息转换机制
+ * 底层是依靠 HttpMessageConverter 消息转换机制
  *
  * 在请求时, 我们会在请求头 Content-Type, 表示RequestBody 的内容类型, 这样,
- * SpringMVC可以从自己的HttpMessageConverter 数组中, 通过canRead, 判断是否
- * 可以读取指定的mediaType, 转换成对应的class 对象.
+ * SpringMVC 可以从自己的HttpMessageConverter 数组中, 通过canRead, 判断是否
+ * 可以读取指定的 mediaType, 转换成对应的 class 对象.
  *
- * 在响应时, 我们会在请求头上Accept上, 表示ResponseBody 的内容类型, 这样, SpringMVC
- * 可以从自己的HttpMessageConverter 数组中, 通过caanWriter方法, 判断是否可以能够将
- * class 序列化成mediaType 内容.
+ * 在响应时, 我们会在请求头上 Accept 上, 表示 ResponseBody 的内容类型, 这样, SpringMVC
+ * 可以从自己的 HttpMessageConverter 数组中, 通过 canWriter 方法, 判断是否可以能够将
+ * class 序列化成 mediaType 内容.
  *
  * @Author: chengxudong             chengxudong@microwu.com
  * Date:           2019/7/31   13:56

@@ -8,12 +8,12 @@ import org.springframework.stereotype.Service;
 import java.util.concurrent.TimeUnit;
 
 /**
- * Description:     Spring异步编程:
+ * Description:     Spring 异步编程:
  *      1. 循环依赖异常
  *          开启@EnableAsync 和 @Async注解所在的Bean被循环依赖
  *      2. 异步失效
  *          在本类中使用了异步是不支持异步的
- *          调用者其实是this, 不是真正的代理对象, Spring无法截获这个方法调用
+ *          调用者其实是this, 不是真正的代理对象, Spring 无法截获这个方法调用
  *      3. 事务失效异常
  *      4. 异步嵌套异常
  *          在本类中异步嵌套异步是不支持的
@@ -26,13 +26,13 @@ import java.util.concurrent.TimeUnit;
  * 注意事项:
  *      1. 尽量不要在本类中异步调用
  *      2. 尽量不要有返回值
- *      3. 不能使用本类的私有方法或者非接口化加@Aysnc, 因为代理实效
- *      4. 异步方法不能用static修饰
- *      5. 异步类没有使用@Component修饰, 导致Spring无法扫描异步类
- *      6. 需要自动注入, 不能手动new对象
- *      7. 启动类必须加@EnableAsync
- *      8. 在调用Async方法上标注@Transaction 是管理调用方法的事务的
- *      9. 在Async方法标注@Transaction是管理异步方法的事务, 事务因线程隔离
+ *      3. 不能使用本类的私有方法或者非接口化加 @Aysnc, 因为代理失效
+ *      4. 异步方法不能用 static 修饰
+ *      5. 异步类没有使用 @Component 修饰, 导致Spring无法扫描异步类
+ *      6. 需要自动注入, 不能手动 new 对象
+ *      7. 启动类必须加 @EnableAsync
+ *      8. 在调用 Async 方法上标注 @Transaction 是管理调用方法的事务的
+ *      9. 在 Async 方法标注 @Transaction 是管理异步方法的事务, 事务因线程隔离
  *
  * Author:         chengxudong             chengxudong@microwu.com
  * Date:           2019/8/8   11:09

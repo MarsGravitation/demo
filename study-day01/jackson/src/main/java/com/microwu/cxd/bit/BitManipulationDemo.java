@@ -1,7 +1,9 @@
 package com.microwu.cxd.bit;
 
 /**
- * Description:
+ * Description: 位运算
+ *
+ * 奇技淫巧：https://www.cnblogs.com/RioTian/category/1687764.html
  *
  * @Author: chengxudong             chengxudong@microwu.com
  * Date:       2020/8/31   13:18
