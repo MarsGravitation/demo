@@ -1,5 +1,7 @@
 package com.microwu.string;
 
+import java.text.MessageFormat;
+import java.time.LocalDateTime;
 import java.util.Date;
 
 /**
@@ -17,5 +19,9 @@ public class StringDemo {
         Date date = new Date();
         String content = "%tF %tT: dsp报警 活动activityId = %d, 导入用户数据 = %s 失败";
         System.out.println(String.format(content, date, date, 1, "a.csv"));
+
+        // MessageFormat
+        content = "{0}: dsp报警 活动activityId = {1}, 导入用户数据 = {2} 失败";
+        System.out.println(MessageFormat.format(content, LocalDateTime.now(), 1, "a.csv"));
     }
 }
