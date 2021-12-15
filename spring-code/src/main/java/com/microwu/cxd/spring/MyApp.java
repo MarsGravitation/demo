@@ -18,5 +18,12 @@ public class MyApp {
         MyTestBean myTestBean = (MyTestBean) xmlBeanFactory.getBean("myTestBean");
         System.out.println(myTestBean.getName());
 
+        // 测试一：scope="prototype"
+        // 每次 getBean 都是创建新的对象
+        // com.microwu.cxd.spring.MyTestBean@483bf400
+        // com.microwu.cxd.spring.MyTestBean@21a06946
+//        System.out.println(myTestBean);
+//        System.out.println(xmlBeanFactory.getBean("myTestBean"));
+
     }
 }

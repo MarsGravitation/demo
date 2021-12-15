@@ -1,4 +1,4 @@
-package com.microwu.structure;
+package com.microwu.structure.link;
 
 /**
  * Description: 使用链表实现 增删改

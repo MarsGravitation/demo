@@ -12,25 +12,39 @@ import java.util.concurrent.atomic.AtomicInteger;
  *      2.1 内部属性
  *
  *  3. 内存泄漏：
- *      ThreadLocal 本身不存放任何数据，而 ThreadLocal 中的数据实际上是存放在线程实例的，从实际上来看是线程内存泄漏，底层来看是 Thread 对象的成员变量 threadLocals 持有
- *      大量 K-V 结构，并且线程一直处于活跃状态导致变量 threadLocals 无法释放被回收。threadLocals 持有大量 K-V 结构这一点的前提是要存在大量的 ThreadLocal 实例的定义，一般
- *      来说，一个应用不可能定义大量的 ThreadLocal，所以一般的泄漏源是线程一直处于活跃状态导致变量的 threadLocals 无法释放被回收。
- *      但是我们知道，ThreadLocalMap.Entry 结构中的 key 用到了弱引用，每次 GC 会回收这些 key，此时 ThreadLocalMap 会出现一些 key = null，但是 value 不为 null 的数据，如果
- *      不及时清理，就会一直驻留在 ThreadLocalMap 中。这也是 ThreadLocal get, set, remove 都会清理 key = null 的代码块，所以，内存泄漏可能出现的地方：
+ *      ThreadLocal 本身不存放任何数据，而 ThreadLocal 中的数据实际上是存放在线程实例的，从实际上来看是线程内存泄漏，底层来看是 Thread
+ *      对象的成员变量 threadLocals 持有大量 K-V 结构，并且线程一直处于活跃状态导致变量 threadLocals 无法释放被回收。threadLocals
+ *      持有大量 K-V 结构这一点的前提是要存在大量的 ThreadLocal 实例的定义，一般来说，一个应用不可能定义大量的 ThreadLocal，所以一般的
+ *      泄漏源是线程一直处于活跃状态导致变量的 threadLocals 无法释放被回收。但是我们知道，ThreadLocalMap.Entry 结构中的 key 用到了
+ *      弱引用，每次 GC 会回收这些 key，此时 ThreadLocalMap 会出现一些 key = null，但是 value 不为 null 的数据，如果不及时清理，
+ *      就会一直驻留在 ThreadLocalMap 中。这也是 ThreadLocal get, set, remove 都会清理 key = null 的代码块，所以，内存泄漏
+ *      可能出现的地方：
  *          a. 大量的初始化 ThreadLocal 实例，初始化后不再调用 get, set, remove 方法
- *          b. 初始化了大量的 ThreadLocal 实例，这些 ThreadLocal 存放了容量大的 value，并且使用这些 ThreadLocal 的线程实例一直处于活跃状态
+ *          b. 初始化了大量的 ThreadLocal 实例，这些 ThreadLocal 存放了容量大的 value，并且使用这些 ThreadLocal 的线程实例
+ *          一直处于活跃状态
  *
- *      ThreadLocal 设计亮点是 key 用到了弱引用。如果强饮用的话，ThreadLocalMap 所有数据都是和 Thread 生命周期绑定，这样很容易出现因为大量线程持续活跃导致的内存泄漏。使用了
- *      弱引用的话，JVM 触发 GC 回收弱引用后，下一次 get, set, remove 可以删除 null 的值，起到了惰性删除释放内存的作用
+ *      key的泄露与value的泄露：threadLocalMap的entry继承自WeakReference，是若引用（弱引用的特点：如果这个对象只被弱引用关联，
+ *      没有任何强引用关联，那么这个对象就可以被回收）value是强引用（如果设计成弱引用，那么可能在需要value的时候却提示已经被回收了）
+ *      正常情况下：当线程终止，保存在ThreadLocal里的value就会被回收，因为此时已经没有任何强引用了
+ *      但是，如果线程始终不终止（比如线程需要保持很久，比如在使用线程池的时候，实际上都是使用同一个线程），那么key对应的value就不能回收，
+ *      因为有之下的调用链：
+ *          Thread ————> ThreadLocalMap —————> Entry（key为null）  —————>   Value
+ *          因为value和Thread之间还存在这个强引用链路，所以导致value无法回收，这样就可能会出现OOM
+ *
+ *      ThreadLocal 设计亮点是 key 用到了弱引用。如果强饮用的话，ThreadLocalMap 所有数据都是和 Thread 生命周期绑定，这样很容易出现因为
+ *      大量线程持续活跃导致的内存泄漏。使用了弱引用的话，JVM 触发 GC 回收弱引用后，下一次 get, set, remove 可以删除 null 的值，起到了
+ *      惰性删除释放内存的作用
  *
  *  4. 使用场景
- *      4.1 ThreadLocal 用作保存每个线程独享的对象，为每个线程都创建一个副本，这样每个线程都可以修改自己所拥有的副本，不会影响其他线程的副本，确保了线程安全
+ *      4.1 ThreadLocal 用作保存每个线程独享的对象，为每个线程都创建一个副本，这样每个线程都可以修改自己所拥有的副本，不会影响其他线程的副本，
+ *      确保了线程安全
  *          |- 通常用在保存线程不安全的工具类上，典型的就是 SimpleDateFormat
  *          class ThreadSafeFormatter{
  *              public static ThreadLocal<SimpleDateFormat> dateFormatThreadLocal
  *                  = ThreadLocal.withInitial(() -> new SimpleDateFormat("mm:ss"));
  *          }
- *      4.2 每个线程内需要独立保存信息，以便供其他方法更方便的获取该信息的场景。每个线程获取到的信息可能都是不一样的，前面执行了保存，后面可以直接获取到，避免了传参，类似于全局变量的概念
+ *      4.2 每个线程内需要独立保存信息，以便供其他方法更方便的获取该信息的场景。每个线程获取到的信息可能都是不一样的，前面执行了保存，
+ *      后面可以直接获取到，避免了传参，类似于全局变量的概念
  *          |- 保存用户权限信息，同一个线程内相同，不同的线程不同
  *          class UserContextHolder {
  *              // 创建ThreadLocal保存User对象

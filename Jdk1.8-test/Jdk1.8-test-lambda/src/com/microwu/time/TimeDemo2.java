@@ -17,11 +17,11 @@ import static com.microwu.time.DateFormatterUtils.SINGLETON;
 public class TimeDemo2 {
 
     /**
-     * GMT：格里尼治时间，也叫世界时UT
+     * GMT：格里尼治时间，也叫世界时 UT
      * UTC：协调世界时，通常 GMT = UTC
      * ISO-8601：国际标准化组织的日期和时间表示方法 2004-05-03T17:30:08+08:00
      *
-     * ZoneId： 时区ID，抽象类，对应的子类ZoneOffset，ZoneRegion
+     * ZoneId： 时区 ID，抽象类，对应的子类 ZoneOffset，ZoneRegion
      * 静态方法：ZoneId#of(String zoneId) 支持固定时间偏移量和地理区域
      *
      * @author   chengxudong               chengxudong@microwu.com
@@ -116,7 +116,7 @@ public class TimeDemo2 {
     }
 
     /**
-     * OffsetTime 基于UTC/Greenwich 时间偏移量的时间，例如：10:15:30+01:--
+     * OffsetTime 基于 UTC/Greenwich 时间偏移量的时间，例如：10:15:30+01:--
      *
      * @author   chengxudong               chengxudong@microwu.com
      * @date    2020/4/3  14:14
@@ -170,7 +170,7 @@ public class TimeDemo2 {
 
     /**
      * 与旧日期的转换 - 不做了
-     * LocalDateTime 转换到Instant 或者 OffsetDatetime，
+     * LocalDateTime 转换到 Instant 或者 OffsetDatetime，
      * 都需要 ZoneOffset 指定时区偏移量
      *
      * @author   chengxudong               chengxudong@microwu.com

@@ -7,21 +7,23 @@
   <version>1.0-SNAPSHOT</version>
   <modules>
     <module>spring-redis</module>
-      <module>third-part-payment</module>
-      <module>spring-security</module>
-      <module>spring-mvc</module>
-      <module>spring-rabbimq</module>
+    <module>third-part-payment</module>
+    <module>spring-security</module>
+    <module>spring-mvc</module>
+    <module>spring-rabbimq</module>
     <module>spring-logger</module>
-      <module>spring-webflux</module>
+    <module>spring-webflux</module>
     <module>netty</module>
-      <module>spring-zookeeper</module>
-      <module>spring-mybatis</module>
+    <module>spring-zookeeper</module>
+    <module>spring-mybatis</module>
     <module>jpa</module>
-      <module>spring-flowable</module>
+    <module>spring-flowable</module>
     <module>spring-kafka</module>
-      <module>custom-starter-tool</module>
+    <module>custom-starter-tool</module>
+    <module>spring-quartz</module>
+    <module>spring-websocket</module>
   </modules>
-  <name>Maven Quick Start Archetype</name>
+  <name>spring-study</name>
   <url>http://maven.apache.org</url>
   <parent>
     <groupId>org.springframework.boot</groupId>
@@ -98,6 +100,7 @@
         <includes>
           <include>**/email.properties</include>
           <include>**/*.xml</include>
+          <include>**/*.html</include>
         </includes>
         <filtering>false</filtering><!--此处不需要过滤器过滤-->
       </resource>

@@ -42,7 +42,7 @@ import java.nio.charset.StandardCharsets;
  *  父类：InputStream、OutputStream、Reader、Writer
  *  文件：FileInputStream、FileOutputStream、FileReader、FileWriter
  *  数组：ByteArrayInputStream、ByteArrayOutputStream、CharArrayReader、CharArrayWriter
- * 处理流：处理流和节点流一块使用，在节点流的基础上，再套一层。直接使用节点流，读写不方便，为了更快、更方便的读写文件，才有了处理流
+ *  处理流：处理流和节点流一块使用，在节点流的基础上，再套一层。直接使用节点流，读写不方便，为了更快、更方便的读写文件，才有了处理流
  *  缓冲流：BufferedInputStream、BufferedOutputStream、BufferedReader、BufferedWriter
  *  转换流：InputStreamReader、OutputStreamReader 实现字节流和字符流之间的转换
  *  数据流：DataInputStream、DataOutputStream 将基础数据类型写入或读取出来

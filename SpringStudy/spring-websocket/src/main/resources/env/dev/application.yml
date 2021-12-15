@@ -11,7 +11,7 @@ spring:
     name: spring-cloud-study-websocket-reids
   freemarker:
     request-context-attribute: request
-    #prefix: /templates/
+    prefix: /templates/
     suffix: .html
     content-type: text/html
     enabled: true

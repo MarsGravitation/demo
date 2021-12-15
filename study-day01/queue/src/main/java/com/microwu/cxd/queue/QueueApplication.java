@@ -1,7 +1,9 @@
 package com.microwu.cxd.queue;
 
 /**
- * Description:
+ * Description: 队列的演进
+ *
+ * https://mp.weixin.qq.com/s/pMivMmfgijmavf-myZBwhw
  *
  * @Author: chengxudong             chengxudong@microwu.com
  * Date:       2020/12/11   16:03

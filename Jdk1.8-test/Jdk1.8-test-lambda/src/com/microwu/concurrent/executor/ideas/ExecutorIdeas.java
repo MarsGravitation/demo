@@ -1,4 +1,4 @@
-package com.microwu.concurrent.executor;
+package com.microwu.concurrent.executor.ideas;
 
 /**
  *

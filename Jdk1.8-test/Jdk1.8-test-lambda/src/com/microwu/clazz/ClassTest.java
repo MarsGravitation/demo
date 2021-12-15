@@ -1,6 +1,7 @@
 package com.microwu.clazz;
 
-import com.sun.org.apache.xpath.internal.operations.String;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Description: Class
@@ -55,9 +56,41 @@ import com.sun.org.apache.xpath.internal.operations.String;
 public class ClassTest {
 
     public static void main(String[] args) throws ClassNotFoundException {
-        String string = new String();
-        ClassLoader classLoader = string.getClass().getClassLoader();
-        classLoader.loadClass("");
+//        String string = new String();
+//        ClassLoader classLoader = string.getClass().getClassLoader();
+//        classLoader.loadClass("");
+
+        test();
+    }
+
+    /**
+     * JAVA 中 isAssignableFrom()方法与 instanceof 关键字 区别及使用
+     *
+     * isAssignableFrom:　是从类继承的角度去判断的，判断是否为某个类的父类
+     *
+     * 父类.class.isAssignableFrom(子类.class)
+     *
+     * instanceof: 从实例继承的角度去判断的，instanceof 判断是否为某个类的子类
+     *
+     * 子类实例 instanceof 父类类型
+     *
+     * https://www.cnblogs.com/pythoncd/articles/12545666.html
+     *
+     * @author   chengxudong             chengxd2@lenovo.com
+     * @date 2021/8/9     15:05
+     *
+     * @param 
+     * @return void
+     */
+    public static void test() {
+
+        // 父类.class.isAssignableFrom(子类.class)
+        // 判断是否为某个类的父类
+        System.out.println(List.class.isAssignableFrom(ArrayList.class));
+
+        ArrayList<Object> list = new ArrayList<>();
+        System.out.println(list instanceof List);
+
     }
 
 }

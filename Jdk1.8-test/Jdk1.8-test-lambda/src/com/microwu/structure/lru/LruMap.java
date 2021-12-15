@@ -6,6 +6,8 @@ import java.util.Map;
 /**
  * Description:
  *
+ * https://crossoverjie.top/2018/04/07/algorithm/LRU-cache/
+ *
  * @Author: chengxudong             chengxudong@microwu.com
  * Date:       2020/12/16   10:15
  * Copyright:      北京小悟科技有限公司       http://www.microwu.com
@@ -19,7 +21,7 @@ public class LruMap<K, V> {
     /**
      * 最大缓存大小
      */
-    private int cacheSize;
+    private final int cacheSize;
 
     /**
      * 节点大小
