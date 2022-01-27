@@ -17,7 +17,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  *
  * 使用 JDBC 存储时，可以在启动时初始化架构，如下：
  *
- * spring.quartz.jdbc.initialize-schema=talways
+ * spring.quartz.jdbc.initialize-schema=always
  *
  * 要让 Quartz 使用 DataSource 应用程序的 main 以外的其他元素 DataSource，请声明一个
  * DataSource bean，并用注释其 @Bean 方法 @QuartzDataSource。这样可以确保和模式初始化
@@ -65,6 +65,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  *
  *
  * https://docs.spring.io/spring-boot/docs/2.5.0/reference/htmlsingle/
+ *
+ * https://www.cnblogs.com/youzhibing/p/10208056.html
  *
  */
 @SpringBootApplication

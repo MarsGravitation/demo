@@ -1,5 +1,10 @@
 package com.microwu.structure.tree;
 
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
+
 /**
  * Description:
  *
@@ -21,7 +26,7 @@ public class BinaryTree {
         this.root = root;
     }
 
-    class Node {
+    private class Node {
         private Integer value;
         private Node leftChild;
         private Node rightChild;
@@ -187,8 +192,44 @@ public class BinaryTree {
         }
     }
 
+    private List<List<Integer>> levelOrder(Node root) {
+        if (root == null) {
+            return null;
+        }
+        List<List<Integer>> ret = new ArrayList<>();
+
+        Queue<Node> queue = new LinkedList<>();
+        queue.offer(root);
+        while (!queue.isEmpty()) {
+            ArrayList<Integer> level = new ArrayList<>();
+            int currentLevelSize = queue.size();
+            for (int i = 0; i < currentLevelSize; i++) {
+                Node node = queue.poll();
+                level.add(node.value);
+                if (node.leftChild != null) {
+                    queue.offer(node.leftChild);
+                }
+                if (node.rightChild != null) {
+                    queue.offer(node.rightChild);
+                }
+            }
+            ret.add(level);
+        }
+        return ret;
+    }
+
     public void print() {
         inOrderTraversal(root);
+    }
+
+    public void levelPrint() {
+        List<List<Integer>> lists = levelOrder(root);
+        lists.forEach(l -> {
+            l.forEach(i -> {
+                System.out.print(i + ",");
+            });
+            System.out.println();
+        });
     }
 
 
@@ -212,5 +253,8 @@ public class BinaryTree {
         System.out.println();
 
         System.out.println(binaryTree.find(5));
+
+        System.out.println("level print...");
+        binaryTree.levelPrint();
     }
 }

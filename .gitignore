@@ -44,3 +44,6 @@ buildNumber.properties
 hs_err_pid*
 
 *.MF
+
+# binary file
+*.exe

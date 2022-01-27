@@ -21,6 +21,7 @@ public class QuartzConfig {
                 .withIdentity("mySampleJob")
                 // 每个 JobDetail 内部都有一个 map，包含了关联到这个 Job 的数据，在 Job 类中可以通过 context 获取
                 .usingJobData("msg", "hello")
+                .usingJobData("name", "cxd")
                 // 即使没有 Trigger 关联时，也不需要删除该 JobDetail
                 .storeDurably()
                 .build();
