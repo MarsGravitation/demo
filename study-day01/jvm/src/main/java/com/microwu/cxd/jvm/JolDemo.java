@@ -14,15 +14,22 @@ import java.util.concurrent.TimeUnit;
  *  果不能整除，那么就靠对齐来补。举个例子，new 除了一个对象，内存只占用 18 字节，但是
  *  规定要能被 8 整除，所以 padding = 6
  *
- *
- *   OFFSET  SIZE   TYPE DESCRIPTION                               VALUE
- *       0     4        (object header)                           70 f1 bf dc (01110000 11110001 10111111 11011100) (-591400592)
- *       4     4        (object header)                           ff 00 00 00 (11111111 00000000 00000000 00000000) (255)
+ * java.lang.Object object internals:
+ *  OFFSET  SIZE   TYPE DESCRIPTION                               VALUE
+ *       0     4        (object header)                           01 00 00 00 (00000001 00000000 00000000 00000000) (1)
+ *       4     4        (object header)                           00 00 00 00 (00000000 00000000 00000000 00000000) (0)
  *       8     4        (object header)                           e5 01 00 f8 (11100101 00000001 00000000 11111000) (-134217243)
- *       // 对象头：markword + klass
  *      12     4        (loss due to the next object alignment)
- *      // 由于下一个对象对齐而造成的损失
- * Instance size: 16 bytes // Object 对象占 16 个字节
+ * Instance size: 16 bytes
+ * Space losses: 0 bytes internal + 4 bytes external = 4 bytes total
+ *
+ * java.lang.Object object internals:
+ *  OFFSET  SIZE   TYPE DESCRIPTION                               VALUE
+ *       0     4        (object header)                           90 f0 df 39 (10010000 11110000 11011111 00111001) (970977424)
+ *       4     4        (object header)                           21 00 00 00 (00100001 00000000 00000000 00000000) (33)
+ *       8     4        (object header)                           e5 01 00 f8 (11100101 00000001 00000000 11111000) (-134217243)
+ *      12     4        (loss due to the next object alignment)
+ * Instance size: 16 bytes
  * Space losses: 0 bytes internal + 4 bytes external = 4 bytes total
  *
  *  a. 对象头包含了 12 字节，分成了 3 行，其中前 2 行就是 markword，第三行就是 klass 指针。值得
@@ -179,12 +186,13 @@ public class JolDemo {
     private static Object o;
 
     public static void main(String[] args) {
-        try {
-            TimeUnit.SECONDS.sleep(5);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+//        try {
+//            TimeUnit.SECONDS.sleep(5);
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
         o = new Object();
+        System.out.println(ClassLayout.parseInstance(o).toPrintable());
         synchronized (o) {
             System.out.println(ClassLayout.parseInstance(o).toPrintable());
         }
