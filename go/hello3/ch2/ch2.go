@@ -188,6 +188,27 @@ func test06() {
 }
 
 /*
+2.5.1
+	panic(i interface{})
+	recover() interface{}
+
+	引发 panic 有两种情况，一种是程序主动调用 panic 函数，另一种是程序产生运行时错误，
+由运行时检测并抛出。
+	发生 panic 后，程序会从调用 panic 的函数位置或发生 panic 的地方立即返回，逐层向上执
+行函数的 defer 语句，然后逐层打印函数调用堆栈，直到被 recover 捕获或运行到最外层函数而
+退出。
+	panic 不但可以在函数正常流程中抛出，在 defer 逻辑里也可以再次调用 panic 或抛出 panic。
+defer 里面的 panic 能够被后续执行的 defer 捕获。
+	recover 用来捕获 panic，阻止 panic 继续向上传递。recover() 和 defer 一起使用，但是 recover
+只有在 defer 后面的函数体内被直接调用才能捕获 panic 终止异常，否则返回 nil，异常继续向外传递。
+
+	defer recover() // 捕获失败
+	defer func() {
+		recover() // 捕获成功
+	}()
+ */
+
+/*
 2.1 函数定义
 	函数声明关键字 func、函数名、参数列表、返回列表、函数体
 	func funcName(param-list) (result-list) {}

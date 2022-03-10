@@ -149,6 +149,69 @@ func test02() {
 	Go 内部使用统一的命名空间对变量进行管理，每一个变量都有一个唯一的名字，包名是这个
 	名字的前缀
 
+1.4.1 常量
+	常量使用一个名称来绑定一块内存地址，该内存地址中存放的数据类型由定义常量时指定
+的类型决定，而且该内存地址里面存放的内容不可以改变。Go 中常量分为布尔型、字符串型和
+数值型常量。常量存储在程序的只读段里(.rodata section)。
+	预声明标识符 iota 用在常量声明中，其初始值为 0。一组多个常量同时声明时其值逐行增
+加，iota 可以看作自增的枚举变量，专门用来初始化常量。
+
+const(
+	c0 = iota // c0 == 0
+	c1 = iota // c1 == 1
+)
+
+简写模式
+const (
+	c0 = iota // c0 == 0
+	c1			// c1 == 1
+)
+
+// 注意 iota 逐行增加
+const (
+	a = 1 << iota // a == 1(iota == 0)
+	b = 1 << iota // b == 2(iota == 1)
+	c = 3		// c == 3(iota == 2, unused)
+	d = 1 << iota // d == 8(iota == 3)
+)
+
+// 分开的 const 语句，iota 每次都从 0 开始
+const x = iota // x == 0
+const y = iota // y == 0
+
+https://studygolang.com/articles/2192
+
+a. iota 只能在常量的表达式中使用
+	fmt.Println(iota) // 编译错误
+b. 每次 const 出现时，都会让 iota 初始化为 0
+c. 允许依靠编译器完成自增设置
+d. 可跳过的值
+const (
+	OutMute AudioOutput = iota // 0
+	OutMono // 1
+	OutStereo // 2
+	_
+	_
+	OutSurround // 5
+)
+e. 位掩码表达式
+当你在一个 const 组中仅仅有一个标识符在一行的时候，它将使用增长的 iota 取得前面的表
+达式并且再运用它。在 Go 语言的 spec 中，这就是所谓的隐形重复最后一个非空的表达式列表
+type Allergen int
+const (
+	IgEggs Allergen = 1 << iota // 1
+	IgChocolate	// 1 << 1
+)
+f. 定义数量级
+type ByteSize float64
+const (
+	_ = iota
+	KB ByteSize = 1 << (10 * iota)
+	MB	// 1 << (10 * 2)
+)
+g. 定义在一行的情况
+h. 中间插队
+
 1.5.5 字符串
 	- 字符串是常来那个，而可以通过类似数组的索引访问其字节单元，但是不能修改某个字节的值
 	var a = "hello, world"
