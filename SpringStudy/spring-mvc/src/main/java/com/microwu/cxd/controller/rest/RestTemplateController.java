@@ -1,13 +1,16 @@
 package com.microwu.cxd.controller.rest;
 
+import com.microwu.cxd.domain.Order;
+import com.microwu.cxd.tool.util.JacksonUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.FileSystemResource;
-import org.springframework.http.RequestEntity;
-import org.springframework.http.ResponseEntity;
+import org.springframework.http.*;
 import org.springframework.util.LinkedMultiValueMap;
+import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
@@ -15,7 +18,9 @@ import org.springframework.web.util.UriComponents;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import java.io.File;
+import java.net.MulticastSocket;
 import java.net.URI;
+import java.util.HashMap;
 
 /**
  * Description:
@@ -158,6 +163,116 @@ public class RestTemplateController {
 //        parts.add("xmlPart", new HttpEntity<>());
         String response = restTemplate.postForObject("http://10.0.0.113/test/test222.php", parts, String.class);
         logger.info("{}", response);
+        return "success";
+    }
+
+    /**
+     * https://juejin.cn/post/6844903656165212174
+     * https://spring.hhui.top/spring-blog/2020/06/17/200617-SpringBoot%E7%B3%BB%E5%88%97RestTemplate%E5%9F%BA%E7%A1%80%E7%94%A8%E6%B3%95%E5%B0%8F%E7%BB%93/
+     *
+     * 表单参数，由 MultiValueMap 封装
+     *
+     * @Nullable
+     * public <T> T getForObject(String url, Class<T> responseType, Object... uriVariables) throws RestClientException;
+     *
+     * @Nullable
+     * public <T> T getForObject(String url, Class<T> responseType, Map<String, ?> uriVariables) throws RestClientException;
+     *
+     * @Nullable
+     * public <T> T getForObject(URI url, Class<T> responseType) throws RestClientException;
+     *
+     * getForEntity: 除了正文，还有响应码，响应头等
+     * getForObject: 正文
+     *
+     * @author   chengxudong               chengxudong@microwu.com
+     * @date    2022/5/26 16:52
+     *
+     * @param:
+     * @return: java.lang.String
+     */
+    @GetMapping("/get")
+    public String get() {
+        String url = "http://httpbin.org/get";
+
+        // 1. 直接在 url 拼参数，调的是方法 1
+        ResponseEntity<String> entity = restTemplate.getForEntity(url + "?name=cxd", String.class);
+        logger.info("entity:{}", entity.getBody());
+
+        // 2. 通过可变参数，填充 url 的 ?，注意顺序
+        entity = restTemplate.getForEntity(url + "?name={?}&age={?}", String.class, "cxd", 27);
+        logger.info("entity:{}", entity.getBody());
+
+        // 3. 参数放在 map 中，通过 map 中的 key 进行匹配
+        entity = restTemplate.getForEntity(url + "?name={name}&age={age}", String.class, new HashMap<String, Object>() {
+            {
+                put("name", "cxd");
+                put("age", 20);
+            }
+        });
+        logger.info("entity:{}", entity.getBody());
+        return "success";
+    }
+    
+    /**
+     * 主要是测试使用的是什么 Content-Type
+     *
+     * @Nullable
+     * public <T> T postForObject(String url, @Nullable Object request, Class<T> responseType, Object... uriVariables);
+     *
+     * @Nullable
+     * public <T> T postForObject(String url, @Nullable Object request, Class<T> responseType, Map<String, ?> uriVariables);
+     *
+     * @Nullable
+     * public <T> T postForObject(URI url, @Nullable Object request, Class<T> responseType);
+     *
+     * @author   chengxudong               chengxudong@microwu.com
+     * @date    2022/5/26 17:08
+     *
+     * @param:  
+     * @return: java.lang.String
+     */
+    @PostMapping("/post")
+    public String post() {
+        String url = "http://httpbin.org/post";
+
+        // 1. 提交表单参数
+        MultiValueMap<String, Object> params = new LinkedMultiValueMap<>();
+        params.add("name", "cxd");
+        params.add("age", 27);
+
+        ResponseEntity<String> entity = restTemplate.postForEntity(url, params, String.class);
+        logger.info("entity:{}", entity.getBody());
+
+        entity = restTemplate.postForEntity(url + "?name=cxd&age=27", String.class, String.class);
+        logger.info("entity:{}", entity.getBody());
+        return "success";
+    }
+    
+    /**
+     * Post json
+     * 需要额外处理一下请求头，设置 Content-Type = application/json
+     *
+     * @author   chengxudong               chengxudong@microwu.com
+     * @date    2022/5/26 17:28
+     *
+     * @param:  
+     * @return: java.lang.String
+     */
+    @PostMapping("/json")
+    public String json() {
+        String url = "http://httpbin.org/post";
+
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.APPLICATION_JSON);
+
+        Order order = new Order();
+        order.setString("hello world!");
+//        HttpEntity<Order> httpEntity = new HttpEntity<>(order, headers);
+        HttpEntity<String> httpEntity = new HttpEntity<>(JacksonUtil.obj2String(order), headers);
+
+        ResponseEntity<String> entity = restTemplate.postForEntity(url, httpEntity, String.class);
+        logger.info("entity:{}", entity.getBody());
+
         return "success";
     }
 }

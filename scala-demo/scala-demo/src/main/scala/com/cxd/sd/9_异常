@@ -1,0 +1,8 @@
+9.1 Java 异常处理
+9.2 Scala 异常处理
+    1. try-catch 程序将不会异常终止
+    2. scala 没有 编译器异常，异常都是在运行的时候捕获处理
+    3. catch 按次序捕获
+    4. finally 同 Java 一样
+    5. throw 抛出一个异常对象。所有异常都是 Throwable 的子类型。throw 表达式
+    是由类型的，就是 Nothing

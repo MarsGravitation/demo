@@ -48,6 +48,33 @@ public enum DateFormatterUtils {
     }
 
     /**
+     * Long -> LocalDatetime
+     *
+     * @author   chengxudong               chengxudong@microwu.com
+     * @date    2022/5/18 10:56
+     *
+     * @param: time - [java.lang.Long]
+     * @return: java.time.LocalDateTime
+     */
+    public LocalDateTime longToTime(Long time) {
+        Instant instant = Instant.ofEpochMilli(time);
+        return LocalDateTime.ofInstant(instant, ZoneId.systemDefault());
+    }
+
+    /**
+     * localDateTime -> Long
+     *
+     * @author   chengxudong               chengxudong@microwu.com
+     * @date    2022/5/18 10:58
+     *
+     * @param: localDateTime - [java.time.LocalDateTime]
+     * @return: java.lang.Long
+     */
+    public Long timeToLong(LocalDateTime localDateTime) {
+        return localDateTime.atZone(ZoneId.systemDefault()).toInstant().toEpochMilli();
+    }
+
+    /**
      * 格式化时间戳
      *
      * Long -> String
@@ -87,7 +114,7 @@ public enum DateFormatterUtils {
     }
 
     public static void main(String[] args) {
-        test02();
+        test03();
     }
 
     public static void test() {
@@ -116,6 +143,14 @@ public enum DateFormatterUtils {
         LocalDateTime time = SINGLETON.parse(date, "yyyy-MM-dd HH:mm:ss.SSS");
         long epochMilli = time.atZone(ZoneId.systemDefault()).toInstant().toEpochMilli();
         System.out.println(epochMilli - milli);
+    }
+
+    public static void test03() {
+        LocalDateTime now = LocalDateTime.now();
+        Long time = SINGLETON.timeToLong(now);
+        System.out.println(time);
+        LocalDateTime localDateTime = SINGLETON.longToTime(time);
+        System.out.println(localDateTime);
     }
 
 }

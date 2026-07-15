@@ -6,6 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 /**
  * Description:
  *
+ * https://www.iocoder.cn/Spring-Boot/Kafka/?self
+ *
  * @Author: chengxudong             chengxudong@microwu.com
  * Date:       2020/12/2   13:54
  * Copyright:      北京小悟科技有限公司       http://www.microwu.com

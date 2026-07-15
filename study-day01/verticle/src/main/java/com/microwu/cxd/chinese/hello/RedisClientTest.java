@@ -1,8 +1,8 @@
 package com.microwu.cxd.chinese.hello;
 
 import io.vertx.core.Vertx;
-import io.vertx.redis.RedisClient;
-import io.vertx.redis.RedisOptions;
+import io.vertx.redis.client.RedisOptions;
+import io.vertx.redis.client.impl.RedisClient;
 
 /**
  * Description:

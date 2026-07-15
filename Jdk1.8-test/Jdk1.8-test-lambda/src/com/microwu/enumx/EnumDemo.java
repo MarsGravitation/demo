@@ -3,6 +3,10 @@ package com.microwu.enumx;
 /**
  * Description:
  *
+ * enum 原理
+ *
+ * https://blog.csdn.net/swadian2008/article/details/100354829
+ *
  * @Author: chengxudong             chengxudong@microwu.com
  * Date:       2019/12/5   16:41
  * Copyright:      北京小悟科技有限公司       http://www.microwu.com

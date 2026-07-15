@@ -2,6 +2,8 @@ package com.microwu.cxd.study.limit;
 
 import com.google.common.util.concurrent.RateLimiter;
 
+import java.time.Instant;
+
 /**
  * Description:
  *
@@ -14,6 +16,10 @@ import com.google.common.util.concurrent.RateLimiter;
 public class LimitTest {
 
     public static void main(String[] args) {
+        test02();
+    }
+
+    public static void test() {
         // 每秒生成 1 个令牌
         RateLimiter rateLimiter = RateLimiter.create(1);
         for (int i = 1; i < 5; i++) {
@@ -24,6 +30,23 @@ public class LimitTest {
             double acquire = rateLimiter.acquire(i);
             // 支持预消费
             System.out.println("curTime = " + System.currentTimeMillis() + " acq: " + i + " waitTime: " + acquire);
+        }
+    }
+
+    public static void test02() {
+        long start;
+        long end;
+        RateLimiter limiter = RateLimiter.create(2 / 60.0);
+        for (int i = 0; i < 5; i++) {
+            // 测试 tryAcquire 获取成功后，acquire 是否阻塞
+            if (!limiter.tryAcquire()) {
+                System.out.println("第 " + i + " 次：获取失败");
+                continue;
+            }
+            start = Instant.now().getEpochSecond();
+            limiter.acquire();
+            end = Instant.now().getEpochSecond();
+            System.out.println("第 " + i + " 次：" + (end - start) + " 秒");
         }
     }
 

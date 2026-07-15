@@ -1,0 +1,44 @@
+package com.microwu.cxd.chinese.hello;
+
+import io.vertx.core.Future;
+import io.vertx.core.Promise;
+import org.junit.jupiter.api.Test;
+
+/**
+ * Description:
+ *
+ * @author: chengxudong             chengxudong@eversec.com
+ * Date:       2023/3/23   9:25
+ * Update History:
+ * Author        Time            Content
+ */
+public class Example {
+
+    @Test
+    public void test() {
+        anAsyncAction(true).compose(this::anotherAsyncAction)
+                .onSuccess(System.out::println)
+                .onFailure(t -> {
+                    System.out.println(t.getMessage());
+                });
+    }
+
+    private Future<String> anAsyncAction(boolean result) {
+        Promise<String> promise = Promise.promise();
+        System.out.println(result);
+        if (result) {
+            promise.complete("cxd");
+        } else {
+            promise.fail(new RuntimeException("exception"));
+        }
+        return promise.future();
+    }
+
+    private Future<String> anotherAsyncAction(String name) {
+        Promise<String> promise = Promise.promise();
+//        promise.complete("hello " + name);
+        promise.fail(new RuntimeException("exception2"));
+        return promise.future();
+    }
+
+}

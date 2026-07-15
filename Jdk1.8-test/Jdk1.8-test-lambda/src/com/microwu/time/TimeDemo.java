@@ -144,7 +144,28 @@ public class TimeDemo {
         System.out.println(format);
     }
 
+    /**
+     * 获取当天的零点，昨天的零点
+     *
+     * @author   chengxudong               chengxudong@microwu.com
+     * @date    2022/5/23 17:00
+     *
+     * @param:
+     * @return: void
+     */
+    public static void test12() {
+        // 十一点以后，八点以前
+        LocalDateTime zeroClock = LocalDateTime.of(LocalDate.now(), LocalTime.MIN);
+        LocalDateTime eightClock = zeroClock.plusHours(8L);
+        LocalDateTime elevenClock = zeroClock.plusHours(11L);
+        System.out.println(eightClock);
+        System.out.println(elevenClock);
+        // 昨天零点
+        LocalDateTime yesterday = LocalDateTime.of(LocalDate.now().minusDays(1), LocalTime.MIN);
+        System.out.println(yesterday);
+    }
+
     public static void main(String[] args) {
-        test10();
+        test12();
     }
 }

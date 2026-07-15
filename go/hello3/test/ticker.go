@@ -13,8 +13,12 @@ Tick at 2021-11-26 16:01:56.373143289 +0800 CST m=+0.500654272
 Tick at 2021-11-26 16:01:56.873591846 +0800 CST m=+1.001102822
 Tick at 2021-11-26 16:01:57.373183396 +0800 CST m=+1.500694329
 Ticker stopped
- */
+*/
 func main() {
+	demo2()
+}
+
+func demo() {
 	// 打点器和定时器的机制有点相似：一个通道用来发送数据
 	// 这里我们在这个通道上使用内置的 range 来迭代值
 	// 每个 500ms 发送一次的值
@@ -31,4 +35,13 @@ func main() {
 	// 一旦一个打点停止了，将不能再从它的通道中收到值
 	ticker.Stop()
 	fmt.Println("Ticker stopped")
+}
+
+// 测试是否内存泄露
+func demo2() {
+	ticker := time.NewTicker(time.Second)
+	defer ticker.Stop()
+	for range ticker.C {
+		fmt.Println(time.Now().Format("2006-01-02 15:04:05"))
+	}
 }

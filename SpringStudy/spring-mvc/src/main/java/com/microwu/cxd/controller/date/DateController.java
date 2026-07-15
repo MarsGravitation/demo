@@ -1,10 +1,7 @@
 package com.microwu.cxd.controller.date;
 
 import com.microwu.cxd.domain.Order;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
 import java.util.Date;
@@ -96,7 +93,7 @@ public class DateController {
      * @return  java.lang.String
      */
     @PostMapping("/test02")
-    public String test02(Order order) {
+    public String test02(@RequestBody Order order) {
         System.out.println(order);
         return "success";
     }

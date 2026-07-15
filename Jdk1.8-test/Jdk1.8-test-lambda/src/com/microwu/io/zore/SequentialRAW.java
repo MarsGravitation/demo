@@ -1,0 +1,171 @@
+package com.microwu.io.zore;
+
+import java.io.File;
+import java.io.IOException;
+import java.io.RandomAccessFile;
+import java.nio.ByteBuffer;
+import java.nio.MappedByteBuffer;
+import java.nio.channels.FileChannel;
+import java.nio.charset.StandardCharsets;
+
+/**
+ * 顺序读写
+ *
+ * https://zhuanlan.zhihu.com/p/258934554
+ * https://blog.csdn.net/jy317358306/article/details/109365865
+ *
+ * @Author: chengxudong             chengxd2@lenovo.com
+ * Date:    2021/5/14  17:52
+ * Copyright:      lenovo			https://www.lenovo.com.cn/
+ */
+public class SequentialRAW {
+
+    /**
+     * 顺序写
+     *
+     * @author   chengxudong             chengxd2@lenovo.com
+     * @date 2021/5/14     17:56
+     *
+     * @param filePath
+     * @param content
+     * @param index
+     * @return long
+     */
+    public long fileWrite(String filePath, String content, int index) {
+        File file = new File(filePath);
+        RandomAccessFile randomAccessTargetFile;
+        // 操作系统提供的一个内存映射的机制的类
+        MappedByteBuffer map;
+        try {
+            randomAccessTargetFile = new RandomAccessFile(file, "rw");
+            FileChannel targetFileChannel = randomAccessTargetFile.getChannel();
+            map = targetFileChannel.map(FileChannel.MapMode.READ_WRITE, 0, (long) 1024 * 1024 * 1024);
+            map.position(index);
+            map.put(content.getBytes(StandardCharsets.UTF_8));
+            return map.position();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+
+        }
+        return 0L;
+    }
+
+    /**
+     * 顺序读
+     *
+     * @author   chengxudong             chengxd2@lenovo.com
+     * @date 2021/5/14     17:56
+     *
+     * @param filePath
+     * @param index
+     * @return java.lang.String
+     */
+    public String fileRead(String filePath, long index) {
+        File file = new File(filePath);
+        RandomAccessFile randomAccessTargetFile;
+        // 操作系统提供的一个内存映射机制的类
+        MappedByteBuffer map;
+        try {
+            randomAccessTargetFile = new RandomAccessFile(file, "rw");
+            FileChannel targetFileChannel = randomAccessTargetFile.getChannel();
+            map = targetFileChannel.map(FileChannel.MapMode.READ_WRITE, 0, index);
+            byte[] bytes = new byte[1024 * 10];
+            map.get(bytes, 0, (int) index);
+            return new String(bytes);
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+
+        }
+        return "";
+    }
+
+    public static void testFileChannelSequentialRW(FileChannel fileChannel) throws IOException {
+        byte[] bytes = "1111111".getBytes();
+        byte[] to = new byte[bytes.length];
+        // 分配直接内存，减少复制
+        ByteBuffer byteBuffer = ByteBuffer.allocateDirect(bytes.length);
+        // 顺序写入
+        for (int i = 0; i < 100000; i++) {
+            byteBuffer.put(bytes);
+            byteBuffer.flip();
+            fileChannel.write(byteBuffer);
+            byteBuffer.flip();
+        }
+
+        fileChannel.position(0);
+        // 顺序读取
+        for (int i = 0; i < 100000; i++) {
+            fileChannel.read(byteBuffer);
+            byteBuffer.flip();
+            byteBuffer.get(to);
+            byteBuffer.flip();
+        }
+    }
+
+    public static void testFileMMapSequentialRW(MappedByteBuffer mappedByteBuffer1, MappedByteBuffer mappedByteBuffer2) {
+        byte[] bytes = "1111111".getBytes();
+        byte[] to = new byte[bytes.length];
+
+        // 顺序写入
+        for (int i = 0; i < 100000; i++) {
+            mappedByteBuffer1.put(bytes);
+        }
+        // 顺序读取
+        for (int i = 0; i < 100000; i++) {
+            mappedByteBuffer2.get(to);
+        }
+    }
+
+    /**
+     * FileChannel初始化时间：7ms
+     * MMAPFile初始化时间：8ms
+     * FileChannel顺序读写时间：420ms
+     * MMAPFile顺序读写时间：20ms
+     * FileChannel随机读写时间：860ms
+     * MMAPFile随机读写时间：45ms
+     *
+     * @author   chengxudong               chengxudong@eversec.com
+     * @date    2022/8/31 10:46
+     *
+     * @param:
+     * @return: void
+     */
+    public static void test() throws IOException {
+        //记录开始时间
+        long start = System.currentTimeMillis();
+        //通过RandomAccessFile的方式获取文件的Channel，这种方式针对随机读写的文件较为常用，我们用文件一般是随机读写
+        RandomAccessFile randomAccessFile = new RandomAccessFile("./FileMmapTest.txt", "rw");
+        FileChannel channel = randomAccessFile.getChannel();
+        System.out.println("FileChannel初始化时间：" + (System.currentTimeMillis() - start) + "ms");
+
+        //内存映射文件，模式是READ_WRITE，如果文件不存在，就会被创建
+        MappedByteBuffer mappedByteBuffer1 = channel.map(FileChannel.MapMode.READ_WRITE, 0, 128 * 1024 * 1024);
+        MappedByteBuffer mappedByteBuffer2 = channel.map(FileChannel.MapMode.READ_WRITE, 0, 128 * 1024 * 1024);
+
+        System.out.println("MMAPFile初始化时间：" + (System.currentTimeMillis() - start) + "ms");
+
+        start = System.currentTimeMillis();
+        testFileChannelSequentialRW(channel);
+        System.out.println("FileChannel顺序读写时间：" + (System.currentTimeMillis() - start) + "ms");
+
+        start = System.currentTimeMillis();
+        testFileMMapSequentialRW(mappedByteBuffer1, mappedByteBuffer2);
+        System.out.println("MMAPFile顺序读写时间：" + (System.currentTimeMillis() - start) + "ms");
+
+        start = System.currentTimeMillis();
+        try {
+//            testFileChannelRandomRW(channel);
+            System.out.println("FileChannel随机读写时间：" + (System.currentTimeMillis() - start) + "ms");
+        } finally {
+            randomAccessFile.close();
+        }
+
+        //文件关闭不影响MMAP写入和读取
+        start = System.currentTimeMillis();
+//        testFileMMapRandomRW(mappedByteBuffer1, mappedByteBuffer2);
+        System.out.println("MMAPFile随机读写时间：" + (System.currentTimeMillis() - start) + "ms");
+    }
+
+}

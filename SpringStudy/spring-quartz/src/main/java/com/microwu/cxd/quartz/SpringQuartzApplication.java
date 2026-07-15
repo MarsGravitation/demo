@@ -68,6 +68,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  *
  * https://www.cnblogs.com/youzhibing/p/10208056.html
  *
+ * https://www.cnblogs.com/summerday152/p/14193968.html
+ *
  */
 @SpringBootApplication
 public class SpringQuartzApplication {

@@ -1,0 +1,11 @@
+server:
+  # 监听端口
+  port: 8080
+  # web 应用上下文路径
+  servlet:
+    context-path: /
+    session:
+      cookie:
+        http-only: true
+        secure: true
+  use-forward-headers: true

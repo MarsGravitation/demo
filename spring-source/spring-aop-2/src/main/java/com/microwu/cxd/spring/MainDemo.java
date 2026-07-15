@@ -1,5 +1,7 @@
 package com.microwu.cxd.spring;
 
+import org.springframework.aop.framework.DefaultAopProxyFactory;
+
 /**
  * Description:
  *
@@ -14,5 +16,6 @@ public class MainDemo {
 //        ContextNamespaceHandler
 //        AspectJWeavingEnabler
 //        LoadTimeWeaverAwareProcessor
+//        DefaultAopProxyFactory
     }
 }
